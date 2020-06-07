@@ -4,26 +4,26 @@
         "isActive": "active", 
         "img": "https://i.ibb.co/hfjgmL4/Sin-t-tulo-1666.jpg",
         "alt": "img1",
-        "title": "akjlshdkjah",
-        "description": "askdjhasdasldjalksdjs",
-        "nameBtn": "asldjkhas"
+        "title": "ActiAr",
+        "description": "Accede desde cualquier dispositivo a tu proxima actidad",
+        "nameBtn": "Registrate"
     },
     {
         "id": 1,
         "isActive": "", 
         "img": "https://i.ibb.co/wW5SWG3/78978798.jpg",
-        "alt": "img1",
-        "title": "akjlshdkjah",
-        "description": "askdjhasdasldjalksdjs",
-        "nameBtn": "asldjkhas"
+        "alt": "img2",
+        "title": "Multiplataforma",
+        "description": "Accede desde cualquier dispositivo a tu proxima actidad",
+        "nameBtn": "Descargar"
     },
     {
         "id": 2,
         "isActive": "", 
         "img": "https://i.ibb.co/hfjgmL4/Sin-t-tulo-1666.jpg",
-        "alt": "img1",
-        "title": "akjlshdkjah",
-        "description": "askdjhasdasldjalksdjs",
+        "alt": "img3",
+        "title": "Online",
+        "description": "Accede desde cualquier dispositivo a tu proxima actidad",
         "nameBtn": "asldjkhas"
     }
 ]
