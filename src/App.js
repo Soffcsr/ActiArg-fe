@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
+import './component/Carousel/Carousel'
+import Carousel from './component/Carousel/Carousel';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+      <Carousel />
     </div>
   );
 }
