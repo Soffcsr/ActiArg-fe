@@ -1,9 +1,11 @@
 import React from 'react'
+
 import Navbar from '../component/Navbar'
 import Carousel from '../component/Carousel/Carousel'
 import CardContent from '../component/Card/CardContent'
 
-const Home = props => {
+
+const Home = () => {
     return(
         <div>
         <Navbar/>
