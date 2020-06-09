@@ -41,6 +41,7 @@ body{
   }
 }
 
+
 .navbar-list{
   list-style: none;
   color: white; 
@@ -68,4 +69,5 @@ body{
 i.fa-bars{
   color: darkred;
 }
+
 
