@@ -12,8 +12,8 @@ const Carousel = () => {
                 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner">
-
-                <div className="dataCarousel">
+                
+            <div>
                     {Datas.map((data) => {
                         return <ItemCarousel
                             key={data.id}
@@ -21,21 +21,22 @@ const Carousel = () => {
                             img={data.img}
                             alt={data.alt}
                             title={data.title}
-                            description={data.description}
-                            nameBtn={data.nameBtn}
-                        />
+                            description={data.description} 
+                            action={data.action}                           
+                            nameBtn={data.nameBtn} 
+                            />
                     })}
                 </div>
 
             </div>
-            {/* <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="sr-only">Previous</span>
             </a>
             <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="sr-only">Next</span>
-            </a> */}
+            </a>
         </div>
     )
 }
