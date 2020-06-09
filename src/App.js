@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import './component/Carousel/Carousel'
-import './component/Card/CardContent'
-import Carousel from './component/Carousel/Carousel';
-import CardContent from './component/Card/CardContent';
+import Home from './views/Home'
 
 function App() {
   return (
     <div className="App">
-      <Carousel />
-      <CardContent />
+
+      <Home/>
+
     </div>
   );
 }
