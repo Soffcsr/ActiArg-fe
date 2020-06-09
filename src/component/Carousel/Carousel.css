@@ -50,7 +50,7 @@
     top: calc(34%);
 }
 
-.btn-primary {
+.actiar-btn {
     color: #fff;
     background-color: transparent;
     border-color: rgb(226, 86, 31);
@@ -63,8 +63,20 @@
     height: 3em;
 }
 
-.btn-primary:hover {
+.actiar-btn:hover {
     color: #fff;
     background-color: rgb(226, 86, 31);
     border-color: rgb(226, 86, 31);
 }
+
+.actiar-btn:active {
+    color: #000;
+    background-color: #FFF;
+    border-color: rgb(226, 86, 31);
+}
+
+*:focus {
+    /* outline: none !important; */
+    box-shadow: none !important;
+}
+

@@ -9,7 +9,7 @@ const ItemCarousel = (props) => {
         <p className="description">{props.description}</p>
         {
           props.action === "yes" ?
-            <button type="button" className="btn btn-primary">
+            <button type="button" className="btn actiar-btn">
               { props.nameBtn }
             </button>
             : null
