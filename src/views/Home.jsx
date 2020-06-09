@@ -1,16 +1,16 @@
 import React from 'react'
 
+import Navbar from '../component/Navbar'
 import Carousel from '../component/Carousel/Carousel'
-
-import Navbar from '../components/Navbar'
+import CardContent from '../component/Card/CardContent'
 
 
 const Home = () => {
     return(
-
         <div>
-          <Navbar/>
-            <Carousel/>
+        <Navbar/>
+        <Carousel/>
+        <CardContent/>
         </div>
 
     )
