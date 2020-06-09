@@ -1,9 +1,18 @@
 import React from 'react'
+
+import Carousel from '../component/Carousel/Carousel'
+
 import Navbar from '../components/Navbar'
 
-const Home = props => {
+
+const Home = () => {
     return(
-        <Navbar/>
+
+        <div>
+          <Navbar/>
+            <Carousel/>
+        </div>
+
     )
 }
 
