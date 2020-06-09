@@ -1,3 +1,7 @@
+body{
+  background-color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +40,32 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-list{
+  list-style: none;
+  color: white; 
+}
+
+.navbar-list li {
+  margin: 2%;
+  width: 7%;
+}
+
+.navbar-list li a{
+  text-decoration: none;
+  color: white;
+} 
+
+.navbar-list li a:hover{
+  text-decoration: none;
+  color: white;
+  cursor: default;
+  border-bottom: solid darkred 4px ;
+  text-shadow: 1px 1px 10px darkred;
+  letter-spacing: 0.1rem;
+} 
+
+i.fa-bars{
+  color: darkred;
+}
+
