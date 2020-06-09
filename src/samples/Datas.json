@@ -12,21 +12,25 @@
     {
         "id": 1,
         "isActive": "", 
+
         "img": "https://i.ibb.co/ySV0d3y/segundoooo.jpg",
         "alt": "img1",
         "title": "donde sea",
         "description": "el celu, tu tablet o pc",
         "action": "yes",
         "nameBtn": "descargar"
+
     },
     {
         "id": 2,
         "isActive": "", 
+
         "img": "https://i.ibb.co/pjwvF2X/terceroooo.jpg",
         "alt": "img1",
         "title": "seguro",
         "description": "paga desde casa",
         "action": "",
         "nameBtn": ""
+
     }
 ]
