@@ -58,10 +58,10 @@ body{
 
 .navbar-list li a:hover{
   text-decoration: none;
-  color: white;
+  color: darkred;
   cursor: default;
-  border-bottom: solid darkred 4px ;
-  text-shadow: 1px 1px 10px darkred;
+  border-bottom: solid darkred 2px ;
+  text-shadow: -1px -1px 10px darkred, 3px 3px 10px darkred;
   letter-spacing: 0.1rem;
 } 
 
