@@ -3,7 +3,9 @@ import Navbar from '../components/Navbar'
 
 const Home = props => {
     return(
-        <Navbar/>
+        <Navbar
+            items={['Home', 'Gimnasios', 'Contactanos']}
+        />
     )
 }
 
