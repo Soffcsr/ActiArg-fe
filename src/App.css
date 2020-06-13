@@ -61,13 +61,45 @@ body{
   text-decoration: none;
   color: white;
   cursor: default;
-  border-bottom: solid darkred 4px ;
-  text-shadow: 1px 1px 10px darkred;
+  border-bottom: solid rgb(225,55,29);
+  text-shadow: -1px -1px 10px rgb(225,55,29), 1px 1px 10px rgb(225,55,29);
   letter-spacing: 0.1rem;
 } 
 
 i.fa-bars{
-  color: darkred;
+  color:rgb(225,55,29);
 }
 
+footer{
+  height: 400px;
+}
 
+footer .form-control{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: black;
+  border-radius: 0;
+}
+
+footer .form-control:focus{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid rgb(225,55,29);
+  background-color: black;
+}
+
+footer i{
+  font-size: 70px;
+  background: -webkit-linear-gradient(left top,rgb(225,55,29), black);
+  background: linear-gradient(to bottom right, rgb(225,55,29), black);
+  -webkit-background-clip: text;
+  background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+}
+
+footer{
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
