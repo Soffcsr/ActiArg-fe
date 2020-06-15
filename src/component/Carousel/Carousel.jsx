@@ -21,7 +21,8 @@ const Carousel = () => {
                             img={data.img}
                             alt={data.alt}
                             title={data.title}
-                            description={data.description}                            
+                            description={data.description} 
+                            action={data.action}                           
                             nameBtn={data.nameBtn} 
                             />
                     })}
