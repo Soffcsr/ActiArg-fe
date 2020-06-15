@@ -59,7 +59,7 @@ body{
 
 .navbar-list li a:hover{
   text-decoration: none;
-  color: white;
+  color: darkred;
   cursor: default;
   border-bottom: solid rgb(225,55,29);
   text-shadow: -1px -1px 10px rgb(225,55,29), 1px 1px 10px rgb(225,55,29);

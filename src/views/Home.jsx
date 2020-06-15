@@ -8,12 +8,9 @@ import CardContent from '../component/Card/CardContent'
 
 const Home = () => {
     return(
-        <div>
-            <Navbar/>
-            <Carousel/>
-            <CardContent/>
-            <Footer/>
-        </div>
+        <Navbar
+            items={['Home', 'Gimnasios', 'Contactanos']}
+        />
     )
 }
 
