@@ -7,10 +7,15 @@ import CardContent from '../component/Card/CardContent'
 
 
 const Home = () => {
-    return(
+    return(    
+        <div>
         <Navbar
             items={['Home', 'Gimnasios', 'Contactanos']}
         />
+        <Carousel/>
+        <CardContent/>
+        <Footer/>
+        </div>
     )
 }
 
