@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import './component/Carousel/Carousel'
-import Home from './views/Home';
-import GymProfile from './views/GymProfile';
+import Home from './views/Home'
+import GymProfile from './views/GymProfile/GymProfile'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <GymProfile/>
 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
