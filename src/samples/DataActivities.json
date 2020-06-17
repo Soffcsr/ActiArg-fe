@@ -1,0 +1,29 @@
+[   
+    {
+        "id": 0,
+        "img": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "alt": "act1",
+        "title": "POWER T",
+        "description": "Power lift class, para los mas exigentes. Acompañados del profe Carlos Carlin Carlangas",
+        "action": "yes",
+        "nameBtn": "read more"
+    },
+    {
+        "id": 1,
+        "img": "https://img2.goodfon.com/wallpaper/nbig/b/a1/fitness-exercise-classes.jpg",
+        "alt": "act2",
+        "title": "FUNCTIONAL",
+        "description": "Movimientos complejos y multi-articulares con pesas e instructor personalizado",
+        "action": "yes",
+        "nameBtn": "read more"
+    },
+    {
+        "id": 2,
+        "img": "https://i.pinimg.com/originals/a6/7a/6a/a67a6a89d98ffc0eda2879e06dbdc1a1.jpg",
+        "alt": "act3",
+        "title": "ZUMBA",
+        "description": "La zumba es un tipo de actividad física basada en ritmos y músicas lationamericanas.",
+        "action": "yes",
+        "nameBtn": "read more"
+    }
+]

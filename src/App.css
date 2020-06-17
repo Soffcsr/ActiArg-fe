@@ -8,6 +8,7 @@ body{
 	font-smoothing: antialiased;
 }
 
+/* Desde aqui */
 h1,
 h2,
 h3,
@@ -63,6 +64,8 @@ button:focus,
 textarea:focus {
 	outline: none;
 }
+
+/* hasta aqui, creo que esta causando problemas */
 
 a:hover,
 a:focus {
@@ -487,4 +490,96 @@ footer{
 	transform: rotate3d(1,0,0,0deg);
 	opacity: 1;
 }
+
+
+/* ========== ACTIVITIES COMP START ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+*:focus {
+    box-shadow: none !important;
+}
+
+.actiar-btn {
+    color: #fff;
+    background-color: transparent;
+    border-color: rgb(226, 86, 31);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7em;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    width: 130px;
+    height: 3em;
+}
+
+.actiar-btn:active {
+    color: #000;
+    background-color: #FFF;
+    border-color: rgb(226, 86, 31);
+}
+
+.actiar-btn:hover {
+    color: #fff;
+    background-color: rgb(226, 86, 31);
+    border-color: rgb(226, 86, 31);
+}
+
+.card{
+    border: none;
+    color: white;
+    text-align: center;   
+}
+
+.card-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.73rem;
+    line-height: 1rem;
+}
+
+.card-img-overlay{
+    top: 2.5rem;
+}
+
+.cool-hovbot:after{
+    position: relative;
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background:  rgb(228,56,28);
+    transition: width .2s;
+    bottom: -0.7rem;
+}
+
+.cool-hovbot:hover::after {
+    width: 100%;
+    transition: width .2s;
+}
+
+.card-img{
+    height: 16rem;
+    width: auto;
+    filter:brightness(0.4);
+    margin-bottom: -1.18rem;
+}
+
+.card-title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.others{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 0.8rem;
+    background: linear-gradient(10deg, #ff4800, rgb(117, 24, 1));;
+    height: 3.5rem;
+    width: 100%;
+}
+
+/* ========== ACTIVITIES COMP EMD ==========*/
 
