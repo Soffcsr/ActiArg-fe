@@ -1,8 +1,21 @@
 import React from 'react'
 
-const Home = props => {
-    return(
-        <h1>Home</h1>
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
+import Carousel from '../component/Carousel/Carousel'
+import CardContent from '../component/Card/CardContent'
+
+
+const Home = () => {
+    return(    
+        <div>
+        <Navbar
+            items={['Home', 'Gimnasios', 'Contactanos']}
+        />
+        <Carousel/>
+        <CardContent/>
+        <Footer/>
+        </div>
     )
 }
 

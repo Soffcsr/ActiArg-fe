@@ -1,16 +1,19 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import './component/Carousel/Carousel'
+import Home from './views/Home'
+import GymProfile from './views/GymProfile/GymProfile'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+
+
+      <GymProfile/>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
