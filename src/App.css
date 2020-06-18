@@ -488,3 +488,52 @@ footer{
 	opacity: 1;
 }
 
+/*---------------------
+  Map Section
+-----------------------*/
+
+.map {
+	height: 590px;
+	position: relative;
+}
+
+.map iframe {
+	width: 100%;
+}
+
+.map-contact-detalis {
+	width: 420px;
+	padding: 40px;
+  background-image: linear-gradient(to left top, #d5d5d5, #dfdfdf, #eaeaea, #f4f4f4, #ffffff);
+	position: absolute;
+	right: 120px;
+	top: 80px;
+	-webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+	box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+}
+
+.map-contact-detalis .open-time {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.map-contact-detalis .open-time h5 {
+	font-size: 18px;
+	color: rgb(193,37,15);
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+
+
+.map-contact-detalis .open-time ul li {
+	font-size: 16px;
+	color: rgb(33,33,33);
+	list-style: none;
+	font-weight: 600;
+	line-height: 25px;
+	position: relative;
+
+}
+
