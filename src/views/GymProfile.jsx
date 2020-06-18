@@ -1,11 +1,13 @@
 import React from 'react'
-import Datas from '../samples/DatasJumbotron.json'
+import DatasJumbotron from '../samples/DatasJumbotron.json'
+import DataContact from '../samples/DataContact.json'
 import Jumbotron from '../component/Jumbotron/Jumbotron'
+import Contact from '../component/Contact'
 
 const GymProfile = props => {
     return(
         <div>
-        {Datas.map((data) => {
+        {DatasJumbotron.map((data) => {
             return <Jumbotron
                 img1={data.img1}
                 img2={data.img2}
@@ -21,7 +23,16 @@ const GymProfile = props => {
                 objectivedescription3={data.objectivedescription3} 
                 
                 />
+               
         })}
+    <br/>
+    {DataContact.map((data) => {
+            return <Contact 
+            phone= {data.phone}
+            adress={data.adress}
+            atention={data.atention}            
+            />  
+    })}
     </div>
     )
 }
