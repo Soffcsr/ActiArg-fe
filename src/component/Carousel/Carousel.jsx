@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemCarousel from './ItemCarousel'
 import Datas from '../../samples/Datas.json'
-import '../Carousel/Carousel.css'
+import '../../App.css'
 
 const Carousel = () => {
     return (
