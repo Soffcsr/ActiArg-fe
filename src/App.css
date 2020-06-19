@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+*:focus {
+    box-shadow: none !important;
+}
 body{
   background-color: black;
   font-family: "Nunito Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 }
 
 h1,
@@ -47,7 +48,6 @@ h6 {
 p {
 	font-size: 16px;
 	font-family: "Nunito Sans", sans-serif;
-	color: #8f8fa8;
 	font-weight: 400;
 	line-height: 24px;
 	margin: 0 0 15px 0;
@@ -261,12 +261,6 @@ footer{
 
 
 /* ========== CAROUSEL COMP START ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-*:focus {
-    box-shadow: none !important;
-}
-
 #myCarousel-indicators>li {
     border-radius: 50%;
     width: 10px;
@@ -340,18 +334,13 @@ footer{
     text-transform: uppercase;
     text-align: center;
 }
-/* ========== CAROUSEL COMP END ==========*/
+
 
 
 /*CSS Jumbotron*/
-
-
-
-
 .home-about {
 	background: rgb(21,21,21);
 }
-
 .about-text {
 	padding-top: 5px;
 }
@@ -376,7 +365,6 @@ footer{
 	color: #ffffff;
 	margin-bottom: 10px;
 }
-
 
 .ch-grid {
 	margin: 20px 0 0 0;
@@ -487,4 +475,54 @@ footer{
 	transform: rotate3d(1,0,0,0deg);
 	opacity: 1;
 }
+
+/*---------------------
+  Map Section
+-----------------------*/
+
+.map {
+	height: 590px;
+	position: relative;
+}
+
+.map iframe {
+	width: 100%;
+}
+
+.map-contact-detalis {
+	width: 420px;
+	padding: 40px;
+  background-image: linear-gradient(to left top, #d5d5d5, #dfdfdf, #eaeaea, #f4f4f4, #ffffff);
+	position: absolute;
+	right: 120px;
+	top: 80px;
+	-webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+	box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+}
+
+.map-contact-detalis .open-time {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.map-contact-detalis .open-time h5 {
+	font-size: 18px;
+	color: rgb(193,37,15);
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.map-contact-detalis .open-time ul li {
+	font-size: 16px;
+	color: rgb(33,33,33);
+	list-style: none;
+	font-weight: 600;
+	line-height: 25px;
+	position: relative;
+
+}
+
+
+
 
