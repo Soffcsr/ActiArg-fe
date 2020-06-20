@@ -3,6 +3,9 @@ import DatasJumbotron from '../../samples/DatasJumbotron.json'
 import DataContact from '../../samples/DataContact.json'
 import Jumbotron from '../GymProfile/Jumbotron/Jumbotron'
 import Contact from '../GymProfile/Contact'
+import Activity from './Activities/Activity'
+import DataActivities from '../../samples/DataActivities.json'
+
 
 const GymProfile = props => {
     return(
@@ -33,7 +36,23 @@ const GymProfile = props => {
             atention={data.atention}            
             />  
     })}
+        
+        <div className="card-group">
+                {DataActivities.map((DataActivity) => {
+                    return <Activity
+                        key={DataActivity.id}
+                        img={DataActivity.img}
+                        alt={DataActivity.alt}
+                        title={DataActivity.title}
+                        description={DataActivity.description}
+                        action={DataActivity.action}
+                        nameBtn={DataActivity.nameBtn}
+                        size={DataActivities.size}
+                    />
+                })}
+            </div>
     </div>
+
     )
 }
 
