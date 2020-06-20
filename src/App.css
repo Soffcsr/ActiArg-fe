@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+*:focus {
+    box-shadow: none !important;
+}
 body{
   background-color: black;
   font-family: "Nunito Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 }
 
+/* Desde aqui */
 h1,
 h2,
 h3,
@@ -15,7 +17,6 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	color: #111111;
 	font-weight: 400;
 	font-family: "Oswald", sans-serif;
 }
@@ -47,7 +48,6 @@ h6 {
 p {
 	font-size: 16px;
 	font-family: "Nunito Sans", sans-serif;
-	color: #8f8fa8;
 	font-weight: 400;
 	line-height: 24px;
 	margin: 0 0 15px 0;
@@ -63,6 +63,8 @@ button:focus,
 textarea:focus {
 	outline: none;
 }
+
+/* hasta aqui, creo que esta causando problemas */
 
 a:hover,
 a:focus {
@@ -261,12 +263,6 @@ footer{
 
 
 /* ========== CAROUSEL COMP START ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-*:focus {
-    box-shadow: none !important;
-}
-
 #myCarousel-indicators>li {
     border-radius: 50%;
     width: 10px;
@@ -340,18 +336,13 @@ footer{
     text-transform: uppercase;
     text-align: center;
 }
-/* ========== CAROUSEL COMP END ==========*/
+
 
 
 /*CSS Jumbotron*/
-
-
-
-
 .home-about {
 	background: rgb(21,21,21);
 }
-
 .about-text {
 	padding-top: 5px;
 }
@@ -376,7 +367,6 @@ footer{
 	color: #ffffff;
 	margin-bottom: 10px;
 }
-
 
 .ch-grid {
 	margin: 20px 0 0 0;
@@ -488,3 +478,225 @@ footer{
 	opacity: 1;
 }
 
+/*---------------------
+  Map Section
+-----------------------*/
+
+.map {
+	height: 590px;
+	position: relative;
+}
+
+.map iframe {
+	width: 100%;
+}
+
+.map-contact-detalis {
+	width: 420px;
+	padding: 40px;
+  background-image: linear-gradient(to left top, #d5d5d5, #dfdfdf, #eaeaea, #f4f4f4, #ffffff);
+	position: absolute;
+	right: 120px;
+	top: 80px;
+	-webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+	box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+}
+
+.map-contact-detalis .open-time {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.map-contact-detalis .open-time h5 {
+	font-size: 18px;
+	color: rgb(193,37,15);
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.map-contact-detalis .open-time ul li {
+	font-size: 16px;
+	color: rgb(33,33,33);
+	list-style: none;
+	font-weight: 600;
+	line-height: 25px;
+	position: relative;
+
+}
+
+/* ========== ACTIVITIES COMP START ==========*/
+.actiar-btn {
+    color: #fff;
+    background-color: transparent;
+    border-color: rgb(226, 86, 31);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7em;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    width: 130px;
+    height: 3em;
+}
+
+.actiar-btn:active {
+    color: #000;
+    background-color: #FFF;
+    border-color: rgb(226, 86, 31);
+}
+
+.actiar-btn:hover {
+    color: #fff;
+    background-color: rgb(226, 86, 31);
+    border-color: rgb(226, 86, 31);
+}
+
+.card{
+    border: none;
+    color: white;
+    text-align: center;   
+}
+
+.card-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.73rem;
+    line-height: 1rem;
+}
+
+.card-img-overlay{
+    top: 2.5rem;
+}
+
+.cool-hovbot:after{
+    position: relative;
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background:  rgb(228,56,28);
+    transition: width .2s;
+    bottom: -0.7rem;
+}
+
+.cool-hovbot:hover::after {
+    width: 100%;
+    transition: width .2s;
+}
+
+.card-img{
+    height: 16rem;
+    width: auto;
+    filter:brightness(0.4);
+    margin-bottom: -1.18rem;
+}
+
+.card-title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.others{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 0.8rem;
+    background: linear-gradient(10deg, #ff4800, rgb(117, 24, 1));;
+    height: 3.5rem;
+    width: 100%;
+}
+
+/* ========== ACTIVITIES COMP EMD ==========*/
+
+/* START PRICE COMPONENT */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+.card:hover {
+    color: orangered;
+    transform: scale(1.05);
+    transition: .5s
+}
+
+.card-tile, .customPriceH2, .card-title, .card-price, .signo {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.card-title{
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
+
+.signo{
+    font-size: 1.3rem;
+    vertical-align: 0.8rem;
+}
+
+.card-price{
+    font-size: 2.6rem;
+}
+
+.customPriceH2{
+    color: white;
+    margin-top: 2rem;
+}
+
+.card-description{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.95rem;
+    padding-top: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.customPrice {
+    height: auto;
+    width: auto;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2.5rem 0;
+}
+
+.card {
+    height: 23rem;
+    margin: 2rem 3rem;
+    box-shadow: 1rem -1rem rgba(19, 19, 19, 0.5);
+    border-radius: 2rem ;
+}
+
+.customBtn {
+    color: #fff;
+    background-color: transparent;
+    border-color: orangered;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    width: 6em;
+    height: 2.5em;
+    margin-top: 1rem;
+}
+
+.customBtn:active {
+    color: #000;
+    background-color: #FFF;
+    border-color: rgb(226, 86, 31);
+}
+
+.customBtn:hover {
+    color: #fff;
+    background-color: rgb(226, 86, 31);
+    border-color: rgb(226, 86, 31);
+}
+
+.customBtn:active,
+.customBtn:focus,
+.customBtn:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* END PRICE COMPONENT */
