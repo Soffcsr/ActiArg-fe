@@ -609,3 +609,95 @@ footer{
 }
 
 /* ========== ACTIVITIES COMP EMD ==========*/
+
+/* START PRICE COMPONENT */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+.card:hover {
+    color: orangered;
+    transform: scale(1.05);
+    transition: .5s
+}
+
+.card-tile, .customPriceH2, .card-title, .card-price, .signo {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.card-title{
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
+
+.signo{
+    font-size: 1.3rem;
+    vertical-align: 0.8rem;
+}
+
+.card-price{
+    font-size: 2.6rem;
+}
+
+.customPriceH2{
+    color: white;
+    margin-top: 2rem;
+}
+
+.card-description{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.95rem;
+    padding-top: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.customPrice {
+    height: auto;
+    width: auto;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2.5rem 0;
+}
+
+.card {
+    height: 23rem;
+    margin: 2rem 3rem;
+    box-shadow: 1rem -1rem rgba(19, 19, 19, 0.5);
+    border-radius: 2rem ;
+}
+
+.customBtn {
+    color: #fff;
+    background-color: transparent;
+    border-color: orangered;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    width: 6em;
+    height: 2.5em;
+    margin-top: 1rem;
+}
+
+.customBtn:active {
+    color: #000;
+    background-color: #FFF;
+    border-color: rgb(226, 86, 31);
+}
+
+.customBtn:hover {
+    color: #fff;
+    background-color: rgb(226, 86, 31);
+    border-color: rgb(226, 86, 31);
+}
+
+.customBtn:active,
+.customBtn:focus,
+.customBtn:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* END PRICE COMPONENT */
