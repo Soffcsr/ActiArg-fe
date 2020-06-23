@@ -3,6 +3,7 @@ import './App.css'
 import './component/Carousel/Carousel'
 import Home from './views/Home'
 import GymProfile from './views/GymProfile/GymProfile'
+import Login from './views/Login'
 import{
   BrowserRouter as Router,
   Switch,
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/Gym3">
             <GymProfile/>
+          </Route>
+          <Route path="/login">
+            <Login/>
           </Route>
         </Switch>
       </Router>

@@ -147,11 +147,17 @@ i.fa-bars{
   color:rgb(225,55,29);
 }
 
+.right{
+  position: absolute;
+  margin-left: 76vw;
+  margin-top: 3.5vh;
+}
+
 footer{
   height: 400px;
 }
 
-footer .form-control{
+.form-control{
   border-top: none;
   border-left: none;
   border-right: none;
@@ -159,7 +165,12 @@ footer .form-control{
   border-radius: 0;
 }
 
-footer .form-control:focus{
+.form-group label{
+  color: rgb(225,55,29);
+  font-family: 'Oswald', sans-serif; 
+}
+
+.form-control:focus{
   border-top: none;
   border-left: none;
   border-right: none;
@@ -700,3 +711,6 @@ footer{
 }
 
 /* END PRICE COMPONENT */
+.img, .img img{
+  height: 100vh;
+}
