@@ -46,11 +46,13 @@ i.fa-bars {
   color: rgb(225, 55, 29);
 }
 
+
 footer {
   height: 400px;
 }
 
 footer .form-control {
+
   border-top: none;
   border-left: none;
   border-right: none;
@@ -58,7 +60,9 @@ footer .form-control {
   border-radius: 0;
 }
 
+
 footer .form-control:focus {
+
   border-top: none;
   border-left: none;
   border-right: none;
@@ -674,4 +678,5 @@ footer {
   }
 }
 /* END ARROWSCROLL COMPONENT */
+
 
