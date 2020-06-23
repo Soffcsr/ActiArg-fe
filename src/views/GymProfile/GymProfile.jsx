@@ -9,6 +9,7 @@ import Price from './Price/Price'
 import DataPrices from '../../samples/DataPrices.json'
 import Navbar from '../../component/Navbar'
 import Carousel from '../../component/Carousel/Carousel'
+import ScrollArrow from '../../component/ScrollArrow'
 
 const GymProfile = () => {
     const [isActive, setActive] = useState(false)
@@ -98,6 +99,9 @@ const GymProfile = () => {
                         atention={data.atention}
                     />
                 })}
+            </div>
+            <div>
+               <ScrollArrow/>
             </div>
         </div>
 

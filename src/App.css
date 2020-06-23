@@ -1,127 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+
 *:focus {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
-body{
+
+body {
   background-color: black;
   font-family: "Nunito Sans", sans-serif;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* Desde aqui */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
-	font-weight: 400;
-	font-family: "Oswald", sans-serif;
-}
-
-h1 {
-	font-size: 70px;
-}
-
-h2 {
-	font-size: 36px;
-}
-
-h3 {
-	font-size: 30px;
-}
-
-h4 {
-	font-size: 24px;
-}
-
-h5 {
-	font-size: 18px;
-}
-
-h6 {
-	font-size: 16px;
-}
-
-p {
-	font-size: 16px;
-	font-family: "Nunito Sans", sans-serif;
-	font-weight: 400;
-	line-height: 24px;
-	margin: 0 0 15px 0;
-}
-
-img {
-	max-width: 100%;
-}
-
-input:focus,
-select:focus,
-button:focus,
-textarea:focus {
-	outline: none;
-}
-
-/* hasta aqui, creo que esta causando problemas */
-
-a:hover,
-a:focus {
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-}
-
-ul,
-ol {
-	padding: 0;
-	margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.navbar-list{
+/* NAVBAR COMPONENT START */
+.navbar-list {
   list-style: none;
-  color: white; 
+  color: white;
 }
 
 .navbar-list li {
@@ -129,35 +26,33 @@ ol {
   width: 7%;
 }
 
-.navbar-list li a{
+.navbar-list li a {
   text-decoration: none;
   color: white;
-} 
+}
 
-.navbar-list li a:hover{
+.navbar-list li a:hover {
   text-decoration: none;
   color: darkred;
   cursor: default;
-  border-bottom: solid rgb(225,55,29);
-  text-shadow: -1px -1px 10px rgb(225,55,29), 1px 1px 10px rgb(225,55,29);
+  border-bottom: solid rgb(225, 55, 29);
+  text-shadow: -1px -1px 10px rgb(225, 55, 29), 1px 1px 10px rgb(225, 55, 29);
   letter-spacing: 0.1rem;
-} 
+}
+/* NAVBAR COMPONENT END */
 
-i.fa-bars{
-  color:rgb(225,55,29);
+/* FOOTER COMPONENT START */
+i.fa-bars {
+  color: rgb(225, 55, 29);
 }
 
-.right{
-  position: absolute;
-  margin-left: 76vw;
-  margin-top: 3.5vh;
-}
 
-footer{
+footer {
   height: 400px;
 }
 
-.form-control{
+footer .form-control {
+
   border-top: none;
   border-left: none;
   border-right: none;
@@ -165,541 +60,561 @@ footer{
   border-radius: 0;
 }
 
-.form-group label{
-  color: rgb(225,55,29);
-  font-family: 'Oswald', sans-serif; 
-}
 
-.form-control:focus{
+footer .form-control:focus {
+
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: solid rgb(225,55,29);
+  border-bottom: solid rgb(225, 55, 29);
   background-color: black;
 }
 
-footer i{
+footer i {
   font-size: 70px;
-  background: -webkit-linear-gradient(left top,rgb(225,55,29), black);
-  background: linear-gradient(to bottom right, rgb(225,55,29), black);
+  background: -webkit-linear-gradient(left top, rgb(225, 55, 29), black);
+  background: linear-gradient(to bottom right, rgb(225, 55, 29), black);
   -webkit-background-clip: text;
-  background-clip: text;  
-  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-footer{
+footer {
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
+/* FOOTER COMPONENT START */
 
-/* Card CSS*/
+/* CARD COMPONENT START */
 .main-content {
   float: left;
   width: 100%;
-  background-color: rgb(21,21,21);
+  background-color: rgb(21, 21, 21);
 }
-  @media (max-width: 991.98px) {
-    .main-content {
-      width: 100%;
-      position: relative;
-      float: none; } }
+@media (max-width: 991.98px) {
+  .main-content {
+    width: 100%;
+    position: relative;
+    float: none;
+  }
+}
+.main-content .container-fluid {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 991.98px) {
   .main-content .container-fluid {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0; }
-    @media (max-width: 991.98px) {
-      .main-content .container-fluid {
-        padding-left: 15px;
-        padding-right: 15px; } }
-  .main-content .photos .photo-item {
-    position: relative; }
-    .main-content .photos .photo-item:after {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-      -webkit-transition: .3s all ease;
-      -o-transition: .3s all ease;
-      transition: .3s all ease;
-      opacity: 0;
-      visibility: hidden; }
-    .main-content .photos .photo-item .photo-text-more {
-      position: absolute;
-      z-index: 3;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      margin-top: 30px;
-      -webkit-transition: .3s all ease;
-      -o-transition: .3s all ease;
-      transition: .3s all ease;
-      opacity: 0;
-      visibility: hidden;
-      text-align: center; }
-      .main-content .photos .photo-item .photo-text-more .icon {
-        color: #fff;
-        font-size: 20px; }
-      .main-content .photos .photo-item .photo-text-more .heading {
-        font-size: 16px;
-        color: #fff;
-        margin-bottom: 0; }
-      .main-content .photos .photo-item .photo-text-more .meta {
-        color: #cccccc;
-        text-transform: uppercase;
-        font-size: 12px; }
-    .main-content .photos .photo-item img {
-      width: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-      height: 300px;
-      margin-bottom: 20px; }
-      @media (max-width: 575.98px) {
-        .main-content .photos .photo-item img {
-          height: 200px; } }
-    .main-content .photos .photo-item:hover:after {
-      opacity: 1;
-      visibility: visible; }
-    .main-content .photos .photo-item:hover .photo-text-more {
-      margin-top: 0;
-      opacity: 1;
-      visibility: visible; }
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.main-content .photos .photo-item {
+  position: relative;
+}
+.main-content .photos .photo-item:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.main-content .photos .photo-item .photo-text-more {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.main-content .photos .photo-item .photo-text-more .icon {
+  color: #fff;
+  font-size: 20px;
+}
+.main-content .photos .photo-item .photo-text-more .heading {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 0;
+}
+.main-content .photos .photo-item .photo-text-more .meta {
+  color: #cccccc;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.main-content .photos .photo-item img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 300px;
+  margin-bottom: 20px;
+}
+@media (max-width: 575.98px) {
+  .main-content .photos .photo-item img {
+    height: 200px;
+  }
+}
+.main-content .photos .photo-item:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+.main-content .photos .photo-item:hover .photo-text-more {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+/* CARD COMPONENT END */
 
-
-/* ========== CAROUSEL COMP START ==========*/
-#myCarousel-indicators>li {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #ffffff
+/* CAROUSEL COMPONENT START */
+#myCarousel-indicators > li {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
 }
 
 .actiar-btn {
-    color: #fff;
-    background-color: transparent;
-    border-color: rgb(226, 86, 31);
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.7em;
-    border-radius: 4px;
-    letter-spacing: 2px;
-    width: 130px;
-    height: 3em;
+  color: #fff;
+  background-color: transparent;
+  border-color: rgb(226, 86, 31);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.7em;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  width: 130px;
+  height: 3em;
 }
 
 .actiar-btn:active {
-    color: #000;
-    background-color: #FFF;
-    border-color: rgb(226, 86, 31);
+  color: #000;
+  background-color: #fff;
+  border-color: rgb(226, 86, 31);
 }
 
 .actiar-btn:hover {
-    color: #fff;
-    background-color: rgb(226, 86, 31);
-    border-color: rgb(226, 86, 31);
+  color: #fff;
+  background-color: rgb(226, 86, 31);
+  border-color: rgb(226, 86, 31);
 }
 
 .carousel-caption {
-    top: calc(34%);
+  top: calc(34%);
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 30px;
-    height: 30px;
-    background-color: #03030312;
-    top: calc(50% - 5px);
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px;
+  height: 30px;
+  background-color: #03030312;
+  top: calc(50% - 5px);
 }
 
 .carousel-control-prev {
-    left: 5%;
+  left: 5%;
 }
 
 .carousel-control-next {
-    right: 5%;
+  right: 5%;
 }
 
 .carousel-item {
-    height: 100vh;
+  height: 100vh;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .description {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3.6em;
-    text-transform: uppercase;
-    line-height: 1.3em;
+  font-family: "Oswald", sans-serif;
+  font-size: 3.6em;
+  text-transform: uppercase;
+  line-height: 1.3em;
 }
 
 .title {
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.4em;
-    text-transform: uppercase;
-    text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
 }
+/* FOOTER COMPONENT END */
 
-
-
-/*CSS Jumbotron*/
+/* JUMBOTRON COMPONENT START */
 .home-about {
-	background: rgb(21,21,21);
+  background: rgb(21, 21, 21);
 }
 .about-text {
-	padding-top: 5px;
+  padding-top: 5px;
 }
 
 .about-text h2 {
-	font-size: 40px;
-	font-weight: 500;
-	color: #ffffff;
-	text-transform: uppercase;
-	margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .about-text p.short-details {
-	font-size: 22px;
-	font-weight: 600;
-	color: #ffffff;
-	line-height: 28px;
-	margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 28px;
+  margin-bottom: 20px;
 }
 
 .about-text p.long-details {
-	color: #ffffff;
-	margin-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .ch-grid {
-	margin: 20px 0 0 0;
-	padding: 0;
-	list-style: none;
-	display: block;
-	text-align: center;
-	width: 100%;
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .ch-grid:after,
 .ch-item:before {
-	content: '';
-    display: table;
+  content: "";
+  display: table;
 }
 
 .ch-grid:after {
-	clear: both;
+  clear: both;
 }
 
 .ch-grid li {
-	width: 220px;
-	height: 220px;
-	display: inline-block;
-	margin: 20px;
+  width: 220px;
+  height: 220px;
+  display: inline-block;
+  margin: 20px;
 }
 
 .ch-item {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	position: relative;
-	cursor: default;
-	perspective: 900px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  perspective: 900px;
 }
-.ch-info{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	transform-style: preserve-3d;
+.ch-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
 }
 .ch-info > div {
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	background-position: center center;
-	transition: all 0.4s linear;
-	transform-origin: 50% 0%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center center;
+  transition: all 0.4s linear;
+  transform-origin: 50% 0%;
 }
 
 .ch-info .ch-info-front {
-	box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
 .ch-info .ch-info-back {
-	transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
-	background: #000;
-	opacity: 0;
+  transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  background: #000;
+  opacity: 0;
 }
 
 .ch-info h3 {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 15px;
-	margin: 0 15px;
-	padding: 80px 0 0 0;
-	height: 110px;
-	font-family: 'Open Sans', Arial, sans-serif;
-	text-shadow: 
-		0 0 1px #fff, 
-		0 1px 2px rgba(0,0,0,0.3);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin: 0 15px;
+  padding: 80px 0 0 0;
+  height: 110px;
+  font-family: "Open Sans", Arial, sans-serif;
+  text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .ch-info p {
-	color: #fff;
-	padding: 10px 5px;
-	font-style: italic;
-	margin: 0 30px;
-	font-size: 12px;
-	border-top: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 10px 5px;
+  font-style: italic;
+  margin: 0 30px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .ch-info p a {
-	display: block;
-	color: rgba(255,255,255,0.7);
-	font-style: normal;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 9px;
-	letter-spacing: 1px;
-	padding-top: 4px;
-	font-family: 'Open Sans', Arial, sans-serif;
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding-top: 4px;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 .ch-info p a:hover {
-	color: rgba(255,242,34, 0.8);
+  color: rgba(255, 242, 34, 0.8);
 }
 
 .ch-item:hover .ch-info-front {
-	transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
-	opacity: 0;
+  transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  opacity: 0;
 }
 
 .ch-item:hover .ch-info-back {
-	transform: rotate3d(1,0,0,0deg);
-	opacity: 1;
+  transform: rotate3d(1, 0, 0, 0deg);
+  opacity: 1;
 }
+/* JUMBOTRON COMPONENT END */
 
-/*---------------------
-  Map Section
------------------------*/
-
+/* MAP COMPONENT START */
 .map {
-	height: 590px;
-	position: relative;
+  height: 590px;
+  position: relative;
 }
 
 .map iframe {
-	width: 100%;
+  width: 100%;
 }
 
 .map-contact-detalis {
-	width: 420px;
-	padding: 40px;
-  background-image: linear-gradient(to left top, #d5d5d5, #dfdfdf, #eaeaea, #f4f4f4, #ffffff);
-	position: absolute;
-	right: 120px;
-	top: 80px;
-	-webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
-	box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+  width: 420px;
+  padding: 40px;
+  background-image: linear-gradient(
+    to left top,
+    #d5d5d5,
+    #dfdfdf,
+    #eaeaea,
+    #f4f4f4,
+    #ffffff
+  );
+  position: absolute;
+  right: 120px;
+  top: 80px;
+  -webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
+  box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
 }
 
 .map-contact-detalis .open-time {
-	overflow: hidden;
-	margin-bottom: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .map-contact-detalis .open-time h5 {
-	font-size: 18px;
-	color: rgb(193,37,15);
-	font-weight: 500;
-	text-transform: uppercase;
-	margin-bottom: 5px;
+  font-size: 18px;
+  color: rgb(193, 37, 15);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .map-contact-detalis .open-time ul li {
-	font-size: 16px;
-	color: rgb(33,33,33);
-	list-style: none;
-	font-weight: 600;
-	line-height: 25px;
-	position: relative;
-
+  font-size: 16px;
+  color: rgb(33, 33, 33);
+  list-style: none;
+  font-weight: 600;
+  line-height: 25px;
+  position: relative;
 }
+/* MAP COMPONENT END */
 
-/* ========== ACTIVITIES COMP START ==========*/
+/* ACTIVITIES COMPONENT START */
 .actiar-btn {
-    color: #fff;
-    background-color: transparent;
-    border-color: rgb(226, 86, 31);
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.7em;
-    border-radius: 4px;
-    letter-spacing: 2px;
-    width: 130px;
-    height: 3em;
+  color: #fff;
+  background-color: transparent;
+  border-color: rgb(226, 86, 31);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.7em;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  width: 130px;
+  height: 3em;
 }
 
 .actiar-btn:active {
-    color: #000;
-    background-color: #FFF;
-    border-color: rgb(226, 86, 31);
+  color: #000;
+  background-color: #fff;
+  border-color: rgb(226, 86, 31);
 }
 
 .actiar-btn:hover {
-    color: #fff;
-    background-color: rgb(226, 86, 31);
-    border-color: rgb(226, 86, 31);
+  color: #fff;
+  background-color: rgb(226, 86, 31);
+  border-color: rgb(226, 86, 31);
 }
 
-.card{
-    border: none;
-    color: white;
-    text-align: center;   
+.cardActivity {
+  border: none;
+  color: white;
+  text-align: center;
 }
 
-.card-description {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.73rem;
-    line-height: 1rem;
+.card-activity-description {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.73rem;
+  line-height: 1rem;
 }
 
-.card-img-overlay{
-    top: 2.5rem;
+.card-img-overlay {
+  top: 2.5rem;
 }
 
-.cool-hovbot:after{
-    position: relative;
-    content: '';
-    display: block;
-    width: 0;
-    height: 5px;
-    background:  rgb(228,56,28);
-    transition: width .2s;
-    bottom: -0.7rem;
+.cool-hovbot:after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background: rgb(228, 56, 28);
+  transition: width 0.2s;
+  bottom: -0.7rem;
 }
 
 .cool-hovbot:hover::after {
-    width: 100%;
-    transition: width .2s;
+  width: 100%;
+  transition: width 0.2s;
 }
 
-.card-img{
-    height: 16rem;
-    width: auto;
-    filter:brightness(0.4);
-    margin-bottom: -1.18rem;
+.card-img {
+  height: 16rem;
+  width: auto;
+  filter: brightness(0.4);
+  margin-bottom: -1.18rem;
 }
 
-.card-title{
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    text-align: center;
+.card-activity-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.others{
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-    color: white;
-    margin-top: 0.8rem;
-    background: linear-gradient(10deg, #ff4800, rgb(117, 24, 1));;
-    height: 3.5rem;
-    width: 100%;
+.others {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: white;
+  margin-top: 0.8rem;
+  background: linear-gradient(10deg, #ff4800, rgb(117, 24, 1));
+  height: 3.5rem;
+  width: 100%;
 }
 
-/* ========== ACTIVITIES COMP EMD ==========*/
+/* ACTIVITIES COMPONENT END */
 
 /* START PRICE COMPONENT */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap");
 
 .card:hover {
-    color: orangered;
-    transform: scale(1.05);
-    transition: .5s
+  color: orangered;
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
-.card-tile, .customPriceH2, .card-title, .card-price, .signo {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+.card-tile,
+.customPriceH2,
+.card-title,
+.card-price,
+.signo {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
-.card-title{
-    font-size: 1.3rem;
-    margin-top: 3rem;
-}
-
-.signo{
-    font-size: 1.3rem;
-    vertical-align: 0.8rem;
-}
-
-.card-price{
-    font-size: 2.6rem;
+.card-title {
+  font-size: 1.3rem;
+  margin-top: 3rem;
 }
 
-.customPriceH2{
-    color: white;
-    margin-top: 2rem;
+.signo {
+  font-size: 1.3rem;
+  vertical-align: 0.8rem;
 }
 
-.card-description{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.95rem;
-    padding-top: 1.5rem;
-    color: rgb(0, 0, 0);
+.card-price {
+  font-size: 2.6rem;
+}
+
+.customPriceH2 {
+  color: white;
+  margin-top: 2rem;
+}
+
+.card-description {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem;
+  padding-top: 1.5rem;
+  color: rgb(0, 0, 0);
 }
 
 .customPrice {
-    height: auto;
-    width: auto;
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 2.5rem 0;
+  height: auto;
+  width: auto;
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2.5rem 0;
 }
 
-.card {
-    height: 23rem;
-    margin: 2rem 3rem;
-    box-shadow: 1rem -1rem rgba(19, 19, 19, 0.5);
-    border-radius: 2rem ;
+.cardPrice {
+  height: 23rem;
+  margin: 2rem 3rem;
+  border-radius: 1rem;
 }
 
 .customBtn {
-    color: #fff;
-    background-color: transparent;
-    border-color: orangered;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2em;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    width: 6em;
-    height: 2.5em;
-    margin-top: 1rem;
+  color: #fff;
+  background-color: transparent;
+  border-color: orangered;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  width: 6em;
+  height: 2.5em;
+  margin-top: 1rem;
 }
 
 .customBtn:active {
-    color: #000;
-    background-color: #FFF;
-    border-color: rgb(226, 86, 31);
+  color: #000;
+  background-color: #fff;
+  border-color: rgb(226, 86, 31);
 }
 
 .customBtn:hover {
-    color: #fff;
-    background-color: rgb(226, 86, 31);
-    border-color: rgb(226, 86, 31);
+  color: #fff;
+  background-color: rgb(226, 86, 31);
+  border-color: rgb(226, 86, 31);
 }
 
 .customBtn:active,
@@ -709,8 +624,59 @@ footer{
   outline: 0;
   box-shadow: none;
 }
-
 /* END PRICE COMPONENT */
-.img, .img img{
-  height: 100vh;
+
+/* START GYMPROFILE COMPONENT */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
+
+#myBtn:hover {
+  background-color: rgb(0, 0, 0);
+}
+/* END GYMPROFILE COMPONENT */
+
+/* START ARROWSCROLL COMPONENT */
+.scrollTop {
+  position: fixed; 
+  width: 100%;
+  bottom: 20px;
+  align-items: flex-start;
+  height: 20px;
+  justify-content: flex-start;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  left: 43%;
+  color: grey;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/* END ARROWSCROLL COMPONENT */
+
+

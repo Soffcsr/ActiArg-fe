@@ -4,7 +4,7 @@ import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 import Carousel from '../component/Carousel/Carousel'
 import CardContent from '../component/Card/CardContent'
-
+import ScrollArrow from '../component/ScrollArrow'
 
 const Home = () => {
     return(    
@@ -15,6 +15,7 @@ const Home = () => {
         <Carousel/>
         <CardContent/>
         <Footer/>
+        <ScrollArrow/>
         </div>
     )
 }
