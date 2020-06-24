@@ -2,7 +2,7 @@
     {
         "id": 0,
         "isActive": "active", 
-        "img": "https://i.ibb.co/8cWKBw0/primerrroooooo.jpg",
+        "img": "https://i.ibb.co/61L6rhr/hero-1.jpg",
         "alt": "img1",
         "title": "actiar",
         "description": "busca tu gym y anotate",
@@ -12,25 +12,21 @@
     {
         "id": 1,
         "isActive": "", 
-
-        "img": "https://i.ibb.co/ySV0d3y/segundoooo.jpg",
+        "img": "https://i.ibb.co/RHP9gbn/hero-2.jpg",
         "alt": "img1",
         "title": "donde sea",
         "description": "el celu, tu tablet o pc",
         "action": "yes",
         "nameBtn": "descargar"
-
     },
     {
         "id": 2,
         "isActive": "", 
-
-        "img": "https://i.ibb.co/pjwvF2X/terceroooo.jpg",
+        "img": "https://i.ibb.co/MZ1vb7r/hero-3.jpg",
         "alt": "img1",
         "title": "seguro",
         "description": "paga desde casa",
         "action": "",
         "nameBtn": ""
-
     }
 ]

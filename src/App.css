@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(21,21,21);
   font-family: "Nunito Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -46,50 +46,66 @@ i.fa-bars {
   color: rgb(225, 55, 29);
 }
 
+.boxFooter{
+  background: rgb(21,21,21);
+}
 
 footer {
   height: 400px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+}
+
+.box1{
+  position: relative;
+  top: 1rem;
+}
+
+footer h5{
+  font-size: 3rem;
+}
+
+.nav{
+  display: flex;
+  position: relative;
+  font-size: 1.8rem;
+  justify-content: center;
 }
 
 footer .form-control {
-
   border-top: none;
   border-left: none;
   border-right: none;
-  background: black;
+  background: rgb(21,21,21);
   border-radius: 0;
 }
 
 
 footer .form-control:focus {
-
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: solid rgb(225, 55, 29);
-  background-color: black;
+  background-color: rgb(21,21,21);
 }
 
 footer i {
-  font-size: 70px;
-  background: -webkit-linear-gradient(left top, rgb(225, 55, 29), black);
-  background: linear-gradient(to bottom right, rgb(225, 55, 29), black);
+  font-size: 4rem;
+  background: rgb(225, 55, 29);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-footer {
-  color: white;
-  font-family: "Oswald", sans-serif;
-}
-/* FOOTER COMPONENT START */
+/* FOOTER COMPONENT END */
 
 /* CARD COMPONENT START */
 .main-content {
   float: left;
   width: 100%;
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(21,21,21);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 @media (max-width: 991.98px) {
   .main-content {
@@ -99,10 +115,10 @@ footer {
   }
 }
 .main-content .container-fluid {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
+  margin-left: 2;
+  margin-right: 2;
+  padding-left: 2;
+  padding-right: 2;
 }
 @media (max-width: 991.98px) {
   .main-content .container-fluid {
@@ -170,6 +186,7 @@ footer {
   .main-content .photos .photo-item img {
     height: 200px;
   }
+
 }
 .main-content .photos .photo-item:hover:after {
   opacity: 1;
@@ -237,6 +254,7 @@ footer {
 
 .carousel-item {
   height: 100vh;
+  background: black;
 }
 
 .carousel-item img {
@@ -251,13 +269,14 @@ footer {
   line-height: 1.3em;
 }
 
+
 .title {
   font-family: "Nunito", sans-serif;
   font-size: 2.4em;
   text-transform: uppercase;
   text-align: center;
 }
-/* FOOTER COMPONENT END */
+/* CAROUSEL COMPONENT END */
 
 /* JUMBOTRON COMPONENT START */
 .home-about {
@@ -419,8 +438,8 @@ footer {
     #ffffff
   );
   position: absolute;
-  right: 120px;
-  top: 80px;
+  right: 5px;
+  top: 10px;
   -webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
   box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
 }
@@ -478,6 +497,7 @@ footer {
   border: none;
   color: white;
   text-align: center;
+  background: black;
 }
 
 .card-activity-description {
@@ -536,21 +556,20 @@ footer {
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap");
 
-.card:hover {
+.cardPrice:hover {
   color: orangered;
   transform: scale(1.05);
   transition: 0.5s;
 }
 
-.card-tile,
 .customPriceH2,
-.card-title,
+.cardPrice-title,
 .card-price,
 .signo {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
-.card-title {
+.cardPrice-title {
   font-size: 1.3rem;
   margin-top: 3rem;
 }
@@ -569,7 +588,7 @@ footer {
   margin-top: 2rem;
 }
 
-.card-description {
+.cardPrice-description {
   font-family: "Nunito Sans", sans-serif;
   font-size: 0.95rem;
   padding-top: 1.5rem;
@@ -651,8 +670,8 @@ footer {
 /* START ARROWSCROLL COMPONENT */
 .scrollTop {
   position: fixed; 
-  width: 100%;
-  bottom: 20px;
+  width: auto;
+  bottom: 26px;
   align-items: flex-start;
   height: 20px;
   justify-content: flex-start;
@@ -661,7 +680,7 @@ footer {
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
-  left: 43%;
+  left: 90%;
   color: grey;
 }
 

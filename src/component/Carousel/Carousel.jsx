@@ -15,6 +15,7 @@ const Carousel = () => {
                 
             <div>
                     {Datas.map((data) => {
+                        
                         return <ItemCarousel
                             key={data.id}
                             isActive={data.isActive}

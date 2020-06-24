@@ -60,7 +60,6 @@ const GymProfile = () => {
                         objectivedescription2={data.objectivedescription2}
                         objective3={data.objective3}
                         objectivedescription3={data.objectivedescription3}
-
                     />
 
                 })}
@@ -69,7 +68,7 @@ const GymProfile = () => {
 
             <div className="customPrice"
                 style={{
-                    backgroundImage: "url(" + "https://i.ibb.co/0jfhcrT/price-bg.jpg" + ")"
+                    backgroundImage: `url("https://i.ibb.co/0jfhcrT/price-bg.jpg")`
                 }}>
                 <h2 className="customPriceH2">Nuestros precios</h2>
 
