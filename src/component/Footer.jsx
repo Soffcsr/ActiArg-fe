@@ -22,7 +22,7 @@ const Footer = () => {
                     
                     <div className="col-md-5">
                         <form>
-                        <h5 className="text-md-center"> E-mail ActiAr</h5>
+                        <h5 className="text-md-center"> Contactanos</h5>
                             <fieldset className="form-group">
                                 <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
                             </fieldset>

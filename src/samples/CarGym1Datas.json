@@ -1,0 +1,32 @@
+[   
+    {
+        "id": 0,
+        "isActive": "active", 
+        "img": "https://mundoesteroide.co/wp-content/uploads/2018/03/cropped-37903219-gym-wallpaper.jpg",
+        "alt": "img1",
+        "title": "test",
+        "description": "test",
+        "action": "yes",
+        "nameBtn": "registro"
+    },
+    {
+        "id": 1,
+        "isActive": "", 
+        "img": "https://i.ibb.co/RHP9gbn/hero-2.jpg",
+        "alt": "img1",
+        "title": "donde sea",
+        "description": "el celu, tu tablet o pc",
+        "action": "yes",
+        "nameBtn": "descargar"
+    },
+    {
+        "id": 2,
+        "isActive": "", 
+        "img": "https://i.ibb.co/MZ1vb7r/hero-3.jpg",
+        "alt": "img1",
+        "title": "seguro",
+        "description": "paga desde casa",
+        "action": "",
+        "nameBtn": ""
+    }
+]
