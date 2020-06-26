@@ -16,7 +16,7 @@ import Footer from '../../component/Footer'
 import ScrollArrow from '../../component/ScrollArrow'
 import '../../App.css'
 
-const GymProfile = () => {
+const Profile1 = () => {
     const [isActive, setActive] = useState(false)
 
     const toggle = () => {
@@ -96,86 +96,86 @@ const GymProfile = () => {
                 })}
             </div>
 
-            <div className="classtime-section class-time-table spad">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-lg-12 text-center">
-                        <div className="section-title">
-                            <h2>Horarios</h2>
+            <div className="classtime-section class-time-table spad table-responsive">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-lg-12 text-center">
+                            <div className="section-title">
+                                <h2>Horarios</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="classtime-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Lunes</th>
-                                <th>Martes</th>
-                                <th>Miercoles</th>
-                                <th>Jueves</th>
-                                <th>Viernes</th>
-                                <th>Sabado</th>
-                                <th>Domingo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            {DataClasses
-                                .map((DataClass) => {
-                                return <ItemsTable
-                                    key="id"
-                                    workoutTime={DataClass.workoutTime}
-                                    mondayHourClass={DataClass.mondayHourClass}
-                                    mondayNameClass={DataClass.mondayNameClass}
-                                    mondayPlaces={DataClass.mondayPlaces}
-                                    mondayAction={DataClass.mondayAction}
-                                    mondayNameBtn={DataClass.mondayNameBtn}
-                                    
-                                    tuesdayHourClass={DataClass.tuesdayHourClass}
-                                    tuesdayNameClass={DataClass.tuesdayNameClass}
-                                    tuesdayPlaces={DataClass.tuesdayPlaces}
-                                    tuesdayAction={DataClass.tuesdayAction}
-                                    tuesdayNameBtn={DataClass.tuesdayNameBtn}
-                                    
-                                    wednesdayHourClass={DataClass.wednesdayHourClass}
-                                    wednesdayNameClass={DataClass.wednesdayNameClass}
-                                    wednesdayPlaces={DataClass.wednesdayPlaces}
-                                    wednesdayAction={DataClass.wednesdayAction}
-                                    wednesdayNameBtn={DataClass.wednesdayNameBtn}
-            
-                                    thursdayHourClass={DataClass.thursdayHourClass}
-                                    thursdayNameClass={DataClass.thursdayNameClass}
-                                    thursdayPlaces={DataClass.thursdayPlaces}
-                                    thursdayAction={DataClass.thursdayAction}
-                                    thursdayNameBtn={DataClass.thursdayNameBtn}
-            
-                                    fridayHourClass={DataClass.fridayHourClass}
-                                    fridayNameClass={DataClass.fridayNameClass}
-                                    fridayPlaces={DataClass.fridayPlaces}
-                                    fridayAction={DataClass.fridayAction}
-                                    fridayNameBtn={DataClass.fridayNameBtn}
-            
-                                    saturdayHourClass={DataClass.saturdayHourClass}
-                                    saturdayNameClass={DataClass.saturdayNameClass}
-                                    saturdayPlaces={DataClass.saturdayPlaces}
-                                    saturdayAction={DataClass.saturdayAction}
-                                    saturdayNameBtn={DataClass.saturdayNameBtn}
-            
-                                    sundayHourClass={DataClass.sundayHourClass}
-                                    sundayNameClass={DataClass.sundayNameClass}
-                                    sundayPlaces={DataClass.sundayPlaces}
-                                    sundayAction={DataClass.sundayAction}
-                                    sundayNameBtn={DataClass.sundayNameBtn}
-                                />
-                            })}
-                            
-                        </tbody>
-                    </table>
+                    <div className="classtime-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miercoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sabado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {DataClasses
+                                    .map((DataClass) => {
+                                        return <ItemsTable
+                                            key="id"
+                                            workoutTime={DataClass.workoutTime}
+                                            mondayHourClass={DataClass.mondayHourClass}
+                                            mondayNameClass={DataClass.mondayNameClass}
+                                            mondayPlaces={DataClass.mondayPlaces}
+                                            mondayAction={DataClass.mondayAction}
+                                            mondayNameBtn={DataClass.mondayNameBtn}
+
+                                            tuesdayHourClass={DataClass.tuesdayHourClass}
+                                            tuesdayNameClass={DataClass.tuesdayNameClass}
+                                            tuesdayPlaces={DataClass.tuesdayPlaces}
+                                            tuesdayAction={DataClass.tuesdayAction}
+                                            tuesdayNameBtn={DataClass.tuesdayNameBtn}
+
+                                            wednesdayHourClass={DataClass.wednesdayHourClass}
+                                            wednesdayNameClass={DataClass.wednesdayNameClass}
+                                            wednesdayPlaces={DataClass.wednesdayPlaces}
+                                            wednesdayAction={DataClass.wednesdayAction}
+                                            wednesdayNameBtn={DataClass.wednesdayNameBtn}
+
+                                            thursdayHourClass={DataClass.thursdayHourClass}
+                                            thursdayNameClass={DataClass.thursdayNameClass}
+                                            thursdayPlaces={DataClass.thursdayPlaces}
+                                            thursdayAction={DataClass.thursdayAction}
+                                            thursdayNameBtn={DataClass.thursdayNameBtn}
+
+                                            fridayHourClass={DataClass.fridayHourClass}
+                                            fridayNameClass={DataClass.fridayNameClass}
+                                            fridayPlaces={DataClass.fridayPlaces}
+                                            fridayAction={DataClass.fridayAction}
+                                            fridayNameBtn={DataClass.fridayNameBtn}
+
+                                            saturdayHourClass={DataClass.saturdayHourClass}
+                                            saturdayNameClass={DataClass.saturdayNameClass}
+                                            saturdayPlaces={DataClass.saturdayPlaces}
+                                            saturdayAction={DataClass.saturdayAction}
+                                            saturdayNameBtn={DataClass.saturdayNameBtn}
+
+                                            sundayHourClass={DataClass.sundayHourClass}
+                                            sundayNameClass={DataClass.sundayNameClass}
+                                            sundayPlaces={DataClass.sundayPlaces}
+                                            sundayAction={DataClass.sundayAction}
+                                            sundayNameBtn={DataClass.sundayNameBtn}
+                                        />
+                                    })}
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
 
             <div className="customPrice"
                 style={{
@@ -218,5 +218,5 @@ const GymProfile = () => {
     )
 }
 
-export default GymProfile
+export default Profile1
 
