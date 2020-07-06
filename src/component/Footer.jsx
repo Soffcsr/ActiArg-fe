@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row boxFooter">
                     <div className="box1 col-md-5">
-                        <h5><i className="fa fa-road"></i>  ActiAr</h5>
+                        <h5><img src="https://i.ibb.co/KhR3zWK/LOGO-ACTIARRR.png" alt="logo" width="150" height="60"/>  </h5>
                         <div className="row">
                             <div className="col-6">
                                 <p>Proyecto TeamWhite</p>
