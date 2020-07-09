@@ -10,7 +10,8 @@ const Home = () => {
     return(    
         <div>
         <Navbar
-            items={['Home', 'Gimnasios', 'Contactanos']}
+            left={['Home', 'Gimnasios']}
+            right={['Nosotros', 'Contactanos']}
         />
         <Carousel/>
         <CardContent/>
