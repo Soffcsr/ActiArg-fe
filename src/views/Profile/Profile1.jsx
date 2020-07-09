@@ -26,7 +26,8 @@ const Profile1 = () => {
     return (
         <div>
             <Navbar
-                items={['Home', 'Gimnasios', 'Contactanos']}
+                left={['Home', 'Gimnasios']}
+                right={['Nosotros', 'Contactanos']}
             />
 
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
