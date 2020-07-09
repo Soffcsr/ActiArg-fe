@@ -1,10 +1,9 @@
 import React from 'react'
 
-
 const Contact = (props) => {
     return (
         <div className="map">
-        <iframe
+        <iframe title="myframe"
             src="https://maps.google.com/maps?q=alta%20intensidad&t=&z=15&ie=UTF8&iwloc=&output=embed" height="600" style={{border: 0}} allowfullscreen=""></iframe>
         <div className="map-contact-detalis">
             <div className="open-time">

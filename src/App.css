@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(21,21,21);
   font-family: "Nunito Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -76,51 +76,68 @@ i.fa-bars {
   color: rgb(225, 55, 29);
 }
 
+.boxFooter{
+  background: rgb(21,21,21);
+}
 
 footer {
-  height: 400px;
+  height: 300px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+}
+
+.box1{
+  position: relative;
+}
+
+footer h5{
+  font-size: 3rem;
+}
+
+.nav{
+  display: flex;
+  position: relative;
+  font-size: 1.8rem;
+  justify-content: center;
 }
 
 footer .form-control {
-
   border-top: none;
   border-left: none;
   border-right: none;
-  background: black;
+  background: rgb(21,21,21);
   border-radius: 0;
 }
 
 
 footer .form-control:focus {
-
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: solid rgb(225, 55, 29);
-  background-color: black;
+  background-color: rgb(21,21,21);
 }
 
 footer i {
-  font-size: 70px;
-  background: -webkit-linear-gradient(left top, rgb(225, 55, 29), black);
-  background: linear-gradient(to bottom right, rgb(225, 55, 29), black);
+  font-size: 4rem;
+  background: rgb(225, 55, 29);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-footer {
-  color: white;
-  font-family: "Oswald", sans-serif;
-}
-/* FOOTER COMPONENT START */
+/* FOOTER COMPONENT END */
 
 /* CARD COMPONENT START */
 .main-content {
   float: left;
   width: 100%;
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(21,21,21);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
+
 @media (max-width: 991.98px) {
   .main-content {
     width: 100%;
@@ -128,21 +145,25 @@ footer {
     float: none;
   }
 }
+
 .main-content .container-fluid {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
+  margin-left: 2;
+  margin-right: 2;
+  padding-left: 2;
+  padding-right: 2;
 }
+
 @media (max-width: 991.98px) {
   .main-content .container-fluid {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
+
 .main-content .photos .photo-item {
   position: relative;
 }
+
 .main-content .photos .photo-item:after {
   position: absolute;
   content: "";
@@ -150,7 +171,7 @@ footer {
   right: 0;
   bottom: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.91);
   z-index: 1;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -158,6 +179,7 @@ footer {
   opacity: 0;
   visibility: hidden;
 }
+
 .main-content .photos .photo-item .photo-text-more {
   position: absolute;
   z-index: 3;
@@ -175,20 +197,24 @@ footer {
   visibility: hidden;
   text-align: center;
 }
+
 .main-content .photos .photo-item .photo-text-more .icon {
   color: #fff;
   font-size: 20px;
 }
+
 .main-content .photos .photo-item .photo-text-more .heading {
   font-size: 16px;
   color: #fff;
   margin-bottom: 0;
 }
+
 .main-content .photos .photo-item .photo-text-more .meta {
   color: #cccccc;
   text-transform: uppercase;
   font-size: 12px;
 }
+
 .main-content .photos .photo-item img {
   width: 100%;
   -o-object-fit: cover;
@@ -196,10 +222,12 @@ footer {
   height: 300px;
   margin-bottom: 20px;
 }
+
 @media (max-width: 575.98px) {
   .main-content .photos .photo-item img {
     height: 200px;
   }
+
 }
 .main-content .photos .photo-item:hover:after {
   opacity: 1;
@@ -226,7 +254,7 @@ footer {
   border-color: rgb(226, 86, 31);
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
-  font-size: 0.7em;
+  font-size: 0.8rem;
   border-radius: 4px;
   letter-spacing: 2px;
   width: 130px;
@@ -286,29 +314,32 @@ footer {
 
 .description {
   font-family: "Oswald", sans-serif;
-  font-size: 3.6em;
+  font-size: 4em;
   text-transform: uppercase;
   line-height: 1.3em;
 }
 
 .title {
   font-family: "Nunito", sans-serif;
-  font-size: 2.4em;
+  font-size: 3em;
   text-transform: uppercase;
   text-align: center;
 }
-/* FOOTER COMPONENT END */
+/* CAROUSEL COMPONENT END */
 
 /* JUMBOTRON COMPONENT START */
 .home-about {
   background: rgb(21, 21, 21);
+  margin-top: 7rem;
+  margin-bottom: 4rem;
 }
+
 .about-text {
   padding-top: 5px;
 }
 
 .about-text h2 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
@@ -362,12 +393,14 @@ footer {
   cursor: default;
   perspective: 900px;
 }
+
 .ch-info {
   position: absolute;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
 }
+
 .ch-info > div {
   display: block;
   position: absolute;
@@ -459,8 +492,8 @@ footer {
     #ffffff
   );
   position: absolute;
-  right: 120px;
-  top: 80px;
+  right: 5px;
+  top: 10px;
   -webkit-box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
   box-shadow: 6px 6px 50px rgba(198, 198, 198, 0.2);
 }
@@ -489,45 +522,22 @@ footer {
 /* MAP COMPONENT END */
 
 /* ACTIVITIES COMPONENT START */
-.actiar-btn {
-  color: #fff;
-  background-color: transparent;
-  border-color: rgb(226, 86, 31);
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-  font-size: 0.7em;
-  border-radius: 4px;
-  letter-spacing: 2px;
-  width: 130px;
-  height: 3em;
-}
-
-.actiar-btn:active {
-  color: #000;
-  background-color: #fff;
-  border-color: rgb(226, 86, 31);
-}
-
-.actiar-btn:hover {
-  color: #fff;
-  background-color: rgb(226, 86, 31);
-  border-color: rgb(226, 86, 31);
-}
-
 .cardActivity {
   border: none;
   color: white;
   text-align: center;
+  background: black;
+  margin: 0.8rem 0.3rem;
 }
 
 .card-activity-description {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 0.73rem;
-  line-height: 1rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
 .card-img-overlay {
-  top: 2.5rem;
+  top: 2.7rem;
 }
 
 .cool-hovbot:after {
@@ -569,28 +579,26 @@ footer {
   height: 3.5rem;
   width: 100%;
 }
-
 /* ACTIVITIES COMPONENT END */
 
 /* START PRICE COMPONENT */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap");
 
-.card:hover {
+.cardPrice:hover {
   color: orangered;
   transform: scale(1.05);
   transition: 0.5s;
 }
 
-.card-tile,
 .customPriceH2,
-.card-title,
+.cardPrice-title,
 .card-price,
 .signo {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
-.card-title {
+.cardPrice-title {
   font-size: 1.3rem;
   margin-top: 3rem;
 }
@@ -609,7 +617,7 @@ footer {
   margin-top: 2rem;
 }
 
-.card-description {
+.cardPrice-description {
   font-family: "Nunito Sans", sans-serif;
   font-size: 0.95rem;
   padding-top: 1.5rem;
@@ -623,6 +631,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2.5rem 0;
+  margin-bottom: 1rem;
 }
 
 .cardPrice {
@@ -691,8 +700,8 @@ footer {
 /* START ARROWSCROLL COMPONENT */
 .scrollTop {
   position: fixed; 
-  width: 100%;
-  bottom: 20px;
+  width: auto;
+  bottom: 26px;
   align-items: flex-start;
   height: 20px;
   justify-content: flex-start;
@@ -701,7 +710,7 @@ footer {
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
-  left: 43%;
+  left: 85%;
   color: grey;
 }
 
@@ -718,6 +727,145 @@ footer {
   }
 }
 /* END ARROWSCROLL COMPONENT */
+
+
+/* START CLASSTABLE COMPONENT */
+.classtime-section {
+	background: black;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section-title {
+	margin-bottom: 3rem;
+}
+
+
+.classtime-table table {
+	width: 100%;
+	border: 1px solid #1f1f1f;
+	background: #212121;
+	text-align: center;
+}
+
+.classtime-table table thead tr th {
+	font-size: 16px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	padding: 25px 5px;
+}
+
+.classtime-table table tbody {
+	border-top: 1px solid #171717;
+}
+
+.classtime-table table tbody tr td {
+	text-align: center;
+	border-right: 1px solid #171717;
+	border-bottom: 1px solid #171717;
+	width: 146px;
+	padding: 26px 10px 28px;
+	position: relative;
+	z-index: 1;
+}
+
+.classtime-table table tbody tr td:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, right top, from(#e16521), to(#e4381C));
+	background: -o-linear-gradient(left, #e16521, #e4381C);
+	background: linear-gradient(to right, #e16521, #e4381C);
+	content: "";
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.classtime-table table tbody tr td.hover-bg:hover:after {
+	opacity: 1;
+}
+
+.classtime-table table tbody tr td.hover-bg:hover h6 {
+	color: #ffffff;
+}
+
+.classtime-table table tbody tr td.workout-time {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 500;
+	font-family: "Oswald", sans-serif;
+}
+
+.classtime-table table tbody tr td span {
+	font-size: 16px;
+	color: #ffffff;
+	display: block;
+	margin-bottom: 7px;
+}
+
+.classtime-table table tbody tr td h6 {
+	color: #e4381C;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.section-title{
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+h2, .h2 {
+  font-size: 4rem;
+}
+
+.actiar-btn2 {
+  color: #fff;
+  background-color: black;
+  border-color: rgb(226, 86, 31);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.7em;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  width: 130px;
+  height: 3em;
+  margin-bottom: 1.5rem;
+}
+
+.actiar-btn2:active {
+  color: #000;
+  background-color: #fff;
+  border-color: rgb(226, 86, 31);
+}
+
+.actiar-btn2:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+/* END CLASSTABLE COMPONENT */
+
+.inConstruction{
+    height: 70vh;
+    width: auto;
+    background: url("https://image.freepik.com/vector-gratis/ilustracion-3d-presentacion-infografica-linea-computadora-portatil-telefono-inteligente-portapapeles-cremallera-azul_1302-20816.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.incoh3{
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  color: rgb(255, 115, 0);
+  top: 40%;
+  background: rgba(0, 0, 0, 0.534);
+}
 
 /* ICON */
 
@@ -809,3 +957,4 @@ p {
   margin-left: 79%;
   margin-top: 2.5%;
 }
+

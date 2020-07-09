@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ItemCard from './ItemCard'
 import Datas from '../../samples/DataCard.json'
 
 const CardContent = () => {
     return (
-       <main class="main-content">
-            <Link to="/Gym3">
+        <main class="main-content">
+            <Link to="/profile1">
                 <div className="container-fluid photos">
                     <div className="row align-items-stretch">
                         {Datas.map((data) => {
@@ -14,12 +14,12 @@ const CardContent = () => {
                                 img={data.img}
                                 alt={data.alt}
                                 title={data.title}
-                                description={data.description}   
-                                adress={data.adress} 
-                                size={data.size}                        
-                                />
+                                description={data.description}
+                                adress={data.adress}
+                                size={data.size}
+                            />
                         })}
-        
+
                     </div>
                 </div>
             </Link>

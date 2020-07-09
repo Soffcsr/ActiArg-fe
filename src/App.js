@@ -2,14 +2,10 @@ import React from 'react'
 import './App.css'
 import './component/Carousel/Carousel'
 import Home from './views/Home'
-import GymProfile from './views/GymProfile/GymProfile'
+import Profile1 from './views/Profile/Profile1'
+import ProfileX from './views/Profile/ProfileX'
 import Login from './views/Login'
-import{
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom'
-
+import{ BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
@@ -19,8 +15,11 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/Gym3">
-            <GymProfile/>
+          <Route path="/profile1">
+            <Profile1/>
+          </Route>
+          <Route path="/profilex">
+            <ProfileX/>
           </Route>
           <Route path="/login">
             <Login/>

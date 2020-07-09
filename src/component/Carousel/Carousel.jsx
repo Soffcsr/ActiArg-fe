@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemCarousel from './ItemCarousel'
-import Datas from '../../samples/Datas.json'
+import CarHomeDatas from '../../samples/CarHomeDatas.json'
 import '../../App.css'
 
 const Carousel = () => {
@@ -12,19 +12,20 @@ const Carousel = () => {
                 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner">
-                
-            <div>
-                    {Datas.map((data) => {
-                        return <ItemCarousel
-                            key={data.id}
-                            isActive={data.isActive}
-                            img={data.img}
-                            alt={data.alt}
-                            title={data.title}
-                            description={data.description} 
-                            action={data.action}                           
-                            nameBtn={data.nameBtn} 
-                            />
+
+                <div>
+                    {
+                        CarHomeDatas.map((CarHomeData) => {
+                                return <ItemCarousel
+                                    key={CarHomeData.id}
+                                    isActive={CarHomeData.isActive}
+                                    img={CarHomeData.img}
+                                    alt={CarHomeData.alt}
+                                    title={CarHomeData.title}
+                                    description={CarHomeData.description}
+                                    action={CarHomeData.action}
+                                    nameBtn={CarHomeData.nameBtn}
+                                />
                     })}
                 </div>
 

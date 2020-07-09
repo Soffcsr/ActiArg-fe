@@ -1,33 +1,40 @@
 import React from 'react'
+import '../App.css'
 
-const Footer = props => {
+const Footer = () => {
     return (
-        <footer className="d-flex flex-column flex-md-row w-100 p-4">
-            <div className="d-flex flex-column justify-content-center col-md-6 p-3">
-                <h1>Contactanos!</h1>
-                <div className="d-flex flex-row justify-content-center">
-                    <i className="fab fa-facebook-square m-5"></i>
-                    <i className="fab fa-instagram-square m-5"></i>
-                    <i className="fab fa-whatsapp-square m-5"></i>
+        <footer className="footer">
+            <div className="container">
+                <div className="row boxFooter">
+                    <div className="box1 col-md-5">
+                        <h5><img src="https://i.ibb.co/KhR3zWK/LOGO-ACTIARRR.png" alt="logo" width="150" height="60"/>  </h5>
+                        <div className="row">
+                            <div className="col-6">
+                                <p>Proyecto TeamWhite</p>
+                            </div>
+                        </div>
+                        <ul className="nav">
+                            <li className="nav-item"><a href="/#" className="nav-link"><i className="fa fa-github fa-lg"></i></a></li>
+                            <li className="nav-item"><a href="/#" className="nav-link"><i className="fa fa-whatsapp fa-lg"></i></a></li>
+                            <li className="nav-item"><a href="/#" className="nav-link"><i className="fa fa-instagram fa-lg"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div className="col-md-5">
+                        <form>
+                        <h5 className="text-md-center"> Contactanos</h5>
+                            <fieldset className="form-group">
+                                <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
+                            </fieldset>
+                            <fieldset className="form-group">
+                                <textarea className="form-control" id="exampleMessage" placeholder="Mensaje"></textarea>
+                            </fieldset>
+                            <fieldset className="form-group text-xs-right">
+                                <button className="actiar-btn">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div className="col-md-6 p-3">
-                <form className="m-1">
-                    <div className="form-group text-left">
-                        <label>Nombre</label>
-                        <input type="text" className="form-control"></input>
-                    </div>
-                    <div className="form-group text-left">
-                        <label>Email</label>
-                        <input type="email" className="form-control"></input>
-                    </div>
-                    <div className="form-group text-left">
-                        <label>Mensaje</label>
-                        <textarea className="form-control">
-                        </textarea>
-                    </div>
-                    <button type="button" className="btn btn-primary">Enviar</button>
-                </form>
             </div>
         </footer>
     )
