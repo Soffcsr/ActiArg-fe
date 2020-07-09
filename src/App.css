@@ -40,20 +40,35 @@ body {
   letter-spacing: 0.1rem;
 }
 
-/* @media (min-width: 576px) { 
+@media (max-width: 576px) { 
   #nav{
-    height: 90vh;
+    height: 95vh;
     font-size: 5vh;
+    font-family: 'Fugaz One', cursive;
+    text-transform: uppercase;
   }
 }
 
 
-@media (min-width: 768px) { 
+@media (min-width: 577px) and (max-width: 768px) { 
   #nav{
-    height: 17vh;
+    height: 15vh;
     font-size: 1rem;
+    font-family: "Nunito Sans", sans-serif;
+    text-transform: none;
   }
-} */
+}
+
+#letter{
+  z-index: -1;
+  margin-left: 20vw;
+}
+#letter h1{
+  color: rgb(225, 55, 29);
+  margin-top: 8vh;
+  font-size: 100vw;
+  font-family: 'Lalezar', cursive;
+}
 /* NAVBAR COMPONENT END */
 
 /* FOOTER COMPONENT START */
@@ -706,11 +721,13 @@ footer {
 
 /* ICON */
 
-#icon {
-  text-align: center;
+#icon img {
+  width: 130px;
+  height: 50px;
+  /* text-align: center;
   color: #fff;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2em; */
 } 
 
 span { 
