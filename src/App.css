@@ -229,6 +229,7 @@ footer i {
   }
 
 }
+
 .main-content .photos .photo-item:hover:after {
   opacity: 1;
   visibility: visible;
