@@ -1,11 +1,17 @@
 import React from 'react'
+import{ 
+  BrowserRouter as Router, 
+  Switch, 
+  Route 
+} from 'react-router-dom'
+
 import './App.css'
 import './component/Carousel/Carousel'
+
 import Home from './views/Home'
-import Profile1 from './views/Profile/Profile1'
-import ProfileX from './views/Profile/ProfileX'
+import Profile from './views/Profile/Profile1'
 import Login from './views/Login'
-import{ BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 
 function App() {
   return (
@@ -15,11 +21,7 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/profile1">
-            <Profile1/>
-          </Route>
-          <Route path="/profilex">
-            <ProfileX/>
+          <Route path="/GymProfile/:id" children={<Profile/>}>
           </Route>
           <Route path="/login">
             <Login/>

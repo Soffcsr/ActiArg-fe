@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import {connect} from 'react-redux'
+import {useParams} from 'react-router-dom'
 import Navbar from '../../component/Navbar'
 import ItemCarousel from '../../component/Carousel/ItemCarousel'
 import CarGym1Datas from '../../samples/CarGym1Datas.json'
 import Activity from './Activity'
-import DataActivities from '../../samples/DataActivities.json'
 import Jumbotron from './Jumbotron'
 import DatasJumbotron from '../../samples/DatasJumbotron.json'
 import ItemsTable from './ItemsTable'
@@ -15,13 +16,21 @@ import DataContact from '../../samples/DataContact.json'
 import Footer from '../../component/Footer'
 import ScrollArrow from '../../component/ScrollArrow'
 import '../../App.css'
+import { showActivities } from '../../actions'
 
-const Profile1 = () => {
+const Profile1 = (props) => {
     const [isActive, setActive] = useState(false)
+
+    let {id} = useParams();
+    console.log("ID:::", id);
 
     const toggle = () => {
         setActive(!isActive)
     }
+
+    useEffect(() => {
+        props.showActivities(id)
+    }, [])
 
     return (
         <div>
@@ -64,7 +73,7 @@ const Profile1 = () => {
             </div>
 
             <div className="card-group">
-                {DataActivities.map((DataActivity) => {
+                {props.activities.map((DataActivity) => {
                     return <Activity
                         key={DataActivity.id}
                         img={DataActivity.img}
@@ -73,7 +82,7 @@ const Profile1 = () => {
                         description={DataActivity.description}
                         action={DataActivity.action}
                         nameBtn={DataActivity.nameBtn}
-                        size={DataActivities.size}
+                        size={DataActivity.size}
                     />
                 })}
             </div>
@@ -219,5 +228,13 @@ const Profile1 = () => {
     )
 }
 
-export default Profile1
+const mapStateToProps = state =>{
+    return{
+        activities: state.activity.activities
+    }
+}
+
+const Profile = connect(mapStateToProps, {showActivities})(Profile1) 
+
+export default Profile
 
