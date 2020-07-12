@@ -49,7 +49,7 @@ const Navbar = ({right, left}) =>{
                             {
                                 left.map((item, index) => {
                                     return(
-                                        <animated.li style={trailsleft[index]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={index}><a href>{item}</a></animated.li>
+                                        <animated.li style={trailsleft[index]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={index}><a href={`#${item}`}>{item}</a></animated.li>
                                     )
                                 })
                             }
@@ -63,7 +63,7 @@ const Navbar = ({right, left}) =>{
                             {
                                 right.map((item, ind) => {
                                     return(
-                                        <animated.li style={trailsright[ind]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={ind}><a href>{item}</a></animated.li>
+                                        <animated.li style={trailsright[ind]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={ind}><a href={`#${item}`}>{item}</a></animated.li>
                                     )
                                 })
                             }
