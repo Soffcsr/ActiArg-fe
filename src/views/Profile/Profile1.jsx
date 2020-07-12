@@ -8,7 +8,6 @@ import Activity from './Activity'
 import Jumbotron from './Jumbotron'
 import DatasJumbotron from '../../samples/DatasJumbotron.json'
 import ItemsTable from './ItemsTable'
-import DataClasses from '../../samples/DataClasses.json'
 import Price from './Price'
 import DataPrices from '../../samples/DataPrices.json'
 import Contact from './Contact'
@@ -16,7 +15,7 @@ import DataContact from '../../samples/DataContact.json'
 import Footer from '../../component/Footer'
 import ScrollArrow from '../../component/ScrollArrow'
 import '../../App.css'
-import { showActivities } from '../../actions'
+import { showActivities, showTurns } from '../../actions'
 
 const Profile1 = (props) => {
     const [isActive, setActive] = useState(false)
@@ -30,6 +29,7 @@ const Profile1 = (props) => {
 
     useEffect(() => {
         props.showActivities(id)
+        props.showTurns(id)
     }, [])
 
     return (
@@ -132,7 +132,7 @@ const Profile1 = (props) => {
                             </thead>
                             <tbody>
 
-                                {DataClasses
+                                {props.turns
                                     .map((DataClass) => {
                                         return <ItemsTable
                                             key="id"
@@ -230,11 +230,12 @@ const Profile1 = (props) => {
 
 const mapStateToProps = state =>{
     return{
-        activities: state.activity.activities
+        activities: state.activity.activities,
+        turns: state.turns.turns
     }
 }
 
-const Profile = connect(mapStateToProps, {showActivities})(Profile1) 
+const Profile = connect(mapStateToProps, {showActivities, showTurns})(Profile1) 
 
 export default Profile
 
