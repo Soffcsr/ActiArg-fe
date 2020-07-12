@@ -13,7 +13,8 @@ const CardContent = (props) => {
     }, [])
 
     return (
-        <main class="main-content">
+        <main class="main-content" id="Gimnasios">
+            <Link to="/profile1">
                 <div className="container-fluid photos">
                     <div className="row align-items-stretch">
                         {props.gyms.map((data) => {
@@ -29,6 +30,7 @@ const CardContent = (props) => {
                         })}
                     </div>
                 </div>
+            </Link>
         </main>
     )
 }
