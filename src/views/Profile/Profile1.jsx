@@ -137,47 +137,54 @@ const Profile1 = (props) => {
                                         return <ItemsTable
                                             key="id"
                                             workoutTime={DataClass.workoutTime}
-                                            mondayHourClass={DataClass.mondayHourClass}
-                                            mondayNameClass={DataClass.mondayNameClass}
-                                            mondayPlaces={DataClass.mondayPlaces}
-                                            mondayAction={DataClass.mondayAction}
-                                            mondayNameBtn={DataClass.mondayNameBtn}
+                                            mondayHourClass={DataClass.days[0].HourClass}
+                                            mondayNameClass={DataClass.days[0].NameClass}
+                                            mondayPartialPlaces={DataClass.days[0].PartialPlaces}
+                                            mondayTotalPlaces={DataClass.days[0].TotalPlaces}
+                                            mondayAction={DataClass.days[0].Action}
+                                            mondayNameBtn={DataClass.days[0].NameBtn}
 
-                                            tuesdayHourClass={DataClass.tuesdayHourClass}
-                                            tuesdayNameClass={DataClass.tuesdayNameClass}
-                                            tuesdayPlaces={DataClass.tuesdayPlaces}
-                                            tuesdayAction={DataClass.tuesdayAction}
-                                            tuesdayNameBtn={DataClass.tuesdayNameBtn}
+                                            tuesdayHourClass={DataClass.days[1].HourClass}
+                                            tuesdayNameClass={DataClass.days[1].NameClass}
+                                            tuesdayPartialPlaces={DataClass.days[1].PartialPlaces}
+                                            tuesdayTotalPlaces={DataClass.days[1].TotalPlaces}
+                                            tuesdayAction={DataClass.days[1].Action}
+                                            tuesdayNameBtn={DataClass.days[1].NameBtn}
 
-                                            wednesdayHourClass={DataClass.wednesdayHourClass}
-                                            wednesdayNameClass={DataClass.wednesdayNameClass}
-                                            wednesdayPlaces={DataClass.wednesdayPlaces}
-                                            wednesdayAction={DataClass.wednesdayAction}
-                                            wednesdayNameBtn={DataClass.wednesdayNameBtn}
+                                            wednesdayHourClass={DataClass.days[2].HourClass}
+                                            wednesdayNameClass={DataClass.days[2].NameClass}
+                                            wednesdayPartialPlaces={DataClass.days[2].PartialPlaces}
+                                            wednesdayTotalPlaces={DataClass.days[2].TotalPlaces}
+                                            wednesdayAction={DataClass.days[2].Action}
+                                            wednesdayNameBtn={DataClass.days[2].NameBtn}
 
-                                            thursdayHourClass={DataClass.thursdayHourClass}
-                                            thursdayNameClass={DataClass.thursdayNameClass}
-                                            thursdayPlaces={DataClass.thursdayPlaces}
-                                            thursdayAction={DataClass.thursdayAction}
-                                            thursdayNameBtn={DataClass.thursdayNameBtn}
+                                            thursdayHourClass={DataClass.days[3].HourClass}
+                                            thursdayNameClass={DataClass.days[3].NameClass}
+                                            thursdayPartialPlaces={DataClass.days[3].PartialPlaces}
+                                            thursdayTotalPlaces={DataClass.days[3].TotalPlaces}
+                                            thursdayAction={DataClass.days[3].Action}
+                                            thursdayNameBtn={DataClass.days[3].NameBtn}
 
-                                            fridayHourClass={DataClass.fridayHourClass}
-                                            fridayNameClass={DataClass.fridayNameClass}
-                                            fridayPlaces={DataClass.fridayPlaces}
-                                            fridayAction={DataClass.fridayAction}
-                                            fridayNameBtn={DataClass.fridayNameBtn}
+                                            fridayHourClass={DataClass.days[4].HourClass}
+                                            fridayNameClass={DataClass.days[4].NameClass}
+                                            fridayPartialPlaces={DataClass.days[4].PartialPlaces}
+                                            fridayTotalPlaces={DataClass.days[4].TotalPlaces}
+                                            fridayAction={DataClass.days[4].Action}
+                                            fridayNameBtn={DataClass.days[4].NameBtn}
 
-                                            saturdayHourClass={DataClass.saturdayHourClass}
-                                            saturdayNameClass={DataClass.saturdayNameClass}
-                                            saturdayPlaces={DataClass.saturdayPlaces}
-                                            saturdayAction={DataClass.saturdayAction}
-                                            saturdayNameBtn={DataClass.saturdayNameBtn}
+                                            saturdayHourClass={DataClass.days[5].HourClass}
+                                            saturdayNameClass={DataClass.days[5].NameClass}
+                                            saturdayPartialPlaces={DataClass.days[5].PartialPlaces}
+                                            saturdayTotalPlaces={DataClass.days[5].TotalPlaces}
+                                            saturdayAction={DataClass.days[5].Action}
+                                            saturdayNameBtn={DataClass.days[5].NameBtn}
 
-                                            sundayHourClass={DataClass.sundayHourClass}
-                                            sundayNameClass={DataClass.sundayNameClass}
-                                            sundayPlaces={DataClass.sundayPlaces}
-                                            sundayAction={DataClass.sundayAction}
-                                            sundayNameBtn={DataClass.sundayNameBtn}
+                                            sundayHourClass={DataClass.days[6].HourClass}
+                                            sundayNameClass={DataClass.days[6].NameClass}
+                                            sundayPartialPlaces={DataClass.days[6].PartialPlaces}
+                                            sundayTotalPlaces={DataClass.days[6].TotalPlaces}
+                                            sundayAction={DataClass.days[6].Action}
+                                            sundayNameBtn={DataClass.days[6].NameBtn}
                                         />
                                     })}
 
