@@ -7,7 +7,7 @@ import {showGyms} from '../../actions/index'
 
 const CardContent = (props) => {
     // console.log("gyms:::", gyms)
-    //comment
+    //comment /
     useEffect(() => {
         props.showGyms()
     }, [])
