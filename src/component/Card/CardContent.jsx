@@ -19,11 +19,11 @@ const CardContent = (props) => {
                     <div className="row align-items-stretch">
                         {props.gyms.map((data) => {
                             return <ItemCard
-                                        img={data.img}
-                                        alt={data.alt}
-                                        title={data.title}
+                                        img={data.photo}
+                                        alt="Image"
+                                        title={data.name}
                                         description={data.description}
-                                        adress={data.adress}
+                                        adress={data.address}
                                         size={data.size}
                                         id={data._id}
                                     />
