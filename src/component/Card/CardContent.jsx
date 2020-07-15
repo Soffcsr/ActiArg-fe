@@ -1,16 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 import ItemCard from './ItemCard'
-import {showGyms} from '../../actions/index'
-// import Datas from '../../samples/DataCard.json'
 
 const CardContent = (props) => {
-    // console.log("gyms:::", gyms)
-    //comment
-    useEffect(() => {
-        props.showGyms()
-    }, [])
 
     return (
         <main class="main-content" id="Gimnasios">
@@ -39,6 +32,6 @@ const mapStateToProps = state => {
     return {gyms: state.gym.gyms}
 }
 
-const GymsList = connect(mapStateToProps, {showGyms})(CardContent)
+const GymsList = connect(mapStateToProps)(CardContent)
 
 export default GymsList
