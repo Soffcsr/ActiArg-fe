@@ -14,9 +14,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <ul className="nav">
-                            <li className="nav-item"><a href="/#" className="nav-link"><i className="fa fa-github fa-lg"></i></a></li>
-                            <li className="nav-item"><a href="/#" className="nav-link"><i className="fa fa-whatsapp fa-lg"></i></a></li>
-                            <li className="nav-item"><a href="/#" className="nav-link"><i className="fa fa-instagram fa-lg"></i></a></li>
+                            <li className="nav-item"><a href="https://github.com/Soffcsr/ActiArg-fe" className="nav-link"><i className="fa fa-github fa-lg"></i></a></li>
+                            <li className="nav-item"><a href="https://wa.me/5493816315733" className="nav-link"><i className="fa fa-whatsapp fa-lg"></i></a></li>
+                            <li className="nav-item"><a href="https://www.instagram.com/proyecto.actiar/?hl=es-la" className="nav-link"><i className="fa fa-instagram fa-lg"></i></a></li>
                         </ul>
                     </div>
                     

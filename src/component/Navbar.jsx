@@ -76,7 +76,7 @@ const Navbar = ({right, left}) =>{
                 : null
             }
 
-            <div className="d-none d-md-flex flex-row right">
+            <div className="d-none d-md-flex flex-row right btnNav">
                 <button type="button" className="btn actiar-btn mr-2">
                     <Link to="/login">Sing in</Link>
                 </button>

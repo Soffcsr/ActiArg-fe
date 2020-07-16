@@ -2,8 +2,10 @@ import React from 'react'
 import Navbar from '../component/Navbar'
 import Carousel from '../component/Carousel/Carousel'
 import GymsList from '../component/Card/CardContent'
+import AboutUs from '../component/AboutUs'
 import Footer from '../component/Footer'
 import ScrollArrow from '../component/ScrollArrow'
+
 
 const Home = () => {
     return(    
@@ -14,6 +16,7 @@ const Home = () => {
         />
         <Carousel/>
         <GymsList/>
+        <AboutUs/>
         <Footer/>
         <ScrollArrow/>
         </div>
