@@ -10,7 +10,7 @@ import './component/Carousel/Carousel'
 
 import Home from './views/Home'
 import Profile from './views/Profile/Profile1'
-import Login from './views/Login'
+import LoginView from './views/Login'
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <Route path="/GymProfile/:id" children={<Profile/>}>
           </Route>
           <Route path="/login">
-            <Login/>
+            <LoginView/>
           </Route>
         </Switch>
       </Router>
