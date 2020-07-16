@@ -76,16 +76,19 @@ const Navbar = (props) =>{
                 </div>
                 : null
             }
-
-            <div className="d-md-flex flex-row right btnNav">
-                <button type="button" className="btn actiar-btn mr-2">
-                    <Link to="/login">Sing in</Link>
-                </button>
-                <button type="button" className="btn actiar-btn mr-2">
-                    <Link to="/register">Sing up</Link>
-                </button>
-                <span className="logout"><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
-            </div>
+            {
+                !props.loged ? 
+                <div className="d-none d-md-flex flex-row right">
+                    <button type="button" className="btn actiar-btn mr-2">
+                        <Link to="/login">Sing in</Link>
+                    </button>
+                    <button type="button" className="btn actiar-btn mr-2">
+                        <Link to="/register">Sing up</Link>
+                    </button>
+                    <span className="logout"><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
+                </div>
+                : null
+            }
         </div>
     )
 }

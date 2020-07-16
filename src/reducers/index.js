@@ -7,7 +7,7 @@ import turnsReducer from './turnsReducer'
 
 const rootReducer = combineReducers({
     gym: gymsReducer,
-    authReducer: authReducer,
+    auth: authReducer,
     activity: activitiesReducer,
     turns: turnsReducer
 })
