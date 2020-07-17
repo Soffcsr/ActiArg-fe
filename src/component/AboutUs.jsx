@@ -2,9 +2,9 @@ import React from 'react'
 
 const AboutUs = () => {
     return (
-        <section className="AbouUs">
+        <section className="AbouUs" >
             <h2 className="teamwhite">Team White</h2>
-            <div className="container">
+            <div className="container" id="Nosotros">
                 <div className="row">
 
                     <div className="col-md-4">
