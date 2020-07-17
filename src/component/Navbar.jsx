@@ -44,7 +44,7 @@ const Navbar = ({right, left}) =>{
             {
                 isOpen ?
                 <div className="d-flex flex-column flex-md-row justify-content-center w-100" id="nav">
-                    <nav className="d-md-flex w-md-50 w-100">
+                    <nav className="d-md-flex lg-flex w-md-50 w-100">
                         <ul className="navbar-list d-flex flex-md-row flex-column justify-content-md-end justify-content-center align-items-center w-100 mt-md-4">
                             {
                                 left.map((item, index) => {
@@ -76,13 +76,14 @@ const Navbar = ({right, left}) =>{
                 : null
             }
 
-            <div className="d-none d-md-flex flex-row right btnNav">
+            <div className="d-md-flex flex-row right btnNav">
                 <button type="button" className="btn actiar-btn mr-2">
                     <Link to="/login">Sing in</Link>
                 </button>
                 <button type="button" className="btn actiar-btn mr-2">
                     <Link to="/register">Sing up</Link>
                 </button>
+                <span className="logout"><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
             </div>
         </div>
     )

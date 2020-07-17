@@ -3,7 +3,7 @@ import React from 'react'
 const ItemCarousel = (props) => {
   return (
     <div className={`carousel-item ${props.isActive}`}>
-      <img src={props.img} className="d-block w-100" alt={props.alt}/>
+      <img src={props.img} className="d-block img-fluid" alt={props.alt}/>
       <div className="carousel-caption">
         <h5 className="title">{props.title}</h5>
         <p className="description">{props.description}</p>
