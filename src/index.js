@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux'
 import store from './store/index'
-import { showGyms } from './actions';
+import { showGyms } from './actions/index';
 
 store.dispatch(showGyms())
 
