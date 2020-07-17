@@ -5,7 +5,8 @@ const Register = props =>{
     return(
         <div>
             <Navbar
-                items={['Home', 'Gimnasios', 'Contactanos']}
+                left={['Home', 'Gimnasios']}
+                right={['Nosotros', 'Contactanos']}
             />
             <div className="d-flex flex-row">
                 <div className="w-50 img">

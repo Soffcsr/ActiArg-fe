@@ -11,6 +11,7 @@ import './component/Carousel/Carousel'
 import Home from './views/Home'
 import Profile from './views/Profile/Profile1'
 import Login from './views/Login'
+import Register from './views/Register'
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login/>
+          </Route>
+          <Route path="/register">
+            <Register/>
           </Route>
         </Switch>
       </Router>
