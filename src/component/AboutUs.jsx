@@ -3,7 +3,7 @@ import React from 'react'
 const AboutUs = () => {
     return (
         <section className="AbouUs" >
-            <h2 className="teamwhite">Team White</h2>
+            <h2 className="teamwhite">Team White <img src="https://rollingcodeschool.com/wp-content/uploads/2019/12/ingenia-logo-transparencia_Mesa-de-trabajo-1-copia-e1575648427572.png" alt="logo" width="100" height="100"/></h2>
             <div className="container" id="Nosotros">
                 <div className="row">
 
