@@ -15,5 +15,11 @@ export const DELETE_TURN = "DELETE_TURN"
 
 export const LOGIN_USER = "LOGIN_USER"
 export const REGISTER_USER = "REGISTER_USER"
+<<<<<<< HEAD
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
 export const LOGIN_ERROR = "LOGIN_ERROR"
+=======
+
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS"
+export const REGISTER_ERROR = "REGISTER_ERROR"
+>>>>>>> add redux to register view
