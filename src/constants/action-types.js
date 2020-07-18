@@ -15,3 +15,6 @@ export const DELETE_TURN = "DELETE_TURN"
 
 export const LOGIN_USER = "LOGIN_USER"
 export const REGISTER_USER = "REGISTER_USER"
+
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS"
+export const REGISTER_ERROR = "REGISTER_ERROR"

@@ -1,4 +1,4 @@
-import { SHOW_GYM, SHOW_ACTIVITIES, SHOW_TURNS } from "../constants/action-types";
+import { SHOW_GYM, SHOW_ACTIVITIES, SHOW_TURNS, REGISTER_USER, REGISTER_SUCCESS, REGISTER_ERROR } from "../constants/action-types";
 
 export function showGyms(payload){
     return (dispatch, getState) => {
@@ -30,5 +30,39 @@ export function showTurns(id){
                 type: SHOW_TURNS,
                 payload: data
             }))
+    }
+}
+
+export function register(nombre, apellido, dni, telefono, email, password){
+    return async (dispatch, getState) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: nombre,
+                lastname: apellido,
+                dni: dni,
+                phone: telefono,
+                email: email,
+                password: password
+            })
+        }
+        let response = await fetch('http://actiar-be.herokuapp.com/register', requestOptions)
+        if(response.ok) {
+            let register = await response.json()
+            dispatch({
+                type: REGISTER_SUCCESS,
+                payload: register.message
+            })
+        }else{
+            let register = await response.json()
+            dispatch({
+                type: REGISTER_ERROR,
+                payload: register.message
+            })
+        }
     }
 }
