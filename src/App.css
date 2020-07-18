@@ -1048,3 +1048,15 @@ p {
   margin-bottom: 2rem;
 }
 /* END ABOUTUS COMPONENT */
+
+/* START LINE COMPONENT */
+.line{
+  color: white;
+  font-family: "Oswald", sans-serif;
+  
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* END LINE COMPONENT */
