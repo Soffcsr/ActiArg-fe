@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux'
 import {animated, useTrail, useSpring} from 'react-spring'
 
 const Navbar = (props) =>{
@@ -92,4 +93,12 @@ const Navbar = (props) =>{
     )
 }
 
-export default Navbar
+const mapStateToProps = state =>{
+    return {
+        loged: state.auth.loged
+    }
+}
+
+const NavbarComponent = connect(mapStateToProps)(Navbar)
+
+export default NavbarComponent

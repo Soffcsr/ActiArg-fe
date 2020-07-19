@@ -1,4 +1,14 @@
-import { SHOW_GYM, SHOW_ACTIVITIES, SHOW_TURNS, REGISTER_USER, REGISTER_SUCCESS, REGISTER_ERROR } from "../constants/action-types";
+
+import { 
+    SHOW_GYM, 
+    SHOW_ACTIVITIES, 
+    SHOW_TURNS,
+    LOGIN_USER,
+    LOGIN_SUCCESS,
+    LOGIN_ERROR,
+    REGISTER_SUCCESS, 
+    REGISTER_ERROR
+} from "../constants/action-types";
 
 export function showGyms(payload){
     return (dispatch, getState) => {
@@ -62,6 +72,36 @@ export function register(nombre, apellido, dni, telefono, email, password){
             dispatch({
                 type: REGISTER_ERROR,
                 payload: register.message
+            })
+        }
+    }
+}
+
+export function login(email, password) {
+    return async (dispatch, getState) => {
+        const requestOptions = {
+            method: 'POST'
+        }
+        let response = await fetch(`http://actiar-be.herokuapp.com/login?email=${email}&&password=${password}`, requestOptions)
+        if(response.ok){
+            let credentials = await response.json()
+            console.log(credentials)
+            sessionStorage.setItem('token', JSON.stringify(credentials.data.token))
+            sessionStorage.setItem('username', JSON.stringify(credentials.data.username))
+            sessionStorage.setItem('userlastname', JSON.stringify(credentials.data.userlastname))
+            dispatch({
+                type: LOGIN_USER,
+                payload: credentials.data
+            })
+            dispatch({
+                type: LOGIN_SUCCESS,
+                payload: true
+            })
+        }else{
+            let error = await response.json()
+            dispatch({
+                type: LOGIN_ERROR,
+                payload: error
             })
         }
     }

@@ -10,8 +10,8 @@ import './component/Carousel/Carousel'
 
 import Home from './views/Home'
 import Profile from './views/Profile/Profile1'
-import Login from './views/Login'
 import RegisterView from './views/Register'
+import LoginView from './views/Login'
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
           <Route path="/GymProfile/:id" children={<Profile/>}>
           </Route>
           <Route path="/login">
-            <Login/>
+            <LoginView/>
           </Route>
           <Route path="/register">
             <RegisterView/>
