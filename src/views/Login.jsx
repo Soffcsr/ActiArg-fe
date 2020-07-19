@@ -1,12 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import Navbar from '../component/Navbar'
 import {login} from '../actions/index'
 
 const Login = props =>{
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    let history = useHistory()
 
     const handlerOnChange = e => {
         switch(e.target.id){
@@ -23,9 +25,13 @@ const Login = props =>{
 
     const login = () =>{
         props.login(email, password)
-        console.log("redireccionar")
-        return <Redirect to="/" />
     }
+
+    useEffect(() => {
+        if(sessionStorage.getItem('token')){
+            history.push('/')
+        }
+    }, [])
 
     return(
         <div>

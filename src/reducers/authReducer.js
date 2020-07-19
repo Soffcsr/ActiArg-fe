@@ -1,27 +1,20 @@
-<<<<<<< HEAD
-import { LOGIN_USER, LOGIN_SUCCESS, LOGIN_ERROR } from "../constants/action-types";
+import { LOGIN_USER, LOGIN_SUCCESS, LOGIN_ERROR, REGISTER_SUCCESS, REGISTER_ERROR } from "../constants/action-types";
 
 const initState = {
     loged: false,
     error: '',
+    registered: false,
+    message: '',
     credentials: {
         token: '',
         username: '',
         userlastname: '',
         userrole: ''
     }
-=======
-import { REGISTER_SUCCESS, REGISTER_ERROR } from "../constants/action-types"
-
-const initState = {
-    registered: false,
-    message: ''
->>>>>>> add redux to register view
 }
 
 const authReducer = (state = initState, action) =>{
     switch(action.type){
-<<<<<<< HEAD
         case LOGIN_USER :
             return {
                 credentials: action.payload,
@@ -36,12 +29,6 @@ const authReducer = (state = initState, action) =>{
                 loged: false,
                 error: action.payload.error
             };
-        default:
-            break;
-
-    }
-    return state
-=======
         case REGISTER_SUCCESS :
             return {
                 registered: true,
@@ -54,8 +41,9 @@ const authReducer = (state = initState, action) =>{
             }
         default:
             break;
+
     }
->>>>>>> add redux to register view
+    return state
 }
 
 export default authReducer
