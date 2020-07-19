@@ -1,3 +1,4 @@
+  
 import { LOGIN_USER, LOGIN_SUCCESS, LOGIN_ERROR, REGISTER_SUCCESS, REGISTER_ERROR } from "../constants/action-types";
 
 const initState = {
@@ -15,6 +16,16 @@ const initState = {
 
 const authReducer = (state = initState, action) =>{
     switch(action.type){
+        case REGISTER_SUCCESS :
+            return {
+                registered: true,
+                message: action.payload
+            }
+        case REGISTER_ERROR :
+            return {
+                registered: false,
+                message: action.payload
+            }
         case LOGIN_USER :
             return {
                 credentials: action.payload,
@@ -29,21 +40,11 @@ const authReducer = (state = initState, action) =>{
                 loged: false,
                 error: action.payload.error
             };
-        case REGISTER_SUCCESS :
-            return {
-                registered: true,
-                message: action.payload
-            }
-        case REGISTER_ERROR :
-            return {
-                registered: false,
-                message: action.payload
-            }
         default:
             break;
-
     }
     return state
 }
+
 
 export default authReducer
