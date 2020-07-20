@@ -7,13 +7,6 @@ const Activity = (props) => {
             <div className="card-img-overlay">
                 <h5 className="card-activity-title">{props.title}</h5>
                 <p className="card-activity-description">{props.description}</p>
-                {
-                    props.action === "yes" ?
-                        <button type="button" className="btn actiar-btn">
-                            {props.nameBtn}
-                        </button>
-                        : null
-                }
             </div>
         </div>
     )

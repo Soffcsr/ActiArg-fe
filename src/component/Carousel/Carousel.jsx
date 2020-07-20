@@ -19,12 +19,9 @@ const Carousel = () => {
                                 return <ItemCarousel
                                     key={CarHomeData.id}
                                     isActive={CarHomeData.isActive}
-                                    img={CarHomeData.img}
-                                    alt={CarHomeData.alt}
-                                    title={CarHomeData.title}
+                                    img={CarHomeData.img}                     
                                     description={CarHomeData.description}
                                     action={CarHomeData.action}
-                                    nameBtn={CarHomeData.nameBtn}
                                 />
                     })}
                 </div>

@@ -2,31 +2,20 @@
     {
         "id": 0,
         "isActive": "active", 
-        "img": "https://i.ibb.co/61L6rhr/hero-1.jpg",
-        "alt": "img1",
-        "title": "actiar",
-        "description": "busca tu gym y anotate",
-        "action": "yes",
-        "nameBtn": "registro"
+        "img": "https://i.ibb.co/V3B0hrP/BACKGROUND7.jpg",
+        "description": "Activate con actiar"
     },
     {
         "id": 1,
         "isActive": "", 
-        "img": "https://i.ibb.co/RHP9gbn/hero-2.jpg",
-        "alt": "img1",
-        "title": "donde sea",
-        "description": "el celu, tu tablet o pc",
-        "action": "yes",
-        "nameBtn": "descargar"
+        "img": "https://cdn.discordapp.com/attachments/683514897191272472/734167398034440252/multiplataforma13.jpg",
+        "description": "con un solo click"
     },
     {
         "id": 2,
         "isActive": "", 
-        "img": "https://i.ibb.co/MZ1vb7r/hero-3.jpg",
-        "alt": "img1",
-        "title": "seguro",
-        "description": "paga desde casa",
-        "action": "",
-        "nameBtn": ""
+        "img": "https://i.ibb.co/WkgLXPX/veeeerrr4.jpg",
+        "description": "Sin moverte de casa"
+
     }
 ]

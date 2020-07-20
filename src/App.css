@@ -69,11 +69,11 @@ body {
   font-family: "Lalezar", cursive;
 }
 
-.btnNav{
+.btnNav {
   top: -0.2rem;
   right: 1rem;
 }
-.fa-sign-out{
+.fa-sign-out {
   color: white;
   font-size: 2rem;
   margin-top: 0.2rem;
@@ -316,8 +316,14 @@ footer i {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  height: 100vh;
+  max-width: none;
+  object-fit: none;
+  object-position: center;
 }
 
 .description {
@@ -325,6 +331,9 @@ footer i {
   font-size: 4em;
   text-transform: uppercase;
   line-height: 1.3em;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px black;
+  text-align: center;
 }
 
 .title {
@@ -868,8 +877,7 @@ h2,
 .inConstruction {
   height: 70vh;
   width: auto;
-  background: url("https://i.ibb.co/LgwGhxy/678678678786.jpg")
-    center no-repeat;
+  background: url("https://i.ibb.co/LgwGhxy/678678678786.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -948,11 +956,11 @@ p {
 
 /* START ABOUTUS COMPONENT */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-.profile{
+.profile {
   height: 45%;
 }
 
-.profile-card-1 {
+.profile-card {
   font-family: "Open Sans", Arial, sans-serif;
   position: relative;
   float: left;
@@ -963,10 +971,11 @@ p {
   text-align: center;
   height: 250px;
   border: none;
-  margin: 1rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.profile-card-1 .background {
+.profile-card .background {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -974,7 +983,7 @@ p {
   opacity: 0.5;
 }
 
-.profile-card-1 .card-content {
+.profile-card .card-content {
   width: 100%;
   padding: 15px 25px;
   position: absolute;
@@ -982,7 +991,7 @@ p {
   top: 50%;
 }
 
-.profile-card-1 .profile {
+.profile-card .profile {
   border-radius: 50%;
   position: absolute;
   bottom: 50%;
@@ -995,19 +1004,19 @@ p {
   transform: translate(-50%, 0%);
 }
 
-.profile-card-1 h2 {
+.profile-card h2 {
   margin: 0 0 5px;
   font-weight: 600;
   font-size: 25px;
 }
 
-.profile-card-1 h2 small {
+.profile-card h2 small {
   display: block;
   font-size: 15px;
   margin-top: 10px;
 }
 
-.profile-card-1 i {
+.profile-card i {
   display: inline-block;
   font-size: 16px;
   color: #ffffff;
@@ -1020,17 +1029,17 @@ p {
   margin: 0 5px;
 }
 
-.profile-card-1 .icon-block {
+.profile-card .icon-block {
   float: left;
   width: 100%;
   margin-top: 15px;
 }
 
-.profile-card-1 .icon-block a {
+.profile-card .icon-block a {
   text-decoration: none;
 }
 
-.profile-card-1 i:hover {
+.profile-card i:hover {
   background-color: #fff;
   color: #2e3434;
   text-decoration: none;
@@ -1043,3 +1052,15 @@ p {
   margin-bottom: 2rem;
 }
 /* END ABOUTUS COMPONENT */
+
+/* START LINE COMPONENT */
+.line {
+  color: white;
+  font-family: "Oswald", sans-serif;
+
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* END LINE COMPONENT */
