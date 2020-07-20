@@ -2,31 +2,20 @@
     {
         "id": 0,
         "isActive": "active", 
-        "img": "https://cdn.discordapp.com/attachments/683514897191272472/733768250667827229/BACKGROUND7.jpg",
-        "alt": "",
-        "title": "",
-        "description": "activate con actiar",
-        "action": "",
-        "nameBtn": ""
+        "img": "https://i.ibb.co/V3B0hrP/BACKGROUND7.jpg",
+        "description": "Activate con actiar"
     },
     {
         "id": 1,
         "isActive": "", 
-        "img": "https://static.vecteezy.com/system/resources/previews/000/523/586/non_2x/online-payment-via-credit-card-protection-on-smartphone-concept-electronic-bill-secure-online-shopping-pay-through-smartphone-and-internet-banking-vector.jpg",
-        "alt": "",
-        "title": "",
-        "description": "",
-        "action": "",
-        "nameBtn": ""
+        "img": "https://cdn.discordapp.com/attachments/683514897191272472/734167398034440252/multiplataforma13.jpg",
+        "description": "con un solo click"
     },
     {
         "id": 2,
         "isActive": "", 
         "img": "https://i.ibb.co/WkgLXPX/veeeerrr4.jpg",
-        "alt": "",
-        "title": "",
-        "description": "Seguro, desde casa",
-        "action": "",
-        "nameBtn": ""
+        "description": "Sin moverte de casa"
+
     }
 ]
