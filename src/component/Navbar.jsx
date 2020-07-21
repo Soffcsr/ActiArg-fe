@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux'
 import {animated, useTrail, useSpring} from 'react-spring'
 
-const Navbar = ({right, left}) =>{
+const Navbar = (props) =>{
     const [isOpen, setIsOpen] = useState(window.screen.width > 696 ? true : false)
 
     
@@ -29,6 +30,12 @@ const Navbar = ({right, left}) =>{
         setIsOpen(!isOpen)
     }
 
+    let logout = () => {
+        sessionStorage.removeItem('token')
+        sessionStorage.removeItem('username')
+        sessionStorage.removeItem('userlastname')
+    }
+
     return(
         <div className="d-flex flex-column flex-md-row bg-tansparent p-fixed" >
             <div className="d-flex flex-row d-md-none">
@@ -47,7 +54,7 @@ const Navbar = ({right, left}) =>{
                     <nav className="d-md-flex lg-flex w-md-50 w-100">
                         <ul className="navbar-list d-flex flex-md-row flex-column justify-content-md-end justify-content-center align-items-center w-100 mt-md-4">
                             {
-                                left.map((item, index) => {
+                                props.left.map((item, index) => {
                                     return(
                                         <animated.li style={trailsleft[index]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={index}><a href={`#${item}`}>{item}</a></animated.li>
                                     )
@@ -61,7 +68,7 @@ const Navbar = ({right, left}) =>{
                     <nav className="d-md-flex w-md-50 w-100">
                         <ul className="navbar-list d-flex flex-md-row flex-column justify-content-md-start justify-content-center align-items-center w-100 mt-md-4">
                             {
-                                right.map((item, ind) => {
+                                props.right.map((item, ind) => {
                                     return(
                                         <animated.li style={trailsright[ind]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={ind}><a href={`#${item}`}>{item}</a></animated.li>
                                     )
@@ -75,18 +82,29 @@ const Navbar = ({right, left}) =>{
                 </div>
                 : null
             }
-
-            <div className="d-md-flex flex-row right btnNav">
-                <button type="button" className="btn actiar-btn mr-2">
-                    <Link to="/login">Sing in</Link>
-                </button>
-                <button type="button" className="btn actiar-btn mr-2">
-                    <Link to="/register">Sing up</Link>
-                </button>
-                <span className="logout"><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
-            </div>
+            {
+                !sessionStorage.getItem('token') ? 
+                <div className="d-none d-md-flex flex-row right">
+                    <button type="button" className="btn actiar-btn mr-2">
+                        <Link to="/login">Sing in</Link>
+                    </button>
+                    <button type="button" className="btn actiar-btn mr-2">
+                        <Link to="/register">Sing up</Link>
+                    </button>
+                </div>
+                : 
+                <span className="logout" onClick={logout}><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
+            }
         </div>
     )
 }
 
-export default Navbar
+const mapStateToProps = state =>{
+    return {
+        loged: state.auth.loged
+    }
+}
+
+const NavbarComponent = connect(mapStateToProps)(Navbar)
+
+export default NavbarComponent

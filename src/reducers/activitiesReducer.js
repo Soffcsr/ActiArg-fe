@@ -7,7 +7,7 @@ const initState = {
 const activitiesReducer = (state = initState, action) => {
     if (action.type === SHOW_ACTIVITIES){
         return Object.assign({}, state, {
-            gyms: state.activities.concat(action.payload)
+            activities: state.activities.concat(action.payload.activities)
         })
     }
     return state

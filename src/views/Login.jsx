@@ -1,7 +1,42 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import {connect} from 'react-redux'
+import {useHistory} from 'react-router-dom'
 import Navbar from '../component/Navbar'
+import {login} from '../actions/index'
 
 const Login = props =>{
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    let history = useHistory()
+
+    const handlerOnChange = e => {
+        switch(e.target.id){
+            case "email" :
+                setEmail(e.target.value)
+                break;
+            case "password" :
+                setPassword(e.target.value)
+                break;
+            default:
+                break;
+        }
+    }
+
+    const login = () =>{
+        props.login(email, password)
+        console.log(sessionStorage.getItem('token'))
+        if(sessionStorage.getItem('token')){
+            history.push('/')
+        }
+    }
+
+    useEffect(() => {
+        if(sessionStorage.getItem('token')){
+            history.push('/')
+        }
+    }, [])
+
     return(
         <div>
             <Navbar
@@ -16,13 +51,13 @@ const Login = props =>{
                     <form className="w-50 align-self-center">
                         <div className="form-group text-left">
                             <label>Email</label>
-                            <input type="email" className="form-control"></input>
+                            <input type="email" id="email" className="form-control" value={email} onChange={handlerOnChange}></input>
                         </div>
                         <div className="form-group text-left">
                             <label>Password</label>
-                            <input type="password" className="form-control"></input>
+                            <input type="password" id="password" className="form-control" value={password} onChange={handlerOnChange}></input>
                         </div>
-                        <button type="button" className="btn actiar-btn">Iniciar</button>
+                        <button type="button" className="btn actiar-btn" onClick={login}>Iniciar</button>
                     </form>
                 </div>
             </div>
@@ -30,4 +65,6 @@ const Login = props =>{
     )
 }
 
-export default Login
+const LoginView = connect(null, {login})(Login)
+
+export default LoginView
