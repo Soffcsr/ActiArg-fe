@@ -30,6 +30,12 @@ const Navbar = (props) =>{
         setIsOpen(!isOpen)
     }
 
+    let logout = () => {
+        sessionStorage.removeItem('token')
+        sessionStorage.removeItem('username')
+        sessionStorage.removeItem('userlastname')
+    }
+
     return(
         <div className="d-flex flex-column flex-md-row bg-tansparent p-fixed" >
             <div className="d-flex flex-row d-md-none">
@@ -87,7 +93,7 @@ const Navbar = (props) =>{
                     </button>
                 </div>
                 : 
-                <span className="logout"><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
+                <span className="logout" onClick={logout}><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
             }
         </div>
     )

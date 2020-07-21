@@ -25,6 +25,10 @@ const Login = props =>{
 
     const login = () =>{
         props.login(email, password)
+        console.log(sessionStorage.getItem('token'))
+        if(sessionStorage.getItem('token')){
+            history.push('/')
+        }
     }
 
     useEffect(() => {

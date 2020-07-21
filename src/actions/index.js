@@ -7,7 +7,9 @@ import {
     LOGIN_SUCCESS,
     LOGIN_ERROR,
     REGISTER_SUCCESS,
-    REGISTER_ERROR
+    REGISTER_ERROR,
+    SHOW_PUBLICITS,
+    SHOW_CAROUSELS
 } from "../constants/action-types";
 
 export function showGyms(payload){
@@ -25,21 +27,55 @@ export function showActivities(id){
     return (dispatch, getState) => {
         fetch(`https://actiar-be.herokuapp.com/ActivityByGym/${id}`)
             .then(response => response.json())
-            .then(data => dispatch({
-                type: SHOW_ACTIVITIES,
-                payload: data
-            }))
+            .then(data => {
+                console.log("activities:::", data)
+                dispatch({
+                    type: SHOW_ACTIVITIES,
+                    payload: data
+                })
+            })
     }
 }
 
 export function showTurns(id){
     return (dispatch, getState) => {
-        fetch(`https://actiar-be.herokuapp.com/TurnsByGym/${id}`)
+        fetch(`https://actiar-be.herokuapp.com/TurnByGym/${id}`)
             .then(response => response.json())
-            .then(data => dispatch({
-                type: SHOW_TURNS,
-                payload: data
-            }))
+            .then(data => {
+                console.log("turns:::", data[0].days[0])
+                dispatch({
+                    type: SHOW_TURNS,
+                    payload: data
+                })
+            })
+    }
+}
+
+export function showPublicits(id){
+    return (dispatch, getState) => {
+        fetch(`https://actiar-be.herokuapp.com/PublicitByGym/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("publicits:::", data)
+                dispatch({
+                    type: SHOW_PUBLICITS,
+                    payload: data
+                })
+            })
+    }
+}
+
+export function showCarousels(id){
+    return (dispatch, getState) => {
+        fetch(`https://actiar-be.herokuapp.com/CarouselByGym/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("carousels:::", data)
+                dispatch({
+                    type: SHOW_CAROUSELS,
+                    payload: data
+                })
+            })
     }
 }
 
