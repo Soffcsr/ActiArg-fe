@@ -1,6 +1,7 @@
 import React from 'react'
 import NavbarComponent from '../component/Navbar'
 import Carousel from '../component/Carousel/Carousel'
+import Line from '../component/Line'
 import GymsList from '../component/Card/CardContent'
 import AboutUs from '../component/AboutUs'
 import Footer from '../component/Footer'
@@ -15,6 +16,7 @@ const Home = () => {
             right={['Nosotros', 'Contactanos']}
         />
         <Carousel/>
+        <Line/>
         <GymsList/>
         <AboutUs/>
         <Footer/>

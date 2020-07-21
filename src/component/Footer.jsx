@@ -10,7 +10,7 @@ const Footer = () => {
                         <h5><img src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" width="150" height="60"/>  </h5>
                         <div className="row">
                             <div className="col-6">
-                                <p>Proyecto TeamWhite</p>
+                                <p>Proyecto Actiar</p>
                             </div>
                         </div>
                         <ul className="nav">

@@ -3,12 +3,12 @@ import React from 'react'
 const AboutUs = () => {
     return (
         <section className="AbouUs" >
-            <h2 className="teamwhite">Team White</h2>
+            <h2 className="teamwhite">Team White <img src="https://rollingcodeschool.com/wp-content/uploads/2019/12/ingenia-logo-transparencia_Mesa-de-trabajo-1-copia-e1575648427572.png" alt="logo" width="100" height="100"/></h2>
             <div className="container" id="Nosotros">
                 <div className="row">
 
                     <div className="col-md-4">
-                        <div className="card profile-card-1">
+                        <div className="card profile-card">
                             <img src="https://i.ibb.co/7CfY2P7/Cheers-clinking-of-friends-with-beer-drink-in-party-night-after-work-on-colorful-blur-background-Gro.jpg" alt="profile-sample1" className="background" />
                             <img src="https://i.ibb.co/bsvx1Dv/pp-1.jpg" alt="profilee" className="profile" />
                             <div className="card-content">
@@ -19,7 +19,7 @@ const AboutUs = () => {
                     </div>
 
                     <div className="col-md-4">
-                        <div className="card profile-card-1">
+                        <div className="card profile-card">
                             <img src="https://scstylecaster.files.wordpress.com/2020/03/concert-unsplash.jpg?w=670&h=503" alt="profile-sample1" className="background" />
                             <img src="https://i.ibb.co/vwqK69x/d6dfad63-ca95-496f-988a-dc8dcb6fab52.jpg" alt="profilee" className="profile" />
                             <div className="card-content">
@@ -30,7 +30,7 @@ const AboutUs = () => {
                     </div>
 
                     <div className="col-md-4">
-                        <div className="card profile-card-1">
+                        <div className="card profile-card">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR8joF06-Zv5VprpM_ZbBIzg4Rlg4AGtd6lAw&usqp=CAU" alt="profile-sample1" className="background" />
                             <img src="https://i.ibb.co/yBfd07B/pp-3.jpg" alt="profilee" className="profile" />
                             <div className="card-content">
