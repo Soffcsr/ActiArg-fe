@@ -1,6 +1,13 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {reserve} from '../../actions/index'
 
 const ItemsTable = (props) => {
+
+    const reserver = (id) => {
+        props.reserve(id, props.idgym)
+    }
+
     return (
         <tr className="componenteHora">
             <td className="workout-time">{props.workoutTime}</td>
@@ -15,7 +22,7 @@ const ItemsTable = (props) => {
                     } 
                     {
                         props.mondayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idMonday)}>
                                 {props.mondayNameBtn}
                             </button>
                             : null
@@ -33,7 +40,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.tuesdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idTuesday)}>
                                 {props.tuesdayNameBtn}
                             </button>
                             : null
@@ -51,7 +58,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.wednesdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idWednesday)}>
                                 {props.wednesdayNameBtn}
                             </button>
                             : null
@@ -69,7 +76,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.thursdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idThursday)}>
                                 {props.thursdayNameBtn}
                             </button>
                             : null
@@ -87,7 +94,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.fridayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idFriday)}>
                                 {props.fridayNameBtn}
                             </button>
                             : null
@@ -105,7 +112,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.saturdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSaturday)}>
                                 {props.saturdayNameBtn}
                             </button>
                             : null
@@ -123,7 +130,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.sundayAction === "yes" ?
-                            <button type="button" className="actiar-btn2">
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSunday)}>
                                 {props.sundayNameBtn}
                             </button>
                             : null
@@ -134,4 +141,6 @@ const ItemsTable = (props) => {
     )
 }
 
-export default ItemsTable
+const ItemsTableComponent = connect(null, {reserve})(ItemsTable)
+
+export default ItemsTableComponent
