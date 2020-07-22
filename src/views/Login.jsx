@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import Navbar from '../component/Navbar'
+import Alert from '../component/Alert'
 import {login} from '../actions/index'
 
 const Login = props =>{
@@ -25,16 +26,10 @@ const Login = props =>{
 
     const login = () =>{
         props.login(email, password)
-        console.log(sessionStorage.getItem('token'))
-        if(sessionStorage.getItem('token')){
-            history.push('/')
-        }
     }
 
     useEffect(() => {
-        if(sessionStorage.getItem('token')){
-            history.push('/')
-        }
+        
     }, [])
 
     return(
@@ -43,12 +38,16 @@ const Login = props =>{
                 left={['Home', 'Gimnasios']}
                 right={['Nosotros', 'Contactanos']}
             />
-            <div className="d-flex flex-row">
-                <div className="w-50 img">
+            <div className="d-flex flex-row justify-content-center align-items-center">
+                <div className="d-none d-md-flex w-50 img">
                     <img className="w-100" src="https://www.65ymas.com/uploads/s1/19/85/96/handy-gym-un-mini-gimnasio-concebido-para-enfermos-de-parkinson-esta-revolucionando-el-fitness.jpeg" alt="imagen-login"/>
                 </div>
-                <div className="d-flex flex-row justify-content-center w-50">
-                    <form className="w-50 align-self-center">
+                <div className="d-flex flex-column justify-content-center align-items-center mt-5">
+                {
+                    props.error ? <Alert message={props.error}/> 
+                    : props.loged ? history.push('/') : null
+                }
+                    <form className="align-self-center">
                         <div className="form-group text-left">
                             <label>Email</label>
                             <input type="email" id="email" className="form-control" value={email} onChange={handlerOnChange}></input>
@@ -65,6 +64,13 @@ const Login = props =>{
     )
 }
 
-const LoginView = connect(null, {login})(Login)
+const mapStateToProps = state => {
+    return {
+        loged: state.auth.loged,
+        error: state.auth.error
+    }
+}
+
+const LoginView = connect(mapStateToProps, {login})(Login)
 
 export default LoginView

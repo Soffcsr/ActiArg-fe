@@ -15,7 +15,7 @@ import DataContact from '../../samples/DataContact.json'
 import Footer from '../../component/Footer'
 import ScrollArrow from '../../component/ScrollArrow'
 import '../../App.css'
-import { showActivities, showTurns, showCarousels, showPublicits } from '../../actions'
+import { showActivities, showTurns, showCarousels, showPublicits, findGymById } from '../../actions'
 
 const Profile1 = (props) => {
     const [isActive, setActive] = useState(false)
@@ -32,7 +32,21 @@ const Profile1 = (props) => {
         props.showTurns(id)
         props.showPublicits(id)
         props.showCarousels(id)
+        props.findGymById(id)
     }, [])
+
+
+    console.log("error::::", props.error)
+    console.log("link::", props.linkPago)
+
+    
+    if(props.error){
+        alert(props.error)
+    }else{
+        window.open(props.linkPago)
+    }
+
+    
 
     return (
         <div>
@@ -136,8 +150,9 @@ const Profile1 = (props) => {
                                         props.turns.map((turn) => {
                                             console.log("turn::", turn)
                                             return <ItemsTable
-                                                key="id"
+                                                idgym = {id}
                                                 workoutTime={turn.workoutTime}
+                                                idMonday={turn.days[0]._id}
                                                 mondayHourClass={turn.days[0].HourClass}
                                                 mondayNameClass={turn.days[0].NameClass}
                                                 mondayPartialPlaces={turn.days[0].PartialPlaces}
@@ -145,6 +160,7 @@ const Profile1 = (props) => {
                                                 mondayAction={turn.days[0].Action}
                                                 mondayNameBtn={turn.days[0].NameBtn}
 
+                                                idTuesday={turn.days[1]._id}
                                                 tuesdayHourClass={turn.days[1].HourClass}
                                                 tuesdayNameClass={turn.days[1].NameClass}
                                                 tuesdayPartialPlaces={turn.days[1].PartialPlaces}
@@ -152,6 +168,7 @@ const Profile1 = (props) => {
                                                 tuesdayAction={turn.days[1].Action}
                                                 tuesdayNameBtn={turn.days[1].NameBtn}
 
+                                                idWednesday={turn.days[2]._id}
                                                 wednesdayHourClass={turn.days[2].HourClass}
                                                 wednesdayNameClass={turn.days[2].NameClass}
                                                 wednesdayPartialPlaces={turn.days[2].PartialPlaces}
@@ -159,6 +176,7 @@ const Profile1 = (props) => {
                                                 wednesdayAction={turn.days[2].Action}
                                                 wednesdayNameBtn={turn.days[2].NameBtn}
 
+                                                idThursday ={turn.days[3]._id}
                                                 thursdayHourClass={turn.days[3].HourClass}
                                                 thursdayNameClass={turn.days[3].NameClass}
                                                 thursdayPartialPlaces={turn.days[3].PartialPlaces}
@@ -166,6 +184,7 @@ const Profile1 = (props) => {
                                                 thursdayAction={turn.days[3].Action}
                                                 thursdayNameBtn={turn.days[3].NameBtn}
 
+                                                idFriday={turn.days[4]._id}
                                                 fridayHourClass={turn.days[4].HourClass}
                                                 fridayNameClass={turn.days[4].NameClass}
                                                 fridayPartialPlaces={turn.days[4].PartialPlaces}
@@ -173,6 +192,7 @@ const Profile1 = (props) => {
                                                 fridayAction={turn.days[4].Action}
                                                 fridayNameBtn={turn.days[4].NameBtn}
 
+                                                idSaturday = {turn.days[5]._id}
                                                 saturdayHourClass={turn.days[5].HourClass}
                                                 saturdayNameClass={turn.days[5].NameClass}
                                                 saturdayPartialPlaces={turn.days[5].PartialPlaces}
@@ -180,6 +200,7 @@ const Profile1 = (props) => {
                                                 saturdayAction={turn.days[5].Action}
                                                 saturdayNameBtn={turn.days[5].NameBtn}
 
+                                                idSunday={turn.days[6]._id}
                                                 sundayHourClass={turn.days[6].HourClass}
                                                 sundayNameClass={turn.days[6].NameClass}
                                                 sundayPartialPlaces={turn.days[6].PartialPlaces}
@@ -222,13 +243,11 @@ const Profile1 = (props) => {
             </div>
             {/* datos del gym */}
             <div>
-                {DataContact.map((data) => {
-                    return <Contact
-                        phone={data.phone}
-                        adress={data.adress}
-                        atention={data.atention}
-                    />
-                })}
+                <Contact
+                    phone={props.gym.phone}
+                    adress={props.gym.address}
+                    atention={props.gym.atention}
+                />
             </div>
 
             <Footer />
@@ -242,12 +261,15 @@ const mapStateToProps = state =>{
     return{
         activities: state.activity.activities,
         turns: state.turns.turns,
+        linkPago: state.turns.linkPago,
+        error: state.turns.error,
         publicits: state.publicits.publicits,
-        carousels: state.carousel.carousels
+        carousels: state.carousel.carousels,
+        gym: state.gym.gym
     }
 }
 
-const Profile = connect(mapStateToProps, {showActivities, showTurns, showCarousels, showPublicits})(Profile1) 
+const Profile = connect(mapStateToProps, {showActivities, showTurns, showCarousels, showPublicits, findGymById})(Profile1) 
 
 export default Profile
 

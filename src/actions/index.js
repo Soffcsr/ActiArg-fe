@@ -9,7 +9,10 @@ import {
     REGISTER_SUCCESS,
     REGISTER_ERROR,
     SHOW_PUBLICITS,
-    SHOW_CAROUSELS
+    SHOW_CAROUSELS,
+    RESERVE_TURN,
+    RESERVE_ERROR,
+    FIND_GYM_BY_ID
 } from "../constants/action-types";
 
 export function showGyms(payload){
@@ -95,10 +98,6 @@ export function login(email, password) {
                 type: LOGIN_USER,
                 payload: credentials.data
             })
-            dispatch({
-                type: LOGIN_SUCCESS,
-                payload: true
-            })
         }else{
             let error = await response.json()
             dispatch({
@@ -140,5 +139,54 @@ export function register(nombre, apellido, dni, telefono, email, password){
                 payload: register.message
             })
         }
+    }
+}
+
+export function reserve(idday, idgym){
+    return async (dispatch, getState) => {
+        let token = sessionStorage.getItem('token')
+
+        const header = new Headers()
+        header.append('Authorization', JSON.parse(token))
+        header.append('Accept', 'application/json')
+
+        let response = await fetch(`https://actiar-be.herokuapp.com/reserveTurn/${idday}/gym/${idgym}`,{
+            method: 'POST',
+            headers: header
+        })
+
+        let data = await response.json()
+        if(data.error){
+            dispatch({
+                type: RESERVE_ERROR,
+                payload: data
+            })
+        }else{
+            dispatch({
+                type: RESERVE_TURN,
+                payload: data
+            })
+        }
+    }
+}
+
+export function findGymById(id) {
+    return async (dispatch, getState) => {
+        let token = sessionStorage.getItem('token')
+
+        const header = new Headers()
+        header.append('Authorization', JSON.parse(token))
+        header.append('Accept', 'application/json')
+
+        let response = await fetch(`https://actiar-be.herokuapp.com/GymbyId/${id}`, {
+            method: 'GET',
+            headers: header
+        })
+
+        let data = await response.json()
+        dispatch({
+            type: FIND_GYM_BY_ID,
+            payload: data
+        })
     }
 }
