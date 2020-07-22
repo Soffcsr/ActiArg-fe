@@ -140,49 +140,49 @@ const Profile1 = (props) => {
                                                 mondayHourClass={turn.days[0].HourClass}
                                                 mondayNameClass={turn.days[0].NameClass}
                                                 mondayPartialPlaces={turn.days[0].PartialPlaces}
-                                                mondayTotalPlaces={turn.days[0].TotalPlaces}
+                                                mondayTotallPlaces={turn.days[0].TotallPlaces}
                                                 mondayAction={turn.days[0].Action}
                                                 mondayNameBtn={turn.days[0].NameBtn}
 
                                                 tuesdayHourClass={turn.days[1].HourClass}
                                                 tuesdayNameClass={turn.days[1].NameClass}
                                                 tuesdayPartialPlaces={turn.days[1].PartialPlaces}
-                                                tuesdayTotalPlaces={turn.days[1].TotalPlaces}
+                                                tuesdayTotallPlaces={turn.days[1].TotallPlaces}
                                                 tuesdayAction={turn.days[1].Action}
                                                 tuesdayNameBtn={turn.days[1].NameBtn}
 
                                                 wednesdayHourClass={turn.days[2].HourClass}
                                                 wednesdayNameClass={turn.days[2].NameClass}
                                                 wednesdayPartialPlaces={turn.days[2].PartialPlaces}
-                                                wednesdayTotalPlaces={turn.days[2].TotalPlaces}
+                                                wednesdayTotallPlaces={turn.days[2].TotallPlaces}
                                                 wednesdayAction={turn.days[2].Action}
                                                 wednesdayNameBtn={turn.days[2].NameBtn}
 
                                                 thursdayHourClass={turn.days[3].HourClass}
                                                 thursdayNameClass={turn.days[3].NameClass}
                                                 thursdayPartialPlaces={turn.days[3].PartialPlaces}
-                                                thursdayTotalPlaces={turn.days[3].TotalPlaces}
+                                                thursdayTotallPlaces={turn.days[3].TotallPlaces}
                                                 thursdayAction={turn.days[3].Action}
                                                 thursdayNameBtn={turn.days[3].NameBtn}
 
                                                 fridayHourClass={turn.days[4].HourClass}
                                                 fridayNameClass={turn.days[4].NameClass}
                                                 fridayPartialPlaces={turn.days[4].PartialPlaces}
-                                                fridayTotalPlaces={turn.days[4].TotalPlaces}
+                                                fridayTotallPlaces={turn.days[4].TotallPlaces}
                                                 fridayAction={turn.days[4].Action}
                                                 fridayNameBtn={turn.days[4].NameBtn}
 
                                                 saturdayHourClass={turn.days[5].HourClass}
                                                 saturdayNameClass={turn.days[5].NameClass}
                                                 saturdayPartialPlaces={turn.days[5].PartialPlaces}
-                                                saturdayTotalPlaces={turn.days[5].TotalPlaces}
+                                                saturdayTotallPlaces={turn.days[5].TotallPlaces}
                                                 saturdayAction={turn.days[5].Action}
                                                 saturdayNameBtn={turn.days[5].NameBtn}
 
                                                 sundayHourClass={turn.days[6].HourClass}
                                                 sundayNameClass={turn.days[6].NameClass}
                                                 sundayPartialPlaces={turn.days[6].PartialPlaces}
-                                                sundayTotalPlaces={turn.days[6].TotalPlaces}
+                                                sundayTotallPlaces={turn.days[6].TotallPlaces}
                                                 sundayAction={turn.days[6].Action}
                                                 sundayNameBtn={turn.days[6].NameBtn}
                                             />
@@ -220,7 +220,7 @@ const Profile1 = (props) => {
                 </div>
             </div>
             {/* datos del gym */}
-            <div>
+           {/*  <div>
                 {DataContact.map((data) => {
                     return <Contact
                         phone={data.phone}
@@ -228,7 +228,7 @@ const Profile1 = (props) => {
                         atention={data.atention}
                     />
                 })}
-            </div>
+            </div> */}
 
             <Footer />
             <ScrollArrow />
