@@ -15,7 +15,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.mondayHourClass}</span>
                     <h6>{props.mondayNameClass}</h6>
-                    <h6>{props.mondayPartialPlaces}{props.mondayTotalPlaces}</h6>
+                    {
+                        props.mondayPartialPlaces !== null 
+                        ? <h6>{props.mondayPartialPlaces} {"de "+props.mondayTotallPlaces}</h6> 
+                        : null
+                    } 
                     {
                         props.mondayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idMonday)}>
@@ -29,7 +33,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.tuesdayHourClass}</span>
                     <h6>{props.tuesdayNameClass}</h6>
-                    <h6>{props.tuesdayPartialPlaces}{props.tuesdayTotalPlaces}</h6>
+                    {
+                        props.tuesdayPartialPlaces !== null 
+                        ? <h6>{props.tuesdayPartialPlaces} {"de "+props.tuesdayTotallPlaces}</h6> 
+                        : null
+                    }
                     {
                         props.tuesdayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idTuesday)}>
@@ -43,7 +51,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.wednesdayHourClass}</span>
                     <h6>{props.wednesdayNameClass}</h6>
-                    <h6>{props.wednesdayPartialPlaces}{props.wednesdayTotalPlaces}</h6>
+                    {
+                        props.wednesdayPartialPlaces !== null 
+                        ? <h6>{props.wednesdayPartialPlaces} {"de "+props.wednesdayTotallPlaces}</h6> 
+                        : null
+                    }
                     {
                         props.wednesdayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idWednesday)}>
@@ -57,7 +69,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.thursdayHourClass}</span>
                     <h6>{props.thursdayNameClass}</h6>
-                    <h6>{props.thursdayPartialPlaces}{props.thursdayTotalPlaces}</h6>
+                    {
+                        props.thursdayPartialPlaces !== null 
+                        ? <h6>{props.thursdayPartialPlaces} {"de "+props.thursdayTotallPlaces}</h6> 
+                        : null
+                    }
                     {
                         props.thursdayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idThursday)}>
@@ -71,7 +87,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.fridayHourClass}</span>
                     <h6>{props.fridayNameClass}</h6>
-                    <h6>{props.fridayPartialPlaces}{props.fridayTotalPlaces}</h6>
+                    {
+                        props.fridayPartialPlaces !== null 
+                        ? <h6>{props.fridayPartialPlaces} {"de "+props.fridayTotallPlaces}</h6> 
+                        : null
+                    }
                     {
                         props.fridayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idFriday)}>
@@ -85,7 +105,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.saturdayHourClass}</span>
                     <h6>{props.saturdayNameClass}</h6>
-                    <h6>{props.fridayPartialPlaces}{props.fridayTotalPlaces}</h6>
+                    {
+                        props.saturdayPartialPlaces !== null 
+                        ? <h6>{props.saturdayPartialPlaces} {"de "+props.saturdayTotallPlaces}</h6> 
+                        : null
+                    }
                     {
                         props.saturdayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSaturday)}>
@@ -99,7 +123,11 @@ const ItemsTable = (props) => {
                 <div>
                     <span>{props.sundayHourClass}</span>
                     <h6>{props.sundayNameClass}</h6>
-                    <h6>{props.sundayPartialPlaces}{props.sundayTotalPlaces}</h6>
+                    {
+                        props.sundayPartialPlaces !== null 
+                        ? <h6>{props.sundayPartialPlaces} {"de "+props.sundayTotallPlaces}</h6> 
+                        : null
+                    }
                     {
                         props.sundayAction === "yes" ?
                             <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSunday)}>

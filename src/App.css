@@ -70,7 +70,7 @@ body {
 }
 
 .btnNav {
-  top: -0.2rem;
+  top: -0.35rem;
   right: 1rem;
 }
 .fa-sign-out {
@@ -576,7 +576,7 @@ footer i {
 .card-img {
   height: 16rem;
   width: auto;
-  filter: brightness(0.4);
+  /* filter: brightness(0.4); */
   margin-bottom: -1.18rem;
 }
 
@@ -626,7 +626,7 @@ footer i {
 }
 
 .card-price {
-  font-size: 2.6rem;
+  font-size: 3.5rem;
 }
 
 .customPriceH2 {
@@ -636,7 +636,7 @@ footer i {
 
 .cardPrice-description {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   padding-top: 1.5rem;
   color: rgb(0, 0, 0);
 }
@@ -877,7 +877,7 @@ h2,
 .inConstruction {
   height: 70vh;
   width: auto;
-  background: url("https://i.ibb.co/LgwGhxy/678678678786.jpg") center no-repeat;
+  background: url("https://i.ibb.co/r7vQQ3p/678678678786-2.jpg") center no-repeat;
   background-size: cover;
 }
 
