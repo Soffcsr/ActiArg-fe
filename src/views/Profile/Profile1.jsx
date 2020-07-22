@@ -3,15 +3,12 @@ import {connect} from 'react-redux'
 import {useParams} from 'react-router-dom'
 import Navbar from '../../component/Navbar'
 import ItemCarousel from '../../component/Carousel/ItemCarousel'
-import CarGym1Datas from '../../samples/CarGym1Datas.json'
 import Activity from './Activity'
 import Jumbotron from './Jumbotron'
 import DatasJumbotron from '../../samples/DatasJumbotron.json'
 import ItemsTable from './ItemsTable'
 import Price from './Price'
-import DataPrices from '../../samples/DataPrices.json'
 import Contact from './Contact'
-import DataContact from '../../samples/DataContact.json'
 import Footer from '../../component/Footer'
 import ScrollArrow from '../../component/ScrollArrow'
 import '../../App.css'
@@ -70,11 +67,11 @@ const Profile1 = (props) => {
                                     key={CarGym1Data.id}
                                     isActive={CarGym1Data.isActive}
                                     img={CarGym1Data.img}
-                                    alt={CarGym1Data.alt}
-                                    title={CarGym1Data.title}
+                                    /* alt={CarGym1Data.alt} */
+                                    /* title={CarGym1Data.title}
                                     description={CarGym1Data.description}
                                     action={CarGym1Data.action}
-                                    nameBtn={CarGym1Data.nameBtn}
+                                    nameBtn={CarGym1Data.nameBtn} */
                                 />
                             })}
                     </div>
@@ -94,10 +91,12 @@ const Profile1 = (props) => {
                     return <Activity
                         key={DataActivity.id}
                         img={DataActivity.img}
+
                         title={DataActivity.title}
                         description={DataActivity.description}
+
                     />
-                })}
+                  })}
             </div>
 
             <div>
