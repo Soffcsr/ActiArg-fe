@@ -40,7 +40,9 @@ const Profile1 = (props) => {
     if(props.error){
         alert(props.error)
     }else{
-        window.open(props.linkPago)
+        if(props.linkPago !== ''){
+            window.open(props.linkPago)
+        }
     }
 
     

@@ -4,8 +4,8 @@ import {reserve} from '../../actions/index'
 
 const ItemsTable = (props) => {
 
-    const reserver = (id) => {
-        props.reserve(id, props.idgym)
+    const reserver = (id, classname) => {
+        props.reserve(id, props.idgym, classname)
     }
 
     return (
@@ -22,7 +22,7 @@ const ItemsTable = (props) => {
                     } 
                     {
                         props.mondayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idMonday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idMonday, props.mondayNameClass)}>
                                 {props.mondayNameBtn}
                             </button>
                             : null
@@ -40,7 +40,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.tuesdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idTuesday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idTuesday, props.tuesdayNameClass)}>
                                 {props.tuesdayNameBtn}
                             </button>
                             : null
@@ -58,7 +58,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.wednesdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idWednesday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idWednesday, props.wednesdayNameClass)}>
                                 {props.wednesdayNameBtn}
                             </button>
                             : null
@@ -76,7 +76,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.thursdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idThursday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idThursday, props.thursdayNameClass)}>
                                 {props.thursdayNameBtn}
                             </button>
                             : null
@@ -94,7 +94,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.fridayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idFriday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idFriday, props.fridayNameClass)}>
                                 {props.fridayNameBtn}
                             </button>
                             : null
@@ -112,7 +112,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.saturdayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSaturday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSaturday, props.saturdayNameClass)}>
                                 {props.saturdayNameBtn}
                             </button>
                             : null
@@ -130,7 +130,7 @@ const ItemsTable = (props) => {
                     }
                     {
                         props.sundayAction === "yes" ?
-                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSunday)}>
+                            <button type="button" className="actiar-btn2" onClick={(e) => reserver(props.idSunday, props.sundayNameClass)}>
                                 {props.sundayNameBtn}
                             </button>
                             : null
