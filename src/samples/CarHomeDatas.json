@@ -2,19 +2,19 @@
     {
         "id": 0,
         "isActive": "active", 
-        "img": "https://i.ibb.co/V3B0hrP/BACKGROUND7.jpg",
+        "img": "https://i.ibb.co/wQVyLL3/BACKGROUND7.jpg",
         "description": "Activate con actiar"
     },
     {
         "id": 1,
         "isActive": "", 
-        "img": "https://i.ibb.co/HVjZSFX/multiplataforma13.jpg",
+        "img": "https://i.ibb.co/Kh74PW7/multiplataforma13.jpg",
         "description": "con un solo click"
     },
     {
         "id": 2,
         "isActive": "", 
-        "img": "https://i.ibb.co/v1cd328/asdasd2.jpg",
+        "img": "https://i.ibb.co/DDJYjDs/asdasd2.jpg",
         "description": "Sin moverte de casa"
     }
 ]
