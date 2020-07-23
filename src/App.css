@@ -331,8 +331,7 @@ footer i {
   font-size: 4em;
   text-transform: uppercase;
   line-height: 1.3em;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke: 2px black;
+  text-shadow: 3px 3px 0 #333, 3px -3px 0 #333, -3px 3px 0 #333, -3px -3px 0 #333;
   text-align: center;
 }
 
@@ -873,15 +872,15 @@ h2,
 }
 /* END CLASSTABLE COMPONENT */
 
-/* START CLASSTABLE COMPONENT */
-.inConstruction {
-  height: 70vh;
+/* START ERROR COMPONENT */
+.error {
+  height: 100vh;
   width: auto;
-  background: url("https://i.ibb.co/r7vQQ3p/678678678786-2.jpg") center no-repeat;
+  background: url("https://i.ibb.co/Lkv00rg/678678678786-2.jpg") center no-repeat;
   background-size: cover;
 }
 
-.incoh3 {
+.erro3 {
   position: relative;
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
@@ -889,7 +888,26 @@ h2,
   top: 40%;
   background: rgba(0, 0, 0, 0.534);
 }
-/* END CLASSTABLE COMPONENT */
+/* END ERROR COMPONENT */
+
+/* START Incostructin COMPONENT */
+.InCostruction {
+  height: 100vh;
+  width: auto;
+  background: url("https://i.pinimg.com/originals/9c/34/19/9c341943963c3069251558af2f4eebc2.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.InCo3 {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  color: rgb(255, 115, 0);
+  top: 40%;
+  background: rgba(0, 0, 0, 0.534);
+}
+/* END Incostructin COMPONENT */
+
 
 /* ICON */
 
