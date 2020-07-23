@@ -12,6 +12,7 @@ import Home from './views/Home'
 import Profile from './views/Profile/Profile1'
 import LoginView from './views/Login'
 import RegisterView from './views/Register'
+import Error404 from './component/Error404'
 
 
 function App() {
@@ -22,14 +23,17 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/GymProfile/:id" children={<Profile/>}>
+          <Route exact path="/GymProfile/:id" children={<Profile/>}>
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <LoginView/>
           </Route>
-          <Route path="/register">
+          <Route exact path="/register">
             <RegisterView/>
           </Route>
+          <Route
+            component={Error404}
+          />
         </Switch>
       </Router>
     </div>

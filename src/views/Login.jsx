@@ -38,6 +38,13 @@ const Login = props =>{
                 left={['Home', 'Gimnasios']}
                 right={['Nosotros', 'Contactanos']}
             />
+            {/*<div id="login-form">
+                <div>
+                    <form>
+                    
+                    </form>
+                </div>
+            </div>*/}
             <div className="d-flex flex-row justify-content-center align-items-center">
                 <div className="d-none d-md-flex w-50 img">
                     <img className="w-100" src="https://www.65ymas.com/uploads/s1/19/85/96/handy-gym-un-mini-gimnasio-concebido-para-enfermos-de-parkinson-esta-revolucionando-el-fitness.jpeg" alt="imagen-login"/>
