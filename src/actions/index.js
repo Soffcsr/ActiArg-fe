@@ -142,7 +142,7 @@ export function register(nombre, apellido, dni, telefono, email, password){
     }
 }
 
-export function reserve(idday, idgym){
+export function reserve(idday, idgym, classname){
     return async (dispatch, getState) => {
         let token = sessionStorage.getItem('token')
 
@@ -150,7 +150,7 @@ export function reserve(idday, idgym){
         header.append('Authorization', JSON.parse(token))
         header.append('Accept', 'application/json')
 
-        let response = await fetch(`https://actiar-be.herokuapp.com/reserveTurn/${idday}/gym/${idgym}`,{
+        let response = await fetch(`https://actiar-be.herokuapp.com/reserveTurn/${idday}/gym/${idgym}?title=${classname}`,{
             method: 'POST',
             headers: header
         })
