@@ -875,9 +875,9 @@ h2,
 
 /* START CLASSTABLE COMPONENT */
 .inConstruction {
-  height: 70vh;
+  height: 100vh;
   width: auto;
-  background: url("https://i.ibb.co/LgwGhxy/678678678786.jpg") center no-repeat;
+  background: url("https://i.ibb.co/Lkv00rg/678678678786-2.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -1064,3 +1064,17 @@ p {
   margin-right: 2rem;
 }
 /* END LINE COMPONENT */
+
+/* START LOGIN VIEW */
+#login-form {
+  background-image: url('https://i.ibb.co/41XkSm0/rolling-price.jpg');
+}
+
+#login-form div{
+  color: #FFFFFF;
+  border-radius: 60px;
+  width: 960px;
+  height: 400px;
+  fill-opacity: 60%;
+}
+/* END LOGIN VIEW */
