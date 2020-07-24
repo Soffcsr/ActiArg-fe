@@ -86,14 +86,16 @@ const Navbar = (props) => {
                 !sessionStorage.getItem('token') ?
                     <div className="d-none d-md-flex flex-row right btnNav">
                         <button type="button" className="btn actiar-btn mr-2">
-                            <Link to="/login">Sing in</Link>
+                            <Link to="/login">Iniciar Sesion</Link>
                         </button>
                         <button type="button" className="btn actiar-btn mr-2">
-                            <Link to="/register">Sing up</Link>
+                            <Link to="/register">Registrarse</Link>
                         </button>
                     </div>
                     :
-                    <span className="logout" onClick={logout}><Link to="/"><i className="fa fa-sign-out"></i></Link></span>
+                    <button type="button" className="btn actiar-btn mr-2 logout" onClick={logout}>   
+                        <Link to="/">Cerrar sesion</Link>
+                    </button>
             }
         </div>
     )
