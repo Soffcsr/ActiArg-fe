@@ -69,11 +69,6 @@ const Profile1 = (props) => {
                                     key={CarGym1Data.id}
                                     isActive={CarGym1Data.isActive}
                                     img={CarGym1Data.img}
-                                    /* alt={CarGym1Data.alt} */
-                                    /* title={CarGym1Data.title}
-                                    description={CarGym1Data.description}
-                                    action={CarGym1Data.action}
-                                    nameBtn={CarGym1Data.nameBtn} */
                                 />
                             })}
                     </div>
@@ -96,7 +91,6 @@ const Profile1 = (props) => {
 
                         title={DataActivity.title}
                         description={DataActivity.description}
-
                     />
                   })}
             </div>
