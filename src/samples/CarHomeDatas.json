@@ -1,0 +1,20 @@
+[   
+    {
+        "id": 0,
+        "isActive": "active", 
+        "img": "https://i.ibb.co/wQVyLL3/BACKGROUND7.jpg",
+        "description": "Activate con actiar"
+    },
+    {
+        "id": 1,
+        "isActive": "", 
+        "img": "https://i.ibb.co/C7fhTLC/552f1adf-b709-42f9-9590-95ef9e6c397d.jpg",
+        "description": "con un solo click"
+    },
+    {
+        "id": 2,
+        "isActive": "", 
+        "img": "https://i.ibb.co/C5T9XfJ/visa.jpg",
+        "description": "Sin moverte de casa"
+    }
+]

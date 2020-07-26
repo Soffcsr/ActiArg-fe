@@ -1,13 +1,18 @@
 import React from 'react'
+import{ 
+  BrowserRouter as Router, 
+  Switch, 
+  Route 
+} from 'react-router-dom'
+
 import './App.css'
 import './component/Carousel/Carousel'
+
 import Home from './views/Home'
-import GymProfile from './views/GymProfile/GymProfile'
-import{
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom'
+import Profile from './views/Profile/Profile1'
+import LoginView from './views/Login'
+import RegisterView from './views/Register'
+import Error404 from './component/Error404'
 
 
 function App() {
@@ -18,9 +23,20 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/Gym3">
-            <GymProfile/>
+          <Route exact path="/home">
+            <Home/>
           </Route>
+          <Route exact path="/GymProfile/:id" children={<Profile/>}>
+          </Route>
+          <Route exact path="/login">
+            <LoginView/>
+          </Route>
+          <Route exact path="/register">
+            <RegisterView/>
+          </Route>
+          <Route
+            component={Error404}
+          />
         </Switch>
       </Router>
     </div>

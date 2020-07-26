@@ -1,29 +1,36 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
 import ItemCard from './ItemCard'
-import Datas from '../../samples/DataCard.json'
 
-const CardContent = () => {
+const CardContent = (props) => {
     return (
-       <main class="main-content">
-            <Link to="/Gym3">
+        <main class="main-content" id="Gimnasios">
+            <Link to="/profile1">
                 <div className="container-fluid photos">
                     <div className="row align-items-stretch">
-                        {Datas.map((data) => {
+                        {props.gyms.map((data) => {
                             return <ItemCard
-                                img={data.img}
-                                alt={data.alt}
-                                title={data.title}
-                                description={data.description}   
-                                adress={data.adress} 
-                                size={data.size}                        
-                                />
+                                        img={data.photo}
+                                        alt="Image"
+                                        title={data.name}
+                                        description={data.description}
+                                        adress={data.address}
+                                        size={data.size}
+                                        id={data._id}
+                                    />
                         })}
-        
                     </div>
                 </div>
             </Link>
         </main>
     )
 }
-export default CardContent
+
+const mapStateToProps = state => {
+    return {gyms: state.gym.gyms}
+}
+
+const GymsList = connect(mapStateToProps)(CardContent)
+
+export default GymsList
