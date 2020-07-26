@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import {connect} from 'react-redux'
-import {useParams} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import Navbar from '../../component/Navbar'
 import ItemCarousel from '../../component/Carousel/ItemCarousel'
 import Activity from './Activity'
@@ -17,7 +17,7 @@ import { showActivities, showTurns, showCarousels, showPublicits, findGymById } 
 const Profile1 = (props) => {
     const [isActive, setActive] = useState(false)
 
-    let {id} = useParams();
+    let { id } = useParams();
     console.log("ID:::", id);
 
     const toggle = () => {
@@ -25,6 +25,7 @@ const Profile1 = (props) => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         props.showActivities(id)
         props.showTurns(id)
         props.showPublicits(id)
@@ -36,16 +37,16 @@ const Profile1 = (props) => {
     console.log("error::::", props.error)
     console.log("link::", props.linkPago)
 
-    
-    if(props.error){
+
+    if (props.error) {
         alert(props.error)
-    }else{
-        if(props.linkPago !== ''){
+    } else {
+        if (props.linkPago !== '') {
             window.open(props.linkPago)
         }
     }
 
-    
+
 
     return (
         <div>
@@ -92,7 +93,7 @@ const Profile1 = (props) => {
                         title={DataActivity.title}
                         description={DataActivity.description}
                     />
-                  })}
+                })}
             </div>
 
             <div>
@@ -113,7 +114,7 @@ const Profile1 = (props) => {
                     />
                 })}
             </div>
-                {/* turnbygym */}
+            {/* turnbygym */}
             <div className="classtime-section class-time-table spad table-responsive">
                 <div className="container">
                     <div className="row">
@@ -140,12 +141,12 @@ const Profile1 = (props) => {
                             </thead>
                             <tbody>
 
-                                { 
+                                {
                                     props.turns ?
                                         props.turns.map((turn) => {
                                             console.log("turn::", turn)
                                             return <ItemsTable
-                                                idgym = {id}
+                                                idgym={id}
                                                 workoutTime={turn.workoutTime}
                                                 idMonday={turn.days[0]._id}
                                                 mondayHourClass={turn.days[0].HourClass}
@@ -171,7 +172,7 @@ const Profile1 = (props) => {
                                                 wednesdayAction={turn.days[2].Action}
                                                 wednesdayNameBtn={turn.days[2].NameBtn}
 
-                                                idThursday ={turn.days[3]._id}
+                                                idThursday={turn.days[3]._id}
                                                 thursdayHourClass={turn.days[3].HourClass}
                                                 thursdayNameClass={turn.days[3].NameClass}
                                                 thursdayPartialPlaces={turn.days[3].PartialPlaces}
@@ -187,7 +188,7 @@ const Profile1 = (props) => {
                                                 fridayAction={turn.days[4].Action}
                                                 fridayNameBtn={turn.days[4].NameBtn}
 
-                                                idSaturday = {turn.days[5]._id}
+                                                idSaturday={turn.days[5]._id}
                                                 saturdayHourClass={turn.days[5].HourClass}
                                                 saturdayNameClass={turn.days[5].NameClass}
                                                 saturdayPartialPlaces={turn.days[5].PartialPlaces}
@@ -204,8 +205,8 @@ const Profile1 = (props) => {
                                                 sundayNameBtn={turn.days[6].NameBtn}
                                             />
                                         })
-                                    : null
-                                    }
+                                        : null
+                                }
 
                             </tbody>
                         </table>
@@ -252,8 +253,8 @@ const Profile1 = (props) => {
     )
 }
 
-const mapStateToProps = state =>{
-    return{
+const mapStateToProps = state => {
+    return {
         activities: state.activity.activities,
         turns: state.turns.turns,
         linkPago: state.turns.linkPago,
@@ -264,7 +265,7 @@ const mapStateToProps = state =>{
     }
 }
 
-const Profile = connect(mapStateToProps, {showActivities, showTurns, showCarousels, showPublicits, findGymById})(Profile1) 
+const Profile = connect(mapStateToProps, { showActivities, showTurns, showCarousels, showPublicits, findGymById })(Profile1)
 
 export default Profile
 

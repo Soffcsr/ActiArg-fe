@@ -13,6 +13,7 @@ const gymsReducer = (state = initState, action) =>{
             })
         case FIND_GYM_BY_ID:
             return {
+                ...state,
                 gym: action.payload
             }
         default:
