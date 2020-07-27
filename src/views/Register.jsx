@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import {register} from '../actions/index.js'
 import Navbar from '../component/Navbar'
+import Alert from '../component/Alert'
 
 const Register = props =>{
     const [nombre, setNombre] = useState('')
@@ -61,6 +62,10 @@ const Register = props =>{
                     <img className="w-100" src="https://i.ibb.co/KLr9fbF/87829700-e3aa-4188-b423-1b069a1667bc.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
+                {
+                    props.error ? <Alert message={props.message}/> 
+                    : props.registered ? history.push('/login') : null
+                }
                     <form className="mt-4 p-4">
                         <div className="form-group text-left">
                             <input type="text" id="nombre" className="form-control" placeholder="Nombre" value={nombre} onChange={handleOnChange}></input>
@@ -94,7 +99,8 @@ const Register = props =>{
 const mapStateToProps = state => {
     return {
         registered: state.auth.registered,
-        message: state.auth.message
+        message: state.auth.message,
+        error: state.auth.error
     }
 }
 
