@@ -57,8 +57,8 @@ const Register = props =>{
                 right={['Nosotros', 'Contactanos']}
             />
             <div className="d-flex flex-row p-4 p-md-0" id="register-form">
-                <div className="d-none d-md-flex w-50 img">
-                    <img className="w-100" src="https://i.ibb.co/KLr9fbF/87829700-e3aa-4188-b423-1b069a1667bc.jpg" alt="imagen-login"/>
+                <div className="d-none d-md-flex w-50">
+                    <img className="w-100" src="https://i.ibb.co/F72JpfH/1082b904-3c44-44ff-9a9e-d73f6ecbc006.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
                     <form className="mt-4 p-4">
