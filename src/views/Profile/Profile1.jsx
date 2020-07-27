@@ -51,8 +51,8 @@ const Profile1 = (props) => {
     return (
         <div>
             <Navbar
-                left={['Home', 'Gimnasios']}
-                right={['Nosotros', 'Contactanos']}
+                left={['Home', 'Actividades', 'Objetivos']}
+                right={['Horarios', 'Precios', 'Contactanos']}
             />
             {
                 !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros precios, por favor logueate"/> : null
@@ -134,7 +134,7 @@ const Profile1 = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="classtime-table">
+                            <div className="classtime-table" id="Horarios">
                                 <table>
                                     <thead>
                                         <tr>
@@ -234,7 +234,7 @@ const Profile1 = (props) => {
                 <button className="customBtn" onClick={toggle}>
                     {isActive ? 'MES' : 'CLASE'}
                 </button>
-                <div className="card-group">
+                <div className="card-group" id="Precios">
                     {props.activities.map((DataPrice) => {
                         return <Price
                             title={DataPrice.title}
@@ -249,7 +249,7 @@ const Profile1 = (props) => {
                 </div>
             </div>
             {/* datos del gym */}
-            <div>
+            <div id="Contactanos">
                 <Contact
                     phone={props.gym.phone}
                     adress={props.gym.address}
