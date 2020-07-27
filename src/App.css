@@ -35,9 +35,7 @@ body {
   text-decoration: none;
   color: white;
   cursor: default;
-  /* border-bottom: solid rgb(225, 55, 29); */
   text-shadow: -1px -1px 10px rgb(225, 55, 29), 1px 1px 10px rgb(225, 55, 29);
-  /* letter-spacing: 0.1rem; */
 }
 
 @media (max-width: 576px) {
@@ -73,10 +71,9 @@ body {
   top: -0.35rem;
   right: 1rem;
 }
-.fa-sign-out {
-  color: white;
-  font-size: 2rem;
-  margin-top: 0.2rem;
+.logout {
+  margin-top: 2rem;
+  margin-right: 3rem;
 }
 /* NAVBAR COMPONENT END */
 
@@ -877,14 +874,14 @@ h2,
 /* END CLASSTABLE COMPONENT */
 
 /* START CLASSTABLE COMPONENT */
-.inConstruction {
+.error {
   height: 100vh;
   width: auto;
   background: url("https://i.ibb.co/Lkv00rg/678678678786-2.jpg") center no-repeat;
   background-size: cover;
 }
 
-.erro3 {
+.error3 {
   position: relative;
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
@@ -892,13 +889,19 @@ h2,
   top: 40%;
   background: rgba(0, 0, 0, 0.534);
 }
+.bajate{
+  position: relative;
+  top: 19rem;
+  background: black;
+}
+
 /* END ERROR COMPONENT */
 
 /* START Incostructin COMPONENT */
-.InCostruction {
+.InConstruction {
   height: 100vh;
   width: auto;
-  background: url("https://i.pinimg.com/originals/9c/34/19/9c341943963c3069251558af2f4eebc2.jpg") center no-repeat;
+  background: url("https://i.ibb.co/Hq9ZjZs/pagina-en-construccion.jpg") center no-repeat;
   background-size: cover;
 }
 

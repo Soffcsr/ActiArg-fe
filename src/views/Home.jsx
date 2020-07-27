@@ -7,7 +7,6 @@ import AboutUs from '../component/AboutUs'
 import Footer from '../component/Footer'
 import ScrollArrow from '../component/ScrollArrow'
 
-
 const Home = () => {
     return(    
         <div>

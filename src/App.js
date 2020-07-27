@@ -23,6 +23,9 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
+          <Route exact path="/home">
+            <Home/>
+          </Route>
           <Route exact path="/GymProfile/:id" children={<Profile/>}>
           </Route>
           <Route exact path="/login">

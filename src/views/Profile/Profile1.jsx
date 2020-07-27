@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import {connect} from 'react-redux'
-import {useParams} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import Navbar from '../../component/Navbar'
 import ItemCarousel from '../../component/Carousel/ItemCarousel'
 import Activity from './Activity'
@@ -18,7 +18,7 @@ import { showActivities, showTurns, showCarousels, showPublicits, findGymById } 
 const Profile1 = (props) => {
     const [isActive, setActive] = useState(false)
 
-    let {id} = useParams();
+    let { id } = useParams();
     console.log("ID:::", id);
 
     const toggle = () => {
@@ -26,6 +26,7 @@ const Profile1 = (props) => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         props.showActivities(id)
         props.showTurns(id)
         props.showPublicits(id)
@@ -37,16 +38,16 @@ const Profile1 = (props) => {
     console.log("error::::", props.error)
     console.log("link::", props.linkPago)
 
-    
-    if(props.error){
+
+    if (props.error) {
         alert(props.error)
-    }else{
-        if(props.linkPago !== ''){
+    } else {
+        if (props.linkPago !== '') {
             window.open(props.linkPago)
         }
     }
 
-    
+
 
     return (
         <div>
@@ -72,11 +73,6 @@ const Profile1 = (props) => {
                                     key={CarGym1Data.id}
                                     isActive={CarGym1Data.isActive}
                                     img={CarGym1Data.img}
-                                    /* alt={CarGym1Data.alt} */
-                                    /* title={CarGym1Data.title}
-                                    description={CarGym1Data.description}
-                                    action={CarGym1Data.action}
-                                    nameBtn={CarGym1Data.nameBtn} */
                                 />
                             })}
                     </div>
@@ -99,9 +95,8 @@ const Profile1 = (props) => {
 
                         title={DataActivity.title}
                         description={DataActivity.description}
-
                     />
-                  })}
+                })}
             </div>
 
             <div>
@@ -122,6 +117,7 @@ const Profile1 = (props) => {
                     />
                 })}
             </div>
+
                 {/* turnbygym */ }
                 {
                     sessionStorage.getItem('token') ? 
@@ -153,7 +149,7 @@ const Profile1 = (props) => {
                                         { 
                                             props.turns ?
                                                 props.turns.map((turn) => {
-                                                    console.log("turn::", turn)
+                                                   
                                                     return <ItemsTable
                                                         idgym = {id}
                                                         workoutTime={turn.workoutTime}
@@ -224,6 +220,7 @@ const Profile1 = (props) => {
                     </div>
                     : null
                 }
+
             {/* activitybyGym */}
             <div className="customPrice"
                 style={{
@@ -264,8 +261,8 @@ const Profile1 = (props) => {
     )
 }
 
-const mapStateToProps = state =>{
-    return{
+const mapStateToProps = state => {
+    return {
         activities: state.activity.activities,
         turns: state.turns.turns,
         linkPago: state.turns.linkPago,
@@ -276,7 +273,7 @@ const mapStateToProps = state =>{
     }
 }
 
-const Profile = connect(mapStateToProps, {showActivities, showTurns, showCarousels, showPublicits, findGymById})(Profile1) 
+const Profile = connect(mapStateToProps, { showActivities, showTurns, showCarousels, showPublicits, findGymById })(Profile1)
 
 export default Profile
 
