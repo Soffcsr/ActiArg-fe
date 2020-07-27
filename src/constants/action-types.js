@@ -27,3 +27,5 @@ export const REGISTER_ERROR = "REGISTER_ERROR"
 export const SHOW_PUBLICITS = "SHOW_PUBLICITS"
 
 export const SHOW_CAROUSELS = "SHOW_CAROUSELS"
+
+export const SEND_MAIL = "SEND_MAIL"
