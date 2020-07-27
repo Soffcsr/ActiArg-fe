@@ -47,7 +47,7 @@ const Login = props =>{
             </div>*/}
             <div className="d-flex flex-row" id="login-form">
                 <div className="d-none d-md-flex w-50 img img-fluid">
-                    <img className="w-100" src="https://i.ibb.co/x24RWBm/7005791b-6a9a-44e3-af02-a3764d5ed434.jpg" alt="imagen-login"/>
+                    <img className="w-100" src="https://i.ibb.co/G2Pk1jK/login-si.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-column align-items-center justify-content-center justify-content-md-start mt-md-5 form">
                 {
