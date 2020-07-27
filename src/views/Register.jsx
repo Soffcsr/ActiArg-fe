@@ -88,7 +88,7 @@ const Register = props =>{
                         <div className="form-group text-left">
                             <input type="password" id="passwordConf" className="form-control" placeholder="Confirme password" value={passwordConf} onChange={handleOnChange}></input>
                         </div>
-                        <button type="button" className="btn actiar-btn" onClick={register}>Iniciar</button>
+                        <button type="button" className="btn actiar-btn" onClick={register}>Registrar</button>
                     </form>
                 </div>
             </div>
