@@ -35,8 +35,8 @@ const Login = props =>{
     return(
         <div>
             <Navbar
-                left={['Home', 'Gimnasios']}
-                right={['Nosotros', 'Contactanos']}
+                left={[]}
+                right={[]}
             />
             {/*<div id="login-form">
                 <div>
