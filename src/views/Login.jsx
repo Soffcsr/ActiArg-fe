@@ -35,8 +35,8 @@ const Login = props =>{
     return(
         <div>
             <Navbar
-                left={['Home', 'Gimnasios']}
-                right={['Nosotros', 'Contactanos']}
+                left={[]}
+                right={[]}
             />
             {/*<div id="login-form">
                 <div>
@@ -45,23 +45,21 @@ const Login = props =>{
                     </form>
                 </div>
             </div>*/}
-            <div className="d-flex flex-row justify-content-center align-items-center">
-                <div className="d-none d-md-flex w-50 img">
-                    <img className="w-100" src="https://www.65ymas.com/uploads/s1/19/85/96/handy-gym-un-mini-gimnasio-concebido-para-enfermos-de-parkinson-esta-revolucionando-el-fitness.jpeg" alt="imagen-login"/>
+            <div className="d-flex flex-row" id="login-form">
+                <div className="d-none d-md-flex w-50 img img-fluid">
+                    <img className="w-100" src="https://i.ibb.co/x24RWBm/7005791b-6a9a-44e3-af02-a3764d5ed434.jpg" alt="imagen-login"/>
                 </div>
-                <div className="d-flex flex-column justify-content-center align-items-center mt-5">
+                <div className="d-flex flex-column align-items-center justify-content-center justify-content-md-start mt-md-5 form">
                 {
-                    props.error ? <Alert message={props.error}/> 
+                    props.error ? <Alert message={props.message}/> 
                     : props.loged ? history.push('/') : null
                 }
-                    <form className="align-self-center">
+                    <form className="d-flex flex-column align-items-center justify-content-center mt-md-5 p-4">
                         <div className="form-group text-left">
-                            <label>Email</label>
-                            <input type="email" id="email" className="form-control" value={email} onChange={handlerOnChange}></input>
+                            <input type="email" id="email" className="form-control" placeholder="Email" value={email} onChange={handlerOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>Password</label>
-                            <input type="password" id="password" className="form-control" value={password} onChange={handlerOnChange}></input>
+                            <input type="password" id="password" className="form-control" placeholder="Password" value={password} onChange={handlerOnChange}></input>
                         </div>
                         <button type="button" className="btn actiar-btn" onClick={login}>Iniciar</button>
                     </form>
@@ -74,6 +72,7 @@ const Login = props =>{
 const mapStateToProps = state => {
     return {
         loged: state.auth.loged,
+        message: state.auth.message,
         error: state.auth.error
     }
 }

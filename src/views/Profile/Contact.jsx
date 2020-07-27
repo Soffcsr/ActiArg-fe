@@ -4,7 +4,7 @@ const Contact = (props) => {
     return (
         <div className="map">
         <iframe title="myframe"
-            src="https://maps.google.com/maps?q=alta%20intensidad&t=&z=15&ie=UTF8&iwloc=&output=embed" height="600" style={{border: 0}} allowfullscreen=""></iframe>
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=General%20Paz%20576+(Rolling%20Code)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" height="600" style={{border: 0}} allowfullscreen=""></iframe>
         <div className="map-contact-detalis">
             <div className="open-time">
                 <h5>Contacto</h5>

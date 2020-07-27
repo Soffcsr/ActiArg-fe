@@ -56,14 +56,16 @@ const Navbar = (props) => {
                                 {
                                     props.left.map((item, index) => {
                                         return (
-                                            <animated.li style={trailsleft[index]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={index}><a href={`#${item}`}>{item}</a></animated.li>
+                                            <animated.li style={trailsleft[index]} className="d-flex flex-row justify-content-center mr-md-5 mt-md-3" key={index}><a href={item === "Home" ? 'http://actiar.herokuapp.com/' : `#${item}`}>{item}</a></animated.li>
                                         )
                                     })
                                 }
                             </ul>
                         </nav>
                         <div className="d-md-block d-none mt-3 mr-md-4" id="icon">
-                            <img src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" />
+                            <Link to="/">
+                                <img src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" />
+                            </Link>
                         </div>
                         <nav className="d-md-flex w-md-50 w-100">
                             <ul className="navbar-list d-flex flex-md-row flex-column justify-content-md-start justify-content-center align-items-center w-100 mt-md-4">

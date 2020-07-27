@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import {register} from '../actions/index.js'
 import Navbar from '../component/Navbar'
+import Alert from '../component/Alert'
 
 const Register = props =>{
     const [nombre, setNombre] = useState('')
@@ -53,42 +54,39 @@ const Register = props =>{
     return(
         <div>
             <Navbar
-                left={['Home', 'Gimnasios']}
-                right={['Nosotros', 'Contactanos']}
+                left={[]}
+                right={[]}
             />
-            <div className="d-flex flex-row">
-                <div className="w-50 img">
-                    <img className="w-100" src="https://www.65ymas.com/uploads/s1/19/85/96/handy-gym-un-mini-gimnasio-concebido-para-enfermos-de-parkinson-esta-revolucionando-el-fitness.jpeg" alt="imagen-login"/>
+            <div className="d-flex flex-row p-4 p-md-0" id="register-form">
+                <div className="d-none d-md-flex w-50 img">
+                    <img className="w-100" src="https://i.ibb.co/KLr9fbF/87829700-e3aa-4188-b423-1b069a1667bc.jpg" alt="imagen-login"/>
                 </div>
-                <div className="d-flex flex-row justify-content-center w-50">
-                    <form className="w-50 align-self-center">
+                <div className="d-flex flex-row justify-content-center form">
+                {
+                    props.error ? <Alert message={props.message}/> 
+                    : props.registered ? history.push('/login') : null
+                }
+                    <form className="mt-4 p-4">
                         <div className="form-group text-left">
-                            <label>Nombre *</label>
-                            <input type="text" id="nombre" className="form-control" value={nombre} onChange={handleOnChange}></input>
+                            <input type="text" id="nombre" className="form-control" placeholder="Nombre" value={nombre} onChange={handleOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>Apellido *</label>
-                            <input type="text" id="apellido" className="form-control" value={apellido} onChange={handleOnChange}></input>
+                            <input type="text" id="apellido" className="form-control" placeholder="Apellido" value={apellido} onChange={handleOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>DNI *</label>
-                            <input type="text" id="dni" className="form-control" value={dni} onChange={handleOnChange}></input>
+                            <input type="text" id="dni" className="form-control" placeholder="DNI" value={dni} onChange={handleOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>Telefono de contacto *</label>
-                            <input type="text" id="telefono" className="form-control" value={telefono} onChange={handleOnChange}></input>
+                            <input type="text" id="telefono" className="form-control" placeholder="Teléfono de contacto" value={telefono} onChange={handleOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>Email *</label>
-                            <input type="email" id="email" className="form-control" value={email} onChange={handleOnChange}></input>
+                            <input type="email" id="email" className="form-control" placeholder="Email" value={email} onChange={handleOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>Password *</label>
-                            <input type="password" id="password" className="form-control" value={password} onChange={handleOnChange}></input>
+                            <input type="password" id="password" className="form-control" placeholder="Password" value={password} onChange={handleOnChange}></input>
                         </div>
                         <div className="form-group text-left">
-                            <label>Confirme password *</label>
-                            <input type="password" id="passwordConf" className="form-control" value={passwordConf} onChange={handleOnChange}></input>
+                            <input type="password" id="passwordConf" className="form-control" placeholder="Confirme password" value={passwordConf} onChange={handleOnChange}></input>
                         </div>
                         <button type="button" className="btn actiar-btn" onClick={register}>Iniciar</button>
                     </form>
@@ -101,7 +99,8 @@ const Register = props =>{
 const mapStateToProps = state => {
     return {
         registered: state.auth.registered,
-        message: state.auth.message
+        message: state.auth.message,
+        error: state.auth.error
     }
 }
 
