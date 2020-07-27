@@ -19,7 +19,6 @@ const Profile1 = (props) => {
     const [isActive, setActive] = useState(false)
 
     let { id } = useParams();
-    console.log("ID:::", id);
 
     const toggle = () => {
         setActive(!isActive)
@@ -27,16 +26,21 @@ const Profile1 = (props) => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        props.showActivities(id)
-        props.showTurns(id)
-        props.showPublicits(id)
         props.showCarousels(id)
         props.findGymById(id)
+        
+        if(props.publicits.length === 0) {
+            props.showPublicits(id)
+        }
+        
+        if(props.turns.length === 0) {
+            props.showTurns(id)
+        }
+
+        if(props.activities.length === 0) {
+            props.showActivities(id)
+        }
     }, [])
-
-
-    console.log("error::::", props.error)
-    console.log("link::", props.linkPago)
 
 
     if (props.error) {
@@ -47,19 +51,15 @@ const Profile1 = (props) => {
         }
     }
 
-
-
     return (
         <div>
             <Navbar
                 left={['Home', 'Gimnasios']}
                 right={['Nosotros', 'Contactanos']}
             />
-
             {
                 !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros horarios y reservar una clase, por favor logueate"/> : null
             }
-
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <ol id="myCarousel-indicators" className="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
@@ -129,7 +129,6 @@ const Profile1 = (props) => {
                             </div>
                         </div>
                     </div>
-
                     <div className="classtime-table">
                         <table>
                             <thead>
@@ -145,11 +144,10 @@ const Profile1 = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-
                                 {
                                     props.turns ?
                                         props.turns.map((turn) => {
-                                            console.log("turn::", turn)
+                                            
                                             return <ItemsTable
                                                 idgym={id}
                                                 workoutTime={turn.workoutTime}
@@ -212,7 +210,6 @@ const Profile1 = (props) => {
                                         })
                                         : null
                                 }
-
                             </tbody>
                         </table>
                     </div>
@@ -250,11 +247,9 @@ const Profile1 = (props) => {
                     atention={props.gym.atention}
                 />
             </div>
-
             <Footer />
             <ScrollArrow />
         </div>
-
     )
 }
 
