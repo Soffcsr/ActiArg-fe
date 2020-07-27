@@ -55,6 +55,10 @@ const Profile1 = (props) => {
                 right={['Nosotros', 'Contactanos']}
             />
 
+            {
+                !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros horarios y reservar una clase, por favor logueate"/> : null
+            }
+
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <ol id="myCarousel-indicators" className="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
