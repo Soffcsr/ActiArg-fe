@@ -46,7 +46,6 @@ export function showTurns(id){
         fetch(`https://actiar-be.herokuapp.com/TurnByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("turns:::", data[0].days[0])
                 dispatch({
                     type: SHOW_TURNS,
                     payload: data
