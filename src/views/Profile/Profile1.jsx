@@ -11,6 +11,7 @@ import Price from './Price'
 import Contact from './Contact'
 import Footer from '../../component/Footer'
 import ScrollArrow from '../../component/ScrollArrow'
+import Alert from '../../component/Alert'
 import '../../App.css'
 import { showActivities, showTurns, showCarousels, showPublicits, findGymById } from '../../actions'
 
