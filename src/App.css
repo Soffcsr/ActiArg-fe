@@ -109,20 +109,24 @@ footer h5 {
   justify-content: center;
 }
 
-footer .form-control {
+footer .form-control, 
+#login-form form .form-control, 
+#register-form form .form-control{
   border-top: none;
   border-left: none;
   border-right: none;
-  background: rgb(21, 21, 21);
+  background: transparent;
   border-radius: 0;
 }
 
-footer .form-control:focus {
+footer .form-control:focus, 
+#login-form form .form-control:focus,
+#register-form form .form-control:focus {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: solid rgb(225, 55, 29);
-  background-color: rgb(21, 21, 21);
+  background-color: transparent;
 }
 
 footer i {
@@ -714,7 +718,7 @@ footer i {
 .scrollTop {
   position: fixed;
   width: auto;
-  bottom: 26px;
+  bottom: 30px;
   align-items: flex-start;
   height: 20px;
   justify-content: flex-start;
@@ -723,7 +727,7 @@ footer i {
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
-  left: 85%;
+  left: 90vw;
   color: grey;
 }
 
@@ -1087,15 +1091,62 @@ p {
 /* END LINE COMPONENT */
 
 /* START LOGIN VIEW */
-#login-form {
-  background-image: url('https://i.ibb.co/41XkSm0/rolling-price.jpg');
+#login-form form,
+#register-form form{
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
 }
 
-#login-form div{
-  color: #FFFFFF;
-  border-radius: 60px;
-  width: 960px;
-  height: 400px;
-  fill-opacity: 60%;
+#login-form form, #register-form form{
+  width: 75%;
+}
+
+#login-form form .form-group{
+  width: 75%;
+}
+
+@media (min-width: 576px) {
+  .form{
+    width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  #login-form,
+  #register-form{
+    width: 100vw;
+  }
+
+  #login-form{
+    background-image: url('https://i.ibb.co/x24RWBm/7005791b-6a9a-44e3-af02-a3764d5ed434.jpg');
+    height: 100vh;
+  }
+
+  #register-form{
+    background-image: url('https://i.ibb.co/KLr9fbF/87829700-e3aa-4188-b423-1b069a1667bc.jpg');
+    height: auto;
+  }
+
+  #login-form .form .img, 
+  #login-form .form .img img{
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #register-form .form .img,
+  #register-form .form .img img{
+    height: auto;
+    width: 100vw;
+  }
+
+  .form{
+    width: 100%;
+  }
+
+  form{
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
 /* END LOGIN VIEW */
