@@ -133,10 +133,10 @@ export function register(nombre, apellido, dni, telefono, email, password){
                 payload: register.message
             })
         }else{
-            let register = await response.json()
+            let error = await response.json()
             dispatch({
                 type: REGISTER_ERROR,
-                payload: register.message
+                payload: error
             })
         }
     }

@@ -3,7 +3,7 @@ import { LOGIN_USER, LOGIN_SUCCESS, LOGIN_ERROR, REGISTER_SUCCESS, REGISTER_ERRO
 
 const initState = {
     loged: false,
-    error: '',
+    error: false,
     registered: false,
     message: '',
     credentials: {
@@ -24,7 +24,8 @@ const authReducer = (state = initState, action) =>{
         case REGISTER_ERROR :
             return {
                 registered: false,
-                message: action.payload
+                message: action.payload.error,
+                error: true
             }
         case LOGIN_USER :
             return {
@@ -38,7 +39,8 @@ const authReducer = (state = initState, action) =>{
         case LOGIN_ERROR :
             return {
                 loged: false,
-                error: action.payload.error
+                message: action.payload.error,
+                error: true
             };
         default:
             break;

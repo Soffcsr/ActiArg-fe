@@ -63,7 +63,9 @@ const Navbar = (props) => {
                             </ul>
                         </nav>
                         <div className="d-md-block d-none mt-3 mr-md-4" id="icon">
-                            <img src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" />
+                            <Link to="/">
+                                <img src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" />
+                            </Link>
                         </div>
                         <nav className="d-md-flex w-md-50 w-100">
                             <ul className="navbar-list d-flex flex-md-row flex-column justify-content-md-start justify-content-center align-items-center w-100 mt-md-4">

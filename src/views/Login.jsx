@@ -35,8 +35,8 @@ const Login = props =>{
     return(
         <div>
             <Navbar
-                left={['Home', 'Gimnasios']}
-                right={['Nosotros', 'Contactanos']}
+                left={[]}
+                right={[]}
             />
             {/*<div id="login-form">
                 <div>
@@ -51,7 +51,7 @@ const Login = props =>{
                 </div>
                 <div className="d-flex flex-column align-items-center justify-content-center justify-content-md-start mt-md-5 form">
                 {
-                    props.error ? <Alert message={props.error}/> 
+                    props.error ? <Alert message={props.message}/> 
                     : props.loged ? history.push('/') : null
                 }
                     <form className="d-flex flex-column align-items-center justify-content-center mt-md-5 p-4">
@@ -72,6 +72,7 @@ const Login = props =>{
 const mapStateToProps = state => {
     return {
         loged: state.auth.loged,
+        message: state.auth.message,
         error: state.auth.error
     }
 }
