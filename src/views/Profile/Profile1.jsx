@@ -56,7 +56,7 @@ const Profile1 = (props) => {
                 right={['Horarios', 'Precios', 'Contactanos']}
             />
             {
-                !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros precios, por favor logueate"/> : null
+                !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros horarios, por favor logueate"/> : null
             }
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <ol id="myCarousel-indicators" className="carousel-indicators">
