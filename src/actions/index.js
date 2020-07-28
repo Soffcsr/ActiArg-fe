@@ -12,7 +12,8 @@ import {
     SHOW_CAROUSELS,
     RESERVE_TURN,
     RESERVE_ERROR,
-    FIND_GYM_BY_ID
+    FIND_GYM_BY_ID,
+    SEND_MAIL
 } from "../constants/action-types";
 
 export function showGyms(payload){
@@ -45,7 +46,6 @@ export function showTurns(id){
         fetch(`https://actiar-be.herokuapp.com/TurnByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("turns:::", data[0].days[0])
                 dispatch({
                     type: SHOW_TURNS,
                     payload: data
@@ -187,6 +187,34 @@ export function findGymById(id) {
         dispatch({
             type: FIND_GYM_BY_ID,
             payload: data
+        })
+    }
+}
+
+export function sendMail(email, consult){
+    return async (dispatch, getState) => {
+        let token = sessionStorage.getItem('token')
+
+        const header = new Headers()
+        header.append('Authorization', JSON.parse(token))
+        header.append('Accept', 'application/json')
+        header.append('Content-Type', 'application/json')
+
+        let response = await fetch('https://actiar-be.herokuapp.com/send', {
+            method: 'POST',
+            headers: header,
+            body: JSON.stringify({
+                email: email,
+                consulta: consult
+            })
+        })
+
+        console.log("RESPONSE::", response)
+
+        let data = await response.json()
+        dispatch({
+            type: SEND_MAIL,
+            payload: data.message
         })
     }
 }

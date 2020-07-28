@@ -58,8 +58,8 @@ const Register = props =>{
                 right={[]}
             />
             <div className="d-flex flex-row p-4 p-md-0" id="register-form">
-                <div className="d-none d-md-flex w-50 img">
-                    <img className="w-100" src="https://i.ibb.co/KLr9fbF/87829700-e3aa-4188-b423-1b069a1667bc.jpg" alt="imagen-login"/>
+                <div className="d-none d-md-flex w-50">
+                    <img className="w-100" src="https://i.ibb.co/F72JpfH/1082b904-3c44-44ff-9a9e-d73f6ecbc006.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
                 {
@@ -88,7 +88,7 @@ const Register = props =>{
                         <div className="form-group text-left">
                             <input type="password" id="passwordConf" className="form-control" placeholder="Confirme password" value={passwordConf} onChange={handleOnChange}></input>
                         </div>
-                        <button type="button" className="btn actiar-btn" onClick={register}>Iniciar</button>
+                        <button type="button" className="btn actiar-btn" onClick={register}>Registrar</button>
                     </form>
                 </div>
             </div>

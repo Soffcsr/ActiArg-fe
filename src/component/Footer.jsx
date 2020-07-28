@@ -1,7 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {connect} from 'react-redux'
+
+import {sendMail} from '../actions/index'
+
+import Alert from '../component/Alert'
+
 import '../App.css'
 
-const Footer = () => {
+const Footer = (props) => {
+    const [email, setEmail] = useState('')
+    const [consult, setConsult] = useState('')
+
+    const handleOnChange = e => {
+        switch (e.target.id) {
+            case "email":
+                setEmail(e.target.value)
+                break;
+            case "consulta":
+                setConsult(e.target.value)
+                break;
+            default:
+                break;
+        }
+    }
+
+    const send = () => {
+        console.log("SENDDDD")
+        props.sendMail(email, consult)
+    }
+
     return (
         <footer className="footer">
             <div className="container">
@@ -22,15 +49,22 @@ const Footer = () => {
                     
                     <div className="col-md-5">
                         <form>
-                        <h5 className="text-md-center"> Contactanos</h5>
+                            {
+                                props.message_send ?
+                                <Alert
+                                    message={props.message}
+                                />
+                                : null
+                            }
+                            <h5 className="text-md-center"> Contactanos</h5>
                             <fieldset className="form-group">
-                                <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
+                                <input type="email" id="email" className="form-control" value={email} placeholder="Email" onChange={handleOnChange}/>
                             </fieldset>
                             <fieldset className="form-group">
-                                <textarea className="form-control" id="exampleMessage" placeholder="Mensaje"></textarea>
+                                <textarea className="form-control" id="consulta" value={consult} placeholder="Mensaje" onChange={handleOnChange}></textarea>
                             </fieldset>
                             <fieldset className="form-group text-xs-right">
-                                <button className="actiar-btn">Enviar</button>
+                                <button type="button" className="actiar-btn" onClick={send}>Enviar</button>
                             </fieldset>
                         </form>
                     </div>
@@ -40,4 +74,13 @@ const Footer = () => {
     )
 }
 
-export default Footer
+const mapStateToProps = state => {
+    return {
+        message: state.mail.message,
+        message_send: state.mail.message_send
+    }
+}
+
+const FooterComponent = connect(mapStateToProps, {sendMail})(Footer)
+
+export default FooterComponent
