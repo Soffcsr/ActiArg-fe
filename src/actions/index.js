@@ -88,21 +88,19 @@ export function login(email, password) {
             method: 'POST'
         }
         let response = await fetch(`http://actiar-be.herokuapp.com/login?email=${email}&&password=${password}`, requestOptions)
-        if(response.ok){
-            let credentials = await response.json()
-            console.log(credentials)
+        let credentials = await response.json()
+        if(credentials.error){
+            dispatch({
+                type: LOGIN_ERROR,
+                payload: credentials.error
+            })
+        }else{
             sessionStorage.setItem('token', JSON.stringify(credentials.data.token))
             sessionStorage.setItem('username', JSON.stringify(credentials.data.username))
             sessionStorage.setItem('userlastname', JSON.stringify(credentials.data.userlastname))
             dispatch({
                 type: LOGIN_USER,
                 payload: credentials.data
-            })
-        }else{
-            let error = await response.json()
-            dispatch({
-                type: LOGIN_ERROR,
-                payload: error
             })
         }
     }
@@ -126,17 +124,16 @@ export function register(nombre, apellido, dni, telefono, email, password){
             })
         }
         let response = await fetch('http://actiar-be.herokuapp.com/register', requestOptions)
-        if(response.ok) {
-            let register = await response.json()
+        let register = await response.json()
+        if(register.error){
+            dispatch({
+                type: REGISTER_ERROR,
+                payload: register.error
+            })
+        }else{
             dispatch({
                 type: REGISTER_SUCCESS,
                 payload: register.message
-            })
-        }else{
-            let error = await response.json()
-            dispatch({
-                type: REGISTER_ERROR,
-                payload: error
             })
         }
     }

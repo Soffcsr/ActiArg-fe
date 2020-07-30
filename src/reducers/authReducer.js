@@ -24,7 +24,7 @@ const authReducer = (state = initState, action) =>{
         case REGISTER_ERROR :
             return {
                 registered: false,
-                message: action.payload.error,
+                message: action.payload,
                 error: true
             }
         case LOGIN_USER :
@@ -39,7 +39,7 @@ const authReducer = (state = initState, action) =>{
         case LOGIN_ERROR :
             return {
                 loged: false,
-                message: action.payload.error,
+                message: action.payload,
                 error: true
             };
         default:
