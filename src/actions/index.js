@@ -4,7 +4,6 @@ import {
     SHOW_ACTIVITIES, 
     SHOW_TURNS,
     LOGIN_USER,
-    LOGIN_SUCCESS,
     LOGIN_ERROR,
     REGISTER_SUCCESS,
     REGISTER_ERROR,
@@ -32,7 +31,6 @@ export function showActivities(id){
         fetch(`https://actiar-be.herokuapp.com/ActivityByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("activities:::", data)
                 dispatch({
                     type: SHOW_ACTIVITIES,
                     payload: data
@@ -59,7 +57,6 @@ export function showPublicits(id){
         fetch(`https://actiar-be.herokuapp.com/PublicitByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("publicits:::", data)
                 dispatch({
                     type: SHOW_PUBLICITS,
                     payload: data
@@ -73,7 +70,6 @@ export function showCarousels(id){
         fetch(`https://actiar-be.herokuapp.com/CarouselByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("carousels:::", data)
                 dispatch({
                     type: SHOW_CAROUSELS,
                     payload: data
@@ -205,8 +201,6 @@ export function sendMail(email, consult){
                 consulta: consult
             })
         })
-
-        console.log("RESPONSE::", response)
 
         let data = await response.json()
         dispatch({

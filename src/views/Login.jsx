@@ -6,11 +6,13 @@ import Alert from '../component/Alert'
 import {login} from '../actions/index'
 
 const Login = props =>{
+    let history = useHistory()
+
+    //LOCAL STATE
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    let history = useHistory()
-
+    //CONTROL DEL FORMULARIO CON EL ESTADO
     const handlerOnChange = e => {
         switch(e.target.id){
             case "email" :
@@ -45,10 +47,24 @@ const Login = props =>{
                         : props.loged ? history.push('/') : null
                     }
                         <div className="form-group text-left">
-                            <input type="email" id="email" className="form-control" placeholder="Email" value={email} onChange={handlerOnChange}/>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                className="form-control" 
+                                placeholder="Email" 
+                                value={email} 
+                                onChange={handlerOnChange}
+                            />
                         </div>
                         <div className="form-group text-left">
-                            <input type="password" id="password" className="form-control" placeholder="Password" value={password} onChange={handlerOnChange}/>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                className="form-control" 
+                                placeholder="Password" 
+                                value={password} 
+                                onChange={handlerOnChange}
+                            />
                         </div>
                         <button type="button" className="btn actiar-btn" onClick={login}>Iniciar</button>
                     </form>
