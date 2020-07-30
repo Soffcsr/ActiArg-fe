@@ -61,7 +61,7 @@ const Register = props =>{
             />
             <div className="d-flex flex-row p-4 p-md-0" id="register-form">
                 <div className="d-none d-md-flex w-50">
-                    <img className="w-100" src="https://i.ibb.co/F72JpfH/1082b904-3c44-44ff-9a9e-d73f6ecbc006.jpg" alt="imagen-login"/>
+                    <img className="w-100" src="https://i.ibb.co/CmyW3C0/aed67a98-f5c6-4dcd-aae4-d564167a94e5.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
                 <form className="mt-4 p-4">
