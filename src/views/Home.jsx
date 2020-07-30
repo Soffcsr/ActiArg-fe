@@ -10,16 +10,16 @@ import ScrollArrow from '../component/ScrollArrow'
 const Home = () => {
     return(    
         <div>
-        <NavbarComponent
-            left={['Home', 'Gimnasios']}
-            right={['Nosotros', 'Contactanos']}
-        />
-        <Carousel/>
-        <Line/>
-        <GymsList/>
-        <AboutUs/>
-        <Footer/>
-        <ScrollArrow/>
+            <NavbarComponent
+                left={['Home', 'Gimnasios']}
+                right={['Nosotros', 'Contactanos']}
+            />
+            <Carousel/>
+            <Line/>
+            <GymsList/>
+            <AboutUs/>
+            <Footer/>
+            <ScrollArrow/>
         </div>
     )
 }

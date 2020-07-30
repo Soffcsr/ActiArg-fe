@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import Navbar from '../component/Navbar'
@@ -28,38 +28,27 @@ const Login = props =>{
         props.login(email, password)
     }
 
-    useEffect(() => {
-        
-    }, [])
-
     return(
         <div>
             <Navbar
                 left={[]}
                 right={[]}
             />
-            {/*<div id="login-form">
-                <div>
-                    <form>
-                    
-                    </form>
-                </div>
-            </div>*/}
             <div className="d-flex flex-row" id="login-form">
                 <div className="d-none d-md-flex w-50 img img-fluid">
                     <img className="w-100" src="https://i.ibb.co/G2Pk1jK/login-si.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-column align-items-center justify-content-center justify-content-md-start mt-md-5 form">
-                {
-                    props.error ? <Alert message={props.message}/> 
-                    : props.loged ? history.push('/') : null
-                }
-                    <form className="d-flex flex-column align-items-center justify-content-center mt-md-5 p-4">
+                <form className="d-flex flex-column align-items-center justify-content-center mt-md-5 p-4">
+                    {
+                        props.error ? <Alert message={props.message}/> 
+                        : props.loged ? history.push('/') : null
+                    }
                         <div className="form-group text-left">
-                            <input type="email" id="email" className="form-control" placeholder="Email" value={email} onChange={handlerOnChange}></input>
+                            <input type="email" id="email" className="form-control" placeholder="Email" value={email} onChange={handlerOnChange}/>
                         </div>
                         <div className="form-group text-left">
-                            <input type="password" id="password" className="form-control" placeholder="Password" value={password} onChange={handlerOnChange}></input>
+                            <input type="password" id="password" className="form-control" placeholder="Password" value={password} onChange={handlerOnChange}/>
                         </div>
                         <button type="button" className="btn actiar-btn" onClick={login}>Iniciar</button>
                     </form>

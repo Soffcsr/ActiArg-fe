@@ -46,9 +46,6 @@ const Register = props =>{
 
     const register = () => {
         props.register(nombre, apellido, dni, telefono, email, password, passwordConf)
-        if(props.registered){
-            history.push('/login')
-        }
     }
 
     return(
@@ -62,11 +59,11 @@ const Register = props =>{
                     <img className="w-100" src="https://i.ibb.co/F72JpfH/1082b904-3c44-44ff-9a9e-d73f6ecbc006.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
-                {
-                    props.error ? <Alert message={props.message}/> 
-                    : props.registered ? history.push('/login') : null
-                }
-                    <form className="mt-4 p-4">
+                <form className="mt-4 p-4">
+                    {
+                        props.error ? <Alert message={props.message}/> 
+                        : props.registered ? history.push('/login') : null
+                    }
                         <div className="form-group text-left">
                             <input type="text" id="nombre" className="form-control" placeholder="Nombre" value={nombre} onChange={handleOnChange}></input>
                         </div>
