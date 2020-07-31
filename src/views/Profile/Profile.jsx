@@ -9,10 +9,7 @@ import {
     showTurns, 
     showCarousels, 
     showPublicits, 
-    findGymById,
-    cleanActivities,
-    cleanPublicits,
-    cleanTurns 
+    findGymById
 } from '../../actions'
 
 import '../../App.css'
@@ -38,11 +35,10 @@ const override = css`
 `;
 
 
-const Profile1 = (props) => {
+const Profile = (props) => {
     let { id } = useParams();
 
     useEffect(() => {
-        clean();
         window.scrollTo(0, 0)
         props.showCarousels(id)
         props.findGymById(id)
@@ -59,18 +55,10 @@ const Profile1 = (props) => {
         }
     }, [])
 
-    const clean = () => {
-        props.cleanActivities()
-        props.cleanPublicits()
-        props.cleanTurns()
-    }
-
     if (props.error) {
         alert(props.error)
     } else {
-        console.log(props.linkPago)
         if (props.linkPago !== '') {
-            console.log(props.linkPago)
             window.open(props.linkPago)
         }
     }
@@ -170,7 +158,7 @@ const mapStateToProps = state => {
     }
 }
 
-const Profile = connect(mapStateToProps, { showActivities, showTurns, showCarousels, showPublicits, findGymById, cleanActivities, cleanPublicits, cleanTurns })(Profile1)
+const ProfileView = connect(mapStateToProps, { showActivities, showTurns, showCarousels, showPublicits, findGymById })(Profile)
 
-export default Profile
+export default ProfileView
 

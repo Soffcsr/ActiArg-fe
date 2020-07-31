@@ -88,8 +88,8 @@ body {
 @media (max-width: 991.98px) {
   .logout {
     position: relative;
-    margin-left: 16rem;
-    bottom: 44.35rem;
+    margin-left: 72vw;
+    bottom: 10vh;
   }
 }
 /* NAVBAR COMPONENT END */
@@ -134,6 +134,7 @@ footer .form-control,
   border-right: none;
   background: transparent;
   border-radius: 0;
+  color: white;
 }
 
 footer .form-control:focus, 
@@ -144,6 +145,7 @@ footer .form-control:focus,
   border-right: none;
   border-bottom: solid rgb(225, 55, 29);
   background-color: transparent;
+  color: white;
 }
 
 footer i {
@@ -1175,7 +1177,8 @@ p {
     width: 100%;
   }
 
-  form{
+  #register-form form,
+  #login-form form{
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
