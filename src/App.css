@@ -71,9 +71,26 @@ body {
   top: -0.35rem;
   right: 1rem;
 }
+
+@media (max-width: 991.98px) {
+  .btnNav {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    right: 1.2rem;
+  }
+}
+
 .logout {
   margin-top: 2rem;
   margin-right: 3rem;
+}                 
+@media (max-width: 991.98px) {
+  .logout {
+    position: absolute;
+    margin-left: 14.5rem;
+    margin-top: 0.5rem;
+  }
 }
 /* NAVBAR COMPONENT END */
 
@@ -135,6 +152,10 @@ footer i {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.logofooter{
+  margin-left: 1.3rem;
 }
 /* FOOTER COMPONENT END */
 
@@ -268,6 +289,16 @@ footer i {
   letter-spacing: 2px;
   width: 130px;
   height: 3em;
+}
+@media (max-width: 991.98px) {
+  .actiar-btn{
+    position: relative;
+    left: 1.2rem;
+    width: 5rem;
+    height: 2.7rem;
+    font-size: 12px;
+    padding: 0 0.18rem;
+  }
 }
 
 .actiar-btn:active {
@@ -727,7 +758,7 @@ footer i {
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
-  left: 90vw;
+  left: 88.5vw;
   color: grey;
 }
 
