@@ -7,7 +7,10 @@ import {
     showTurns, 
     showCarousels, 
     showPublicits, 
-    findGymById 
+    findGymById,
+    cleanActivities,
+    cleanPublicits,
+    cleanTurns 
 } from '../../actions'
 
 import '../../App.css'
@@ -28,10 +31,10 @@ const Profile1 = (props) => {
     let { id } = useParams();
 
     useEffect(() => {
+        clean();
         window.scrollTo(0, 0)
         props.showCarousels(id)
         props.findGymById(id)
-        
         if(props.publicits.length === 0) {
             props.showPublicits(id)
         }
@@ -45,11 +48,18 @@ const Profile1 = (props) => {
         }
     }, [])
 
+    const clean = () => {
+        props.cleanActivities()
+        props.cleanPublicits()
+        props.cleanTurns()
+    }
 
     if (props.error) {
         alert(props.error)
     } else {
+        console.log(props.linkPago)
         if (props.linkPago !== '') {
+            console.log(props.linkPago)
             window.open(props.linkPago)
         }
     }
@@ -139,7 +149,7 @@ const mapStateToProps = state => {
     }
 }
 
-const Profile = connect(mapStateToProps, { showActivities, showTurns, showCarousels, showPublicits, findGymById })(Profile1)
+const Profile = connect(mapStateToProps, { showActivities, showTurns, showCarousels, showPublicits, findGymById, cleanActivities, cleanPublicits, cleanTurns })(Profile1)
 
 export default Profile
 

@@ -12,7 +12,10 @@ import {
     RESERVE_TURN,
     RESERVE_ERROR,
     FIND_GYM_BY_ID,
-    SEND_MAIL
+    SEND_MAIL,
+    CLEAN_ACTIVITIES,
+    CLEAN_PUBLICITS,
+    CLEAN_TURNS
 } from "../constants/action-types";
 
 export function showGyms(payload){
@@ -206,6 +209,36 @@ export function sendMail(email, consult){
         dispatch({
             type: SEND_MAIL,
             payload: data.message
+        })
+    }
+}
+
+export function cleanActivities(){
+    console.log("cleaned")
+    return async (dispatch, getState) => {
+        dispatch({
+            type: CLEAN_ACTIVITIES,
+            payload: []
+        })
+    }
+}
+
+export function cleanPublicits(){
+    console.log("cleaned")
+    return async (dispatch, getState) => {
+        dispatch({
+            type: CLEAN_PUBLICITS,
+            payload: []
+        })
+    }
+}
+
+export function cleanTurns(){
+    console.log("cleaned")
+    return async (dispatch, getState) => {
+        dispatch({
+            type: CLEAN_TURNS,
+            payload: []
         })
     }
 }

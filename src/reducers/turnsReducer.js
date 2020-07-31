@@ -1,4 +1,4 @@
-import { SHOW_TURNS, RESERVE_TURN, RESERVE_ERROR } from "../constants/action-types"
+import { SHOW_TURNS, RESERVE_TURN, RESERVE_ERROR, CLEAN_TURNS } from "../constants/action-types"
 
 const initState = {
     error: '',
@@ -22,6 +22,10 @@ const turnsReducer = (state = initState, action) => {
                 turns: state.turns,
                 error: action.payload.error
             }
+        case CLEAN_TURNS:
+            return Object.assign({}, state, {
+                turns: action.payload
+            })
         default:
             break;
     }

@@ -1,14 +1,21 @@
-const { SHOW_PUBLICITS } = require("../constants/action-types")
+const { SHOW_PUBLICITS, CLEAN_TURNS, CLEAN_PUBLICITS } = require("../constants/action-types")
 
 const initState = {
     publicits: []
 }
 
 const publicitsReducer = (state = initState, action) => {
-    if(action.type === SHOW_PUBLICITS){
-        return Object.assign({}, state, {
-            publicits: state.publicits.concat(action.payload.publicits)
-        })
+    switch (action.type) {
+        case SHOW_PUBLICITS:
+            return Object.assign({}, state, {
+                publicits: state.publicits.concat(action.payload.publicits)
+            })
+        case CLEAN_PUBLICITS:
+            return {
+                publicits: action.payload
+            }
+        default:
+            break;
     }
     return state
 }
