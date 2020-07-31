@@ -214,7 +214,6 @@ export function sendMail(email, consult){
 }
 
 export function cleanActivities(){
-    console.log("cleaned")
     return async (dispatch, getState) => {
         dispatch({
             type: CLEAN_ACTIVITIES,
@@ -224,7 +223,6 @@ export function cleanActivities(){
 }
 
 export function cleanPublicits(){
-    console.log("cleaned")
     return async (dispatch, getState) => {
         dispatch({
             type: CLEAN_PUBLICITS,
@@ -234,7 +232,6 @@ export function cleanPublicits(){
 }
 
 export function cleanTurns(){
-    console.log("cleaned")
     return async (dispatch, getState) => {
         dispatch({
             type: CLEAN_TURNS,

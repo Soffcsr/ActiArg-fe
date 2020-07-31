@@ -26,7 +26,8 @@ const turnsReducer = (state = initState, action) => {
             }
         case CLEAN_TURNS:
             return Object.assign({}, state, {
-                turns: action.payload
+                turns: action.payload,
+                bandera: true
             })
         default:
             break;
