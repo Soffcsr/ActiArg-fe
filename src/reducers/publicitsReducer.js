@@ -1,4 +1,4 @@
-const { SHOW_PUBLICITS, CLEAN_TURNS, CLEAN_PUBLICITS } = require("../constants/action-types")
+const { SHOW_PUBLICITS, CLEAN_PUBLICITS } = require("../constants/action-types")
 
 const initState = {
     publicits: []

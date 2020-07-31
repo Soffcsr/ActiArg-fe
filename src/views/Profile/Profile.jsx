@@ -64,7 +64,7 @@ const Profile = (props) => {
     }
 
     return (
-        props.bandera == true ? 
+        props.bandera === true ? 
         <div className="sweet-loading">
             <PacmanLoader
             css={override}
