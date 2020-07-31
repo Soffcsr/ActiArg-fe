@@ -5,15 +5,13 @@ import{
   Route 
 } from 'react-router-dom'
 
-import './App.css'
-import './component/Carousel/Carousel'
-
 import Home from './views/Home'
 import Profile from './views/Profile/Profile'
 import LoginView from './views/Login'
 import RegisterView from './views/Register'
 import Error404 from './component/Error404'
 
+import './App.css'
 
 function App() {
   return (

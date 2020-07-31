@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {reserve} from '../../actions/index'
+import {reserve} from '../../../actions/index'
 
 const ItemsTable = (props) => {
 

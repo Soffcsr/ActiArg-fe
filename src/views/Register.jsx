@@ -1,11 +1,16 @@
 import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import {useHistory} from 'react-router-dom'
+
 import {register} from '../actions/index.js'
+
 import Navbar from '../component/Navbar'
 import Alert from '../component/Alert'
 
 const Register = props =>{
+    let history = useHistory()
+
+    //lOCAL STATE
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
     const [dni, setDni] = useState('')
@@ -14,8 +19,8 @@ const Register = props =>{
     const [password, setPassword] = useState('')
     const [passwordConf, setPasswordConfig] = useState('')
 
-    let history = useHistory()
-
+    
+    //CONTROL DEL FORMULARIO CON EL ESTADO
     const handleOnChange = e => {
         switch (e.target.id) {
             case "nombre":
@@ -56,7 +61,7 @@ const Register = props =>{
             />
             <div className="d-flex flex-row p-4 p-md-0" id="register-form">
                 <div className="d-none d-md-flex w-50">
-                    <img className="w-100" src="https://i.ibb.co/F72JpfH/1082b904-3c44-44ff-9a9e-d73f6ecbc006.jpg" alt="imagen-login"/>
+                    <img className="w-100" src="https://i.ibb.co/CmyW3C0/aed67a98-f5c6-4dcd-aae4-d564167a94e5.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
                 <form className="mt-4 p-4">
@@ -64,27 +69,76 @@ const Register = props =>{
                         props.error ? <Alert message={props.message}/> 
                         : props.registered ? history.push('/login') : null
                     }
-                        <div className="form-group text-left">
-                            <input type="text" id="nombre" className="form-control" placeholder="Nombre" value={nombre} onChange={handleOnChange}></input>
-                        </div>
-                        <div className="form-group text-left">
-                            <input type="text" id="apellido" className="form-control" placeholder="Apellido" value={apellido} onChange={handleOnChange}></input>
-                        </div>
-                        <div className="form-group text-left">
-                            <input type="text" id="dni" className="form-control" placeholder="DNI" value={dni} onChange={handleOnChange}></input>
-                        </div>
-                        <div className="form-group text-left">
-                            <input type="text" id="telefono" className="form-control" placeholder="Teléfono de contacto" value={telefono} onChange={handleOnChange}></input>
-                        </div>
-                        <div className="form-group text-left">
-                            <input type="email" id="email" className="form-control" placeholder="Email" value={email} onChange={handleOnChange}></input>
-                        </div>
-                        <div className="form-group text-left">
-                            <input type="password" id="password" className="form-control" placeholder="Password" value={password} onChange={handleOnChange}></input>
-                        </div>
-                        <div className="form-group text-left">
-                            <input type="password" id="passwordConf" className="form-control" placeholder="Confirme password" value={passwordConf} onChange={handleOnChange}></input>
-                        </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            className="form-control" 
+                            placeholder="Nombre" 
+                            value={nombre} 
+                            onChange={handleOnChange}
+                        />
+                    </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="text" 
+                            id="apellido" 
+                            className="form-control" 
+                            placeholder="Apellido" 
+                            value={apellido} 
+                            onChange={handleOnChange}
+                        />
+                    </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="text" 
+                            id="dni" 
+                            className="form-control" 
+                            placeholder="DNI" 
+                            value={dni} 
+                            onChange={handleOnChange}
+                        />
+                    </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="text" 
+                            id="telefono" 
+                            className="form-control" 
+                            placeholder="Teléfono de contacto" 
+                            value={telefono} 
+                            onChange={handleOnChange}
+                        />
+                    </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            className="form-control" 
+                            placeholder="Email" 
+                            value={email} 
+                            onChange={handleOnChange}
+                            />
+                    </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            className="form-control" 
+                            placeholder="Password" 
+                            value={password} 
+                            onChange={handleOnChange}
+                        />
+                    </div>
+                    <div className="form-group text-left">
+                        <input 
+                            type="password" 
+                            id="passwordConf" 
+                            className="form-control" 
+                            placeholder="Confirme password" 
+                            value={passwordConf} 
+                            onChange={handleOnChange}
+                        />
+                    </div>
                         <button type="button" className="btn actiar-btn" onClick={register}>Registrar</button>
                     </form>
                 </div>
