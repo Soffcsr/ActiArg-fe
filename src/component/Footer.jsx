@@ -38,7 +38,7 @@ const Footer = (props) => {
                     <div className="box1 col-md-5">
                         <h5><img className="logofooter" src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" width="150" height="60"/></h5>
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-12">
                                 <p>Proyecto Actiar</p>
                             </div>
                         </div>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import { css } from "@emotion/core";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 import { 
     showActivities, 
@@ -26,6 +28,15 @@ import Alert from '../../component/Alert'
 import InConstruction from '../../component/InConstruction'
 import Navbar from '../../component/Navbar'
 import ItemCarousel from '../../component/Carousel/ItemCarousel'
+
+
+const override = css`
+    display: block;
+    margin:auto;
+    margin-top:200px;
+    border-color: red;
+`;
+
 
 const Profile1 = (props) => {
     let { id } = useParams();
@@ -65,13 +76,22 @@ const Profile1 = (props) => {
     }
 
     return (
+        props.bandera == true ? 
+        <div className="sweet-loading">
+            <PacmanLoader
+            css={override}
+            size={150}
+            color={"#EF602B"}
+            loading={true}
+            />
+        </div>:
         <div>
             <Navbar
                 left={['Home', 'Nosotros', 'Clases']}
                 right={['Horarios', 'Precios', 'Contactanos']}
             />
-            {
-
+            {   
+               
                 props.publicits.length !== 0 || props.activities.length !== 0 || props.turns.length !== 0 ?
                 <div>
                 {
@@ -145,7 +165,8 @@ const mapStateToProps = state => {
         error: state.turns.error,
         publicits: state.publicits.publicits,
         carousels: state.carousel.carousels,
-        gym: state.gym.gym
+        gym: state.gym.gym,
+        bandera: state.turns.bandera
     }
 }
 
