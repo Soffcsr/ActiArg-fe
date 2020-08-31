@@ -295,11 +295,10 @@ footer i {
 @media (max-width: 991.98px) {
   .actiar-btn{
     position: relative;
-    left: 1.2rem;
     width: 5rem;
     height: 2.7rem;
     font-size: 12px;
-    padding: 0 0.18rem;
+    padding: 0 0.14rem;
   }
 }
 

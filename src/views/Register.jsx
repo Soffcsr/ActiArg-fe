@@ -115,6 +115,8 @@ const Register = props =>{
                             id="email" 
                             className="form-control" 
                             placeholder="Email" 
+                            required
+                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
                             value={email} 
                             onChange={handleOnChange}
                             />
