@@ -34,6 +34,7 @@ const Navbar = (props) => {
         sessionStorage.removeItem('token')
         sessionStorage.removeItem('username')
         sessionStorage.removeItem('userlastname')
+        window.location.reload()
     }
 
     return (
@@ -90,13 +91,14 @@ const Navbar = (props) => {
                         <button type="button" className="btn actiar-btn mr-2">
                             <Link to="/login">Inicio</Link>
                         </button>
-                        <button type="button" className="btn actiar-btn mr-2">
+                        <button typ
+                        e="button" className="btn actiar-btn mr-2">
                             <Link to="/register">Registro</Link>
                         </button>
                     </div>
                     :
                     <button type="button" className="btn actiar-btn mr-2 logout" onClick={logout}>   
-                        <Link to="/">Cerrar</Link>
+                        <Link to="/">Cerrar</Link>    
                     </button>
             }
         </div>
