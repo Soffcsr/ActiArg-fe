@@ -18,6 +18,14 @@ const Register = props =>{
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConf, setPasswordConfig] = useState('')
+    
+    const [nombreValido, setNombreValido] = useState(true)
+    const [apellidoValido, setApellidoValido] = useState(true)
+    const [dniValido, setDniValido] = useState(true)
+    const [telefonoValido, setTelefonoValido] = useState(true)
+    const [emailValido, setEmailValido] = useState(true)
+    const [passwordValido, setPasswordValido] = useState(true)
+    const [passwordConfValido, setPasswordConfValido] = useState(true)
 
     
     //CONTROL DEL FORMULARIO CON EL ESTADO
@@ -53,6 +61,42 @@ const Register = props =>{
         props.register(nombre, apellido, dni, telefono, email, password, passwordConf)
     }
 
+    const validate = e =>{
+        switch (e.target.id) {
+            case "nombre":
+                let pattern_nombre = new RegExp('^[a-zA-Z ]{3,30}$')
+                !pattern_nombre.test(e.target.value) ? setNombreValido(false) : setNombreValido(true) 
+                break;
+            case "apellido":
+                let pattern_apellido = new RegExp('^[a-zA-Z ]{3,30}$')
+                !pattern_apellido.test(e.target.value) ? setApellidoValido(false) : setApellidoValido(true)
+                break;
+            case "dni":
+                // eslint-disable-next-line no-useless-escape
+                let pattern_dni = new RegExp('^[0-9]{7,8}$')
+                !pattern_dni.test(e.target.value) ? setDniValido(false) : setDniValido(true)
+                break;
+            case "telefono":
+                let pattern_telefono = new RegExp('^[0-9]{7,13}$')
+                !pattern_telefono.test(e.target.value) ? setTelefonoValido(false) : setTelefonoValido(true)
+                break;
+            case "email":
+                // eslint-disable-next-line no-useless-escape
+                let pattern_email = new RegExp('^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$')
+                !pattern_email.test(e.target.value) ? setEmailValido(false) : setEmailValido(true)
+                break;
+            case "password":
+                let pattern_password = new RegExp('^[a-zA-Z0-9]{8,30}$')
+                !pattern_password.test(e.target.value) ? setPasswordValido(false) : setPasswordValido(true)
+                break;
+            case "passwordConf":
+                e.target.value !== password ? setPasswordConfValido(false) : setPasswordConfValido(true)
+                break;
+            default:
+                break;
+        }
+    }
+
     return(
         <div>
             <Navbar
@@ -77,7 +121,9 @@ const Register = props =>{
                             placeholder="Nombre" 
                             value={nombre} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                         />
+                        {!nombreValido ? <small className="text-danger">Formato no valido</small> : null}
                     </div>
                     <div className="form-group text-left">
                         <input 
@@ -87,7 +133,9 @@ const Register = props =>{
                             placeholder="Apellido" 
                             value={apellido} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                         />
+                        {!apellidoValido ? <small className="text-danger">Formato no valido</small> : null}
                     </div>
                     <div className="form-group text-left">
                         <input 
@@ -97,7 +145,9 @@ const Register = props =>{
                             placeholder="DNI" 
                             value={dni} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                         />
+                        {!dniValido ? <small className="text-danger">Formato no valido</small> : null}
                     </div>
                     <div className="form-group text-left">
                         <input 
@@ -107,7 +157,9 @@ const Register = props =>{
                             placeholder="Teléfono de contacto" 
                             value={telefono} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                         />
+                        {!telefonoValido ? <small className="text-danger">Formato no valido</small> : null}
                     </div>
                     <div className="form-group text-left">
                         <input 
@@ -116,10 +168,11 @@ const Register = props =>{
                             className="form-control" 
                             placeholder="Email" 
                             required
-                            pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
                             value={email} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                             />
+                            {!emailValido ? <small className="text-danger">Formato no valido</small> : null}
                     </div>
                     <div className="form-group text-left">
                         <input 
@@ -129,7 +182,9 @@ const Register = props =>{
                             placeholder="Password" 
                             value={password} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                         />
+                        {!passwordValido ? <small className="text-danger">Formato no valido</small> : null}
                     </div>
                     <div className="form-group text-left">
                         <input 
@@ -139,7 +194,9 @@ const Register = props =>{
                             placeholder="Confirme password" 
                             value={passwordConf} 
                             onChange={handleOnChange}
+                            onBlur={validate}
                         />
+                        {!passwordConfValido ? <small className="text-danger">Las contraseñas no coinciden</small> : null}
                     </div>
                         <button type="button" className="btn actiar-btn" onClick={register}>Registrar</button>
                     </form>
