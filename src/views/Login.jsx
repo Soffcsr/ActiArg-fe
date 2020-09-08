@@ -52,6 +52,7 @@ const Login = props =>{
                                 id="email" 
                                 className="form-control" 
                                 placeholder="Email" 
+                                maxLength="30"
                                 value={email} 
                                 onChange={handlerOnChange}
                             />
@@ -62,6 +63,7 @@ const Login = props =>{
                                 id="password" 
                                 className="form-control" 
                                 placeholder="Password" 
+                                maxLength="30"
                                 value={password} 
                                 onChange={handlerOnChange}
                             />

@@ -35,7 +35,7 @@ const override = css`
 `;
 
 
-const Profile = ({publicits, turns, activities, error, linkPago, carousels, gym, bandera, showCarousels, findGymById, showPublicits, showTurns}) => {
+const Profile = ({publicits, turns, activities, error, linkPago, carousels, gym, bandera,showActivities, showCarousels, findGymById, showPublicits, showTurns}) => {
     let { id } = useParams();
 
     useEffect(() => {
