@@ -18,7 +18,7 @@ const Register = props =>{
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConf, setPasswordConfig] = useState('')
-    
+
     const [nombreValido, setNombreValido] = useState(true)
     const [apellidoValido, setApellidoValido] = useState(true)
     const [dniValido, setDniValido] = useState(true)
@@ -110,7 +110,7 @@ const Register = props =>{
                 <div className="d-flex flex-row justify-content-center form">
                 <form className="mt-4 p-4">
                     {
-                        props.error ? <Alert message={props.message}/> 
+                        props.error ? <Alert message={props.message} status={500}/> 
                         : props.registered ? history.push('/login') : null
                     }
                     <div className="form-group text-left">
