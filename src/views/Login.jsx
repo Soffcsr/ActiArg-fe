@@ -43,7 +43,7 @@ const Login = props =>{
                 <div className="d-flex flex-column align-items-center justify-content-center justify-content-md-start mt-md-5 form">
                 <form className="d-flex flex-column align-items-center justify-content-center mt-md-5 p-4">
                     {
-                        props.error ? <Alert message={props.message}/> 
+                        props.error ? <Alert message={props.message} status={500}/> 
                         : props.loged ? history.push('/') : null
                     }
                         <div className="form-group text-left">

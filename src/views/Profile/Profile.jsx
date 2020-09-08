@@ -83,7 +83,7 @@ const Profile = (props) => {
                 props.publicits.length !== 0 || props.activities.length !== 0 || props.turns.length !== 0 ?
                 <div>
                 {
-                    !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros horarios y reservar una clase, por favor logueate"/> : null
+                    !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros horarios y reservar una clase, por favor logueate" status={500}/> : null
                 }
                     <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                         <ol id="myCarousel-indicators" className="carousel-indicators">

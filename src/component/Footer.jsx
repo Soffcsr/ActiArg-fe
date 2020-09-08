@@ -61,6 +61,7 @@ const Footer = (props) => {
                                 props.message_send ?
                                 <Alert
                                     message={props.message}
+                                    status={200}
                                 />
                                 : null
                             }
