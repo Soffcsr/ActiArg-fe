@@ -4,7 +4,6 @@ import {
     SHOW_ACTIVITIES, 
     SHOW_TURNS,
     LOGIN_USER,
-    LOGIN_SUCCESS,
     LOGIN_ERROR,
     REGISTER_SUCCESS,
     REGISTER_ERROR,
@@ -13,7 +12,10 @@ import {
     RESERVE_TURN,
     RESERVE_ERROR,
     FIND_GYM_BY_ID,
-    SEND_MAIL
+    SEND_MAIL,
+    CLEAN_ACTIVITIES,
+    CLEAN_PUBLICITS,
+    CLEAN_TURNS
 } from "../constants/action-types";
 
 export function showGyms(payload){
@@ -32,7 +34,6 @@ export function showActivities(id){
         fetch(`https://actiar-be.herokuapp.com/ActivityByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("activities:::", data)
                 dispatch({
                     type: SHOW_ACTIVITIES,
                     payload: data
@@ -59,7 +60,6 @@ export function showPublicits(id){
         fetch(`https://actiar-be.herokuapp.com/PublicitByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("publicits:::", data)
                 dispatch({
                     type: SHOW_PUBLICITS,
                     payload: data
@@ -73,7 +73,6 @@ export function showCarousels(id){
         fetch(`https://actiar-be.herokuapp.com/CarouselByGym/${id}`)
             .then(response => response.json())
             .then(data => {
-                console.log("carousels:::", data)
                 dispatch({
                     type: SHOW_CAROUSELS,
                     payload: data
@@ -88,21 +87,19 @@ export function login(email, password) {
             method: 'POST'
         }
         let response = await fetch(`http://actiar-be.herokuapp.com/login?email=${email}&&password=${password}`, requestOptions)
-        if(response.ok){
-            let credentials = await response.json()
-            console.log(credentials)
+        let credentials = await response.json()
+        if(credentials.error){
+            dispatch({
+                type: LOGIN_ERROR,
+                payload: credentials.error
+            })
+        }else{
             sessionStorage.setItem('token', JSON.stringify(credentials.data.token))
             sessionStorage.setItem('username', JSON.stringify(credentials.data.username))
             sessionStorage.setItem('userlastname', JSON.stringify(credentials.data.userlastname))
             dispatch({
                 type: LOGIN_USER,
                 payload: credentials.data
-            })
-        }else{
-            let error = await response.json()
-            dispatch({
-                type: LOGIN_ERROR,
-                payload: error
             })
         }
     }
@@ -126,17 +123,16 @@ export function register(nombre, apellido, dni, telefono, email, password){
             })
         }
         let response = await fetch('http://actiar-be.herokuapp.com/register', requestOptions)
-        if(response.ok) {
-            let register = await response.json()
+        let register = await response.json()
+        if(register.error){
+            dispatch({
+                type: REGISTER_ERROR,
+                payload: register.error
+            })
+        }else{
             dispatch({
                 type: REGISTER_SUCCESS,
                 payload: register.message
-            })
-        }else{
-            let error = await response.json()
-            dispatch({
-                type: REGISTER_ERROR,
-                payload: error
             })
         }
     }
@@ -209,12 +205,37 @@ export function sendMail(email, consult){
             })
         })
 
-        console.log("RESPONSE::", response)
-
         let data = await response.json()
         dispatch({
             type: SEND_MAIL,
             payload: data.message
+        })
+    }
+}
+
+export function cleanActivities(){
+    return async (dispatch, getState) => {
+        dispatch({
+            type: CLEAN_ACTIVITIES,
+            payload: []
+        })
+    }
+}
+
+export function cleanPublicits(){
+    return async (dispatch, getState) => {
+        dispatch({
+            type: CLEAN_PUBLICITS,
+            payload: []
+        })
+    }
+}
+
+export function cleanTurns(){
+    return async (dispatch, getState) => {
+        dispatch({
+            type: CLEAN_TURNS,
+            payload: []
         })
     }
 }

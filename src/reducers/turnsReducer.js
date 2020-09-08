@@ -1,16 +1,18 @@
-import { SHOW_TURNS, RESERVE_TURN, RESERVE_ERROR } from "../constants/action-types"
+import { SHOW_TURNS, RESERVE_TURN, RESERVE_ERROR, CLEAN_TURNS } from "../constants/action-types"
 
 const initState = {
     error: '',
     linkPago: '',
-    turns: []
+    turns: [],
+    bandera: true
 }
 
 const turnsReducer = (state = initState, action) => {
     switch (action.type) {
         case SHOW_TURNS:
             return Object.assign({}, state, {
-                turns: state.turns.concat(action.payload)
+                turns: state.turns.concat(action.payload),
+                bandera: false
             })
         case RESERVE_TURN:
             return {
@@ -22,6 +24,11 @@ const turnsReducer = (state = initState, action) => {
                 turns: state.turns,
                 error: action.payload.error
             }
+        case CLEAN_TURNS:
+            return Object.assign({}, state, {
+                turns: action.payload,
+                bandera: true
+            })
         default:
             break;
     }

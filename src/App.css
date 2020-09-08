@@ -71,9 +71,26 @@ body {
   top: -0.35rem;
   right: 1rem;
 }
+
+@media (max-width: 991.98px) {
+  .btnNav {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    right: 1.2rem;
+  }
+}
+
 .logout {
   margin-top: 2rem;
   margin-right: 3rem;
+}                 
+@media (max-width: 991.98px) {
+  .logout {
+    position: relative;
+    margin-left: 72vw;
+    bottom: 10vh;
+  }
 }
 /* NAVBAR COMPONENT END */
 
@@ -117,6 +134,7 @@ footer .form-control,
   border-right: none;
   background: transparent;
   border-radius: 0;
+  color: white;
 }
 
 footer .form-control:focus, 
@@ -127,6 +145,7 @@ footer .form-control:focus,
   border-right: none;
   border-bottom: solid rgb(225, 55, 29);
   background-color: transparent;
+  color: white;
 }
 
 footer i {
@@ -135,6 +154,10 @@ footer i {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.logofooter{
+  margin-left: 1.3rem;
 }
 /* FOOTER COMPONENT END */
 
@@ -268,6 +291,15 @@ footer i {
   letter-spacing: 2px;
   width: 130px;
   height: 3em;
+}
+@media (max-width: 991.98px) {
+  .actiar-btn{
+    position: relative;
+    width: 5rem;
+    height: 2.7rem;
+    font-size: 12px;
+    padding: 0 0.14rem;
+  }
 }
 
 .actiar-btn:active {
@@ -727,7 +759,7 @@ footer i {
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
-  left: 90vw;
+  left: 88.5vw;
   color: grey;
 }
 
@@ -891,7 +923,7 @@ h2,
 }
 .bajate{
   position: relative;
-  top: 22rem;
+  top: 16rem;
   background: black;
 }
 
@@ -910,38 +942,31 @@ h2,
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
   color: rgb(255, 115, 0);
-  top: 40%;
+  top: 30%;
   background: rgba(0, 0, 0, 0.534);
 }
 /* END Incostructin COMPONENT */
 
 
 /* ICON */
-
 #icon img {
   width: 130px;
   height: 50px;
-  /* text-align: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 2em; */
 }
 
 span {
-  text-shadow: -0.08em 0 red, 0.08em 0 cyan; /* This creates the 3D effect, pretty easy, eh? */
-  letter-spacing: 0.08em; /* make sure the letters don't overlap */
+  text-shadow: -0.08em 0 red, 0.08em 0 cyan; 
+  letter-spacing: 0.08em; 
 }
 
 p {
   margin: 0;
 }
-
 /* ICON END */
 
 /* ---------------- Title ---------------- */
-
 #title {
-  font-family: Helvetica, Geneva, sans-serif; /* Any font would work, but SansSerif looks better */
+  font-family: Helvetica, Geneva, sans-serif; 
 }
 #title:focus {
   outline: none;
@@ -952,16 +977,16 @@ p {
   transition: font-size 2s cubic-bezier(0, 1, 0, 1);
 }
 #title span:hover {
-  font-size: 1.5em; /* This adds a hover effect */
+  font-size: 1.5em; 
   line-height: 1em;
   transition: font-size 0.2s cubic-bezier(0, 0.75, 0, 1);
 }
 #title span:active {
   font-size: 1em;
-  text-shadow: none; /* Click to disable the 3D effect */
+  text-shadow: none; 
 }
 #title span::selection {
-  background-color: red; /* This hides the selection */
+  background-color: red; 
 }
 
 /* ---------------- Slogan ---------------- */
@@ -1076,13 +1101,12 @@ p {
   text-align: center;
   margin-bottom: 2rem;
 }
-/* END ABOUTUS COMPONENT */
+/* END ABOUT US COMPONENT */
 
 /* START LINE COMPONENT */
 .line {
   color: white;
   font-family: "Oswald", sans-serif;
-
   padding: 2rem 0;
   margin-top: 1.5rem;
   margin-left: 2rem;
@@ -1100,6 +1124,7 @@ p {
 
 #login-form form, #register-form form{
   width: 75%;
+  height: 75%;
 }
 
 #login-form form .form-group{
@@ -1120,13 +1145,19 @@ p {
   }
 
   #login-form{
-    background-image: url('https://i.ibb.co/x24RWBm/7005791b-6a9a-44e3-af02-a3764d5ed434.jpg');
+    background-image: url('https://i.ibb.co/rxwJTwH/0d0a2fcc-345f-468d-a2e6-c7222588d756.jpg');
     height: 100vh;
-  }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+}
 
   #register-form{
-    background-image: url('https://i.ibb.co/KLr9fbF/87829700-e3aa-4188-b423-1b069a1667bc.jpg');
-    height: auto;
+    background-image: url('https://i.ibb.co/Rpq96dD/a1b47ab8-0f04-420c-94d7-91ef9615ccda.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
   }
 
   #login-form .form .img, 
@@ -1145,8 +1176,9 @@ p {
     width: 100%;
   }
 
-  form{
-    background-color: rgba(0, 0, 0, 0.4);
+  #register-form form,
+  #login-form form{
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 /* END LOGIN VIEW */
