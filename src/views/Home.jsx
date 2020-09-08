@@ -15,15 +15,16 @@ import {
     cleanTurns 
 } from '../actions/index'
 
-const Home = (props) => {
+const Home = ({cleanActivities, cleanPublicits, cleanTurns}) => {
     useEffect(() => {
         cleanState();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const cleanState = () => {
-        props.cleanActivities()
-        props.cleanPublicits()
-        props.cleanTurns()
+        cleanActivities()
+        cleanPublicits()
+        cleanTurns()
     }
 
     return(    
@@ -42,4 +43,5 @@ const Home = (props) => {
     )
 }
 const HomeView = connect(null, {cleanActivities, cleanPublicits, cleanTurns })(Home)
+
 export default HomeView

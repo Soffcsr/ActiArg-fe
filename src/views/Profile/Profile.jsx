@@ -35,36 +35,37 @@ const override = css`
 `;
 
 
-const Profile = (props) => {
+const Profile = ({publicits, turns, activities, error, linkPago, carousels, gym, bandera, showCarousels, findGymById, showPublicits, showTurns}) => {
     let { id } = useParams();
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        props.showCarousels(id)
-        props.findGymById(id)
-        if(props.publicits.length === 0) {
-            props.showPublicits(id)
+        showCarousels(id)
+        findGymById(id)
+        if(publicits.length === 0) {
+            showPublicits(id)
         }
         
-        if(props.turns.length === 0) {
-            props.showTurns(id)
+        if(turns.length === 0) {
+            showTurns(id)
         }
 
-        if(props.activities.length === 0) {
-            props.showActivities(id)
+        if(activities.length === 0) {
+            showActivities(id)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    if (props.error) {
-        alert(props.error)
+    if (error) {
+        alert(error)
     } else {
-        if (props.linkPago !== '') {
-            window.open(props.linkPago)
+        if (linkPago !== '') {
+            window.open(linkPago)
         }
     }
 
     return (
-        props.bandera === true ? 
+        bandera === true ? 
         <div className="sweet-loading">
             <PacmanLoader
             css={override}
@@ -79,8 +80,7 @@ const Profile = (props) => {
                 right={['Horarios', 'Precios', 'Contactanos']}
             />
             {   
-               
-                props.publicits.length !== 0 || props.activities.length !== 0 || props.turns.length !== 0 ?
+                publicits.length !== 0 || activities.length !== 0 || turns.length !== 0 ?
                 <div>
                 {
                     !sessionStorage.getItem('token') ? <Alert message="Para ver nuestros horarios y reservar una clase, por favor logueate" status={500}/> : null
@@ -95,11 +95,11 @@ const Profile = (props) => {
                         <div className="carousel-inner">
                             <div>
                                 {
-                                    props.carousels.map((CarGym1Data) => {
+                                    carousels.map((CardGym) => {
                                         return <ItemCarousel
-                                            key={CarGym1Data.id}
-                                            isActive={CarGym1Data.isActive}
-                                            img={CarGym1Data.img}
+                                            key={CardGym.id}
+                                            isActive={CardGym.isActive}
+                                            img={CardGym.img}
                                         />
                                     })}
                             </div>
@@ -115,25 +115,25 @@ const Profile = (props) => {
                     </div>
 
                     <AdvertisementContainer
-                        publicits = {props.publicits}
+                        publicits = {publicits}
                     />
     
                     <ObjectivesContainer/>
                     
                     <TurnsTable
-                        turns = {props.turns}
+                        turns = {turns}
                         idgym = {id}
                     />
 
                     <ActivitiesContainer
-                        activities = {props.activities}
+                        activities = {activities}
                     />
                     
                     <div>
                         <Contact
-                            phone={props.gym.phone}
-                            adress={props.gym.address}
-                            atention={props.gym.atention}
+                            phone={gym.phone}
+                            adress={gym.address}
+                            atention={gym.atention}
                         />
                     </div>
                 </div>
