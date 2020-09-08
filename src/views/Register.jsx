@@ -119,6 +119,7 @@ const Register = props =>{
                             id="nombre" 
                             className="form-control" 
                             placeholder="Nombre" 
+                            maxLength="30"
                             value={nombre} 
                             onChange={handleOnChange}
                             onBlur={validate}
@@ -131,6 +132,7 @@ const Register = props =>{
                             id="apellido" 
                             className="form-control" 
                             placeholder="Apellido" 
+                            maxLength="30"
                             value={apellido} 
                             onChange={handleOnChange}
                             onBlur={validate}
@@ -143,6 +145,7 @@ const Register = props =>{
                             id="dni" 
                             className="form-control" 
                             placeholder="DNI" 
+                            maxLength="9"
                             value={dni} 
                             onChange={handleOnChange}
                             onBlur={validate}
@@ -154,7 +157,8 @@ const Register = props =>{
                             type="text" 
                             id="telefono" 
                             className="form-control" 
-                            placeholder="Teléfono de contacto" 
+                            placeholder="Teléfono de contacto"
+                            maxLength="10" 
                             value={telefono} 
                             onChange={handleOnChange}
                             onBlur={validate}
@@ -167,6 +171,7 @@ const Register = props =>{
                             id="email" 
                             className="form-control" 
                             placeholder="Email" 
+                            maxLength="30"
                             required
                             value={email} 
                             onChange={handleOnChange}
@@ -180,6 +185,7 @@ const Register = props =>{
                             id="password" 
                             className="form-control" 
                             placeholder="Password" 
+                            maxLength="30"
                             value={password} 
                             onChange={handleOnChange}
                             onBlur={validate}
@@ -192,6 +198,7 @@ const Register = props =>{
                             id="passwordConf" 
                             className="form-control" 
                             placeholder="Confirme password" 
+                            maxLength="30"
                             value={passwordConf} 
                             onChange={handleOnChange}
                             onBlur={validate}
