@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { animated, useTrail, useSpring } from 'react-spring'
 
 const Navbar = (props) => {
-    const [isOpen, setIsOpen] = useState(window.screen.width > 696 ? true : false)
+    const [isOpen, setIsOpen] = useState(window.innerWidth > 696 ? true : false)
 
 
     const trailsleft = useTrail(2, {
@@ -63,7 +63,7 @@ const Navbar = (props) => {
                                 }
                             </ul>
                         </nav>
-                        <div className="d-md-block d-none mt-3 mr-md-4" id="icon">
+                        <div className="d-lg-block d-none mt-3 mr-md-4" id="icon">
                             <Link to="/">
                                 <img src="https://i.ibb.co/cvDL1jx/LOGO-ACTIAR2.png" alt="logo" />
                             </Link>

@@ -104,11 +104,11 @@ const Register = props =>{
                 right={[]}
             />
             <div className="d-flex flex-row p-4 p-md-0" id="register-form">
-                <div className="d-none d-md-flex w-50">
+                <div className="d-none d-md-flex w-50 mt-4 p-4">
                     <img className="w-100" src="https://i.ibb.co/Rpq96dD/a1b47ab8-0f04-420c-94d7-91ef9615ccda.jpg" alt="imagen-login"/>
                 </div>
                 <div className="d-flex flex-row justify-content-center form">
-                <form className="mt-4 p-4">
+                <form className="mt-4 p-5">
                     {
                         props.error ? <Alert message={props.message} status={500}/> 
                         : props.registered ? history.push('/login') : null
